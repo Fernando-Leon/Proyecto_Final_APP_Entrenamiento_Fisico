@@ -13,12 +13,9 @@
             android:orientation="vertical">
 
         <LinearLayout
-            android:background="@color/purple_200"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_column="0"
-            app:layout_row="0">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -50,12 +47,9 @@
         </LinearLayout>
 
         <ScrollView
-            android:background="#333333"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            app:layout_column="0"
-            app:layout_row="1">
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -286,33 +280,41 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/purple_200"
-            app:layout_column="0"
-            app:layout_row="2">
+            android:orientation="horizontal">
+
             <Button
+                android:id="@+id/inicio"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Home"
                 tools:ignore="Suspicious0dp"></Button>
+
             <Button
+                android:id="@+id/informesButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Settings"
                 android:layout_weight="1"
-                tools:ignore="Suspicious0dp"></Button>
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:onClick="statusInformes"
                 android:text="Informe"
-                android:layout_weight="1"
                 tools:ignore="Suspicious0dp"></Button>
+
             <Button
+                android:id="@+id/estadisticasButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Estadisticas"
                 android:layout_weight="1"
+                android:onClick="statusEstadisticas"
+                android:text="Estadisticas"
+                tools:ignore="Suspicious0dp"></Button>
+
+            <Button
+                android:id="@+id/ajustesButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="statusAjustes"
+                android:text="Ajustes"
                 tools:ignore="Suspicious0dp"></Button>
         </LinearLayout>
 </LinearLayout>

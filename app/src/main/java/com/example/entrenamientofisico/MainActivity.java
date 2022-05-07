@@ -2,8 +2,10 @@ package com.example.entrenamientofisico;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.service.autofill.CharSequenceTransformation;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -37,4 +39,22 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    // menu de navegacion hacia las demas activity's
+
+    public void statusAjustes(View view) {
+        Intent intent = new Intent(this, activity_ajustes.class);
+        startActivity(intent);
+    }
+
+    public void statusEstadisticas(View view) {
+        Intent intent = new Intent(this, activity_estadisticas.class);
+        startActivity(intent);
+    }
+
+    public void statusInformes(View view) {
+        Intent intent = new Intent(this, activity_informes.class);
+        startActivity(intent);
+    }
+
 }
