@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+=       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:background="@color/purple_200"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_column="0"
+            app:layout_row="0">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Enternamiento Fisico"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="20sp"></TextView>
+
+            <TextView
+                android:id="@+id/fraseRandom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:padding="20dp"
+                android:text="Frase aleatoria"
+                android:textAlignment="center"
+                android:textColor="#fff"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Categorias"
+                android:padding="20dp"
+                android:textSize="25dp"
+                android:textColor="#fff"></TextView>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:background="#333333"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_column="0"
+            app:layout_row="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Todo el cuerpo"
+                        android:textSize="20dp"
+                        android:padding="20dp"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff">
+                    </TextView>
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Principiante" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Intermedio" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Avanzado" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Espalda y Hombros"
+                        android:textSize="20dp"
+                        android:padding="20dp"
+                        android:textColor="#ffffff">
+                    </TextView>
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Principiante" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Intermedio" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Avanzado" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pecho"
+                        android:textSize="20dp"
+                        android:padding="20dp"
+                        android:textColor="#ffffff">
+                    </TextView>
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Principiante" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Intermedio" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Avanzado" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Brazo"
+                        android:textSize="20dp"
+                        android:padding="20dp"
+                        android:textColor="#ffffff">
+                    </TextView>
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Principiante" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Intermedio" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Avanzado" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pecho"
+                        android:textSize="20dp"
+                        android:padding="20dp"
+                        android:textColor="#ffffff">
+                    </TextView>
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Principiante" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Intermedio" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Avanzado" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pierna"
+                        android:textSize="20dp"
+                        android:padding="20dp"
+                        android:textColor="#ffffff">
+                    </TextView>
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Principiante" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Intermedio" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_buttom_customised"
+                        android:layout_margin="10dp"
+                        android:text="Avanzado" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/purple_200"
+            app:layout_column="0"
+            app:layout_row="2">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Home"
+                tools:ignore="Suspicious0dp"></Button>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:layout_weight="1"
+                tools:ignore="Suspicious0dp"></Button>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Informe"
+                android:layout_weight="1"
+                tools:ignore="Suspicious0dp"></Button>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Estadisticas"
+                android:layout_weight="1"
+                tools:ignore="Suspicious0dp"></Button>
+        </LinearLayout>
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
