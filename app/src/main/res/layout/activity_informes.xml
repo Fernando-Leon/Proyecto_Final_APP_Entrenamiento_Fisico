@@ -26,6 +26,13 @@
             android:textColor="#fff"
             android:textSize="20sp"></TextView>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Indice de masa corporal (IMC)"
+            android:textColor="#fff"
+            android:textSize="15sp"></TextView>
 
     </LinearLayout>
 
@@ -38,6 +45,54 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Peso (Kg)"
+                    android:textColor="#fff"
+                    android:padding="20dp"
+                    ></TextView>
+
+            <TextView
+                android:id="@+id/valuePeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="50"
+                android:textColor="#fff"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Altura m"
+                android:textColor="#fff"
+                android:padding="20dp"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/valueAltura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="1.78"
+                android:textColor="#fff"></TextView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cambiar"
+                android:id="@+id/abrirPopup"
+                android:onClick="abrirPopup">
+            </Button>
+
+            <TextView
+                android:id="@+id/resultadoImc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:padding="20dp"
+                android:text="TextView" />
 
         </LinearLayout>
 
