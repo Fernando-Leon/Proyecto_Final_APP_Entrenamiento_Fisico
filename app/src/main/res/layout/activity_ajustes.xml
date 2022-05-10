@@ -28,19 +28,26 @@
 
         </LinearLayout>
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-            <LinearLayout
+            <Button
+                android:id="@+id/deleteHistorial"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:text="Eliminar historial"></Button>
 
-            </LinearLayout>
+            <Button
+                android:id="@+id/exitAplication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Salir"></Button>
 
-        </ScrollView>
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
