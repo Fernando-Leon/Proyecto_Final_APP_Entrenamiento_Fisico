@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EntrenamientoFisico">
         <activity
+            android:name=".activityExercicios"
+            android:exported="false" />
+        <activity
             android:name=".activity_ajustes"
             android:exported="false" />
         <activity
