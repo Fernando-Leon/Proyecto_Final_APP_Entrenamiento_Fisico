@@ -7,11 +7,57 @@
     android:background="#000"
     tools:context=".activityExercicios">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="titulo"
-        android:id="@+id/tituloEjercicio"
-        android:textColor="#fff"></TextView>
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="titulo"
+                android:id="@+id/tituloEjercicio"
+                android:layout_margin="20dp"
+                android:textColor="#fff"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre ejercicio"
+                android:textColor="#fff"
+                android:layout_margin="20dp"
+                android:id="@+id/nombreEjercicio">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="descripcion"
+                android:textColor="#fff"
+                android:layout_margin="20dp"
+                android:id="@+id/descripcionEjercicio">
+            </TextView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="siguiente"
+                android:id="@+id/siguiente"
+                android:layout_gravity="center_horizontal"
+                ></Button>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
