@@ -56,6 +56,13 @@
                 android:id="@+id/siguiente"
                 android:layout_gravity="center_horizontal"
                 ></Button>
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Atras"
+                android:id="@+id/atras">
+            </Button>
         </LinearLayout>
 
     </LinearLayout>

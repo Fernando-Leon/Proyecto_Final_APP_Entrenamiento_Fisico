@@ -16,27 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     private RadioGroup grupo;
 
-    //Categoria "Abdominales"
-    private RadioButton cat1nivel1;
-    private RadioButton cat1nivel2;
-    private RadioButton cat1nivel3;
-    //Categoria "Esplada y hombros"
-    private RadioButton cat2nivel1;
-    private RadioButton cat2nivel2;
-    private RadioButton cat2nivel3;
-    //Categoria "Pecho"
-    private RadioButton cat3nivel1;
-    private RadioButton cat3nivel2;
-    private RadioButton cat3nivel3;
-    //Categoria "Brazo"
-    private RadioButton cat4nivel1;
-    private RadioButton cat4nivel2;
-    private RadioButton cat4nivel3;
-    //Categoria "Piernas"
-    private RadioButton cat5nivel1;
-    private RadioButton cat5nivel2;
-    private RadioButton cat5nivel3;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Theme_EntrenamientoFisico);
@@ -48,10 +27,24 @@ public class MainActivity extends AppCompatActivity {
 
         fraseRandom = (TextView) findViewById(R.id.fraseRandom);
 
-        String frasesRandom[] = {"Frase 1",
-                                 "Frase 2",
-                                 "Frase 3",
-                                  "Frase 4"};
+        String frasesRandom[] = {
+                "La fuerza no viene de una capacidad física. Viene de una voluntad indomable.-Mahatma Gandhi.",
+                "Cuando se tiene algo que demostrar, no hay nada mejor que un reto.- Terry Bradshaw.",
+                "Si quieres verme conseguir algo, dime que no puedo hacerlo.-Maya Angelou.",
+                "No eres un perdedor hasta que no dejas de intentarlo.-Mike Ditka.",
+                "Incluso si caes de cara, sigues moviéndote hacia adelante.- Viktor Kiam",
+                "Para tener éxito, en primer lugar debemos creer que podemos.- Nikos Kazantzakis.",
+                "Tienes que esperar cosas de ti mismo antes de poder hacerlas.-Michael Jordan.",
+                "No puedes poner un límite a nada. Cuanto más sueñas, más lejos llegas.-Michael Phelps.",
+                "Las grandes recompensas esperan a los que son capaces de sufrir, arriesgarse, hacer cosas distintas. Por eso están destinadas a solo unos pocos. -Anónimo.",
+                "La motivación es lo que te pone en marcha, y el hábito es lo que hace que sigas.-.Jim Ryun.",
+                "Da siempre lo mejor de ti. Lo que siembres hoy dará su fruto mañana.-Og Mandino",
+                "Un campeón es alguien que se levanta cuando no puede más.-William Harrison “Jack” Dempsey.",
+                "Establece tu metas altas, y no pares hasta que no llegues allí.- Bo Jackson.",
+                "No se puede ganar a la persona que nunca se rinde.-Babe Ruth.",
+                "La falta de actividad destruye la buena condicion de cualquier ser humano, mientras que el movimiento y el ejercicio físico metodico la guardan y la preservan. -Platón.",
+                "No te vallas dejando algo sin terminar. -Arnold Schawarzeneger."
+        };
 
         for (int i = 0; i < 4; i++) {
             int index = (int)(Math.random() * 4);
@@ -59,26 +52,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         grupo = (RadioGroup) findViewById(R.id.categorias);
-
-        cat1nivel1 = (RadioButton) findViewById(R.id.c1r1);
-        cat1nivel2 = (RadioButton) findViewById(R.id.c1r2);
-        cat1nivel3 = (RadioButton) findViewById(R.id.c1r3);
-
-        cat2nivel1 = (RadioButton) findViewById(R.id.c2r1);
-        cat2nivel2 = (RadioButton) findViewById(R.id.c2r2);
-        cat2nivel3 = (RadioButton) findViewById(R.id.c2r3);
-
-        cat3nivel1 = (RadioButton) findViewById(R.id.c3r1);
-        cat3nivel2 = (RadioButton) findViewById(R.id.c3r2);
-        cat3nivel3 = (RadioButton) findViewById(R.id.c3r3);
-
-        cat4nivel1 = (RadioButton) findViewById(R.id.c4r1);
-        cat4nivel2 = (RadioButton) findViewById(R.id.c4r2);
-        cat4nivel3 = (RadioButton) findViewById(R.id.c4r3);
-
-        cat5nivel1 = (RadioButton) findViewById(R.id.c5r1);
-        cat5nivel2 = (RadioButton) findViewById(R.id.c5r2);
-        cat5nivel3 = (RadioButton) findViewById(R.id.c5r3);
 
 
         grupo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -112,9 +85,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
     }
 
     // menu de navegacion hacia las demas activity's
@@ -134,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //Programacion logica cada que el usuario escoje un nivel de dicha categoria
 
 
 }
