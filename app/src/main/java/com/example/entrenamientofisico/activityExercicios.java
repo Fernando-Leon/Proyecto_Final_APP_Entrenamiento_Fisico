@@ -391,7 +391,6 @@ public class activityExercicios extends AppCompatActivity {
         botonRetroceder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if(numEjercicio > 1){
 
                     //Abdominales
@@ -637,6 +636,7 @@ public class activityExercicios extends AppCompatActivity {
                 }
 
             }
+
         });
 
     }
