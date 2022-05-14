@@ -159,6 +159,9 @@ public class activityExercicios extends AppCompatActivity {
                         if(countLevel <= intermedio){
                             numEjercicio=1;
                         }
+                        if(countLevel>2){
+                            countLevel = intermedio;
+                        }
                     }
                 }
 
@@ -172,6 +175,9 @@ public class activityExercicios extends AppCompatActivity {
                         countLevel++;
                         if(countLevel <= avanzado){
                             numEjercicio=1;
+                        }
+                        if(countLevel>2){
+                            countLevel = avanzado;
                         }
                     }
                 }
@@ -203,6 +209,9 @@ public class activityExercicios extends AppCompatActivity {
                         if(countLevel <= intermedio){
                             numEjercicio=1;
                         }
+                        if(countLevel>2){
+                            countLevel = intermedio;
+                        }
                     }
                 }
 
@@ -216,6 +225,9 @@ public class activityExercicios extends AppCompatActivity {
                         countLevel++;
                         if(countLevel <= avanzado){
                             numEjercicio=1;
+                        }
+                        if(countLevel>2){
+                            countLevel = avanzado;
                         }
                     }
                 }
@@ -247,6 +259,9 @@ public class activityExercicios extends AppCompatActivity {
                         if(countLevel <= intermedio){
                             numEjercicio=1;
                         }
+                        if(countLevel>2){
+                            countLevel = intermedio;
+                        }
                     }
                 }
 
@@ -260,6 +275,9 @@ public class activityExercicios extends AppCompatActivity {
                         countLevel++;
                         if(countLevel <= avanzado){
                             numEjercicio=1;
+                        }
+                        if(countLevel>2){
+                            countLevel = avanzado;
                         }
                     }
                 }
@@ -291,6 +309,9 @@ public class activityExercicios extends AppCompatActivity {
                         if(countLevel <= intermedio){
                             numEjercicio=1;
                         }
+                        if(countLevel>2){
+                            countLevel = intermedio;
+                        }
                     }
                 }
 
@@ -304,6 +325,9 @@ public class activityExercicios extends AppCompatActivity {
                         countLevel++;
                         if(countLevel <= avanzado){
                             numEjercicio=1;
+                        }
+                        if(countLevel>2){
+                            countLevel = avanzado;
                         }
                     }
                 }
@@ -335,6 +359,9 @@ public class activityExercicios extends AppCompatActivity {
                         if(countLevel <= intermedio){
                             numEjercicio=1;
                         }
+                        if(countLevel>2){
+                            countLevel = intermedio;
+                        }
                     }
                 }
 
@@ -349,6 +376,9 @@ public class activityExercicios extends AppCompatActivity {
                         if(countLevel <= avanzado){
                             numEjercicio=1;
                         }
+                        if(countLevel>2){
+                            countLevel = avanzado;
+                        }
                     }
                 }
 
@@ -361,6 +391,250 @@ public class activityExercicios extends AppCompatActivity {
         botonRetroceder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if(numEjercicio > 1){
+
+                    //Abdominales
+
+                    if(valueCat == 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
+                        descripcion.setText(abdominales[numEjercicio-1][1]);
+                    }
+
+                    //Hombros espalda
+
+                    if(valueCat == 4){
+                        numEjercicio--;
+                        tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
+                        descripcion.setText(espaldaHombros[numEjercicio-1][1]);
+                    }
+
+                    //Pecho
+
+                    if(valueCat == 7){
+                        numEjercicio--;
+                        tituloEjercicio.setText(pecho[numEjercicio-1][0]);
+                        descripcion.setText(pecho[numEjercicio-1][1]);
+                    }
+
+                    //Brazo
+
+                    if(valueCat == 10){
+                        numEjercicio--;
+                        tituloEjercicio.setText(brazo[numEjercicio-1][0]);
+                        descripcion.setText(brazo[numEjercicio-1][1]);
+                    }
+
+                    //Pierna
+
+                    if(valueCat == 13){
+                        numEjercicio--;
+                        tituloEjercicio.setText(pierna[numEjercicio-1][0]);
+                        descripcion.setText(pierna[numEjercicio-1][1]);
+                    }
+
+                }
+
+                //Abdominales
+
+                if(valueCat == 2){
+
+                    if(countLevel == 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
+                        descripcion.setText(abdominales[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
+                        descripcion.setText(abdominales[numEjercicio-1][1]);
+                    }else if(countLevel == 2 && numEjercicio == 1){
+                        numEjercicio = abdominales.length;
+                        countLevel--;
+                        tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
+                        descripcion.setText(abdominales[numEjercicio-1][1]);
+                    }
+
+                }
+
+                if(valueCat == 3){
+
+                    if(countLevel == 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
+                        descripcion.setText(abdominales[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
+                        descripcion.setText(abdominales[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio == 1){
+                        numEjercicio = abdominales.length;
+                        countLevel--;
+                        tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
+                        descripcion.setText(abdominales[numEjercicio-1][1]);
+                    }
+
+                }
+
+                //Espalda hombros
+
+                if(valueCat == 5){
+
+                    if(countLevel == 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
+                        descripcion.setText(espaldaHombros[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
+                        descripcion.setText(espaldaHombros[numEjercicio-1][1]);
+                    }else if(countLevel == 2 && numEjercicio == 1){
+                        numEjercicio = espaldaHombros.length;
+                        countLevel--;
+                        tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
+                        descripcion.setText(espaldaHombros[numEjercicio-1][1]);
+                    }
+
+                }
+
+                if(valueCat == 6){
+
+                    if(countLevel == 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
+                        descripcion.setText(espaldaHombros[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
+                        descripcion.setText(espaldaHombros[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio == 1){
+                        numEjercicio = espaldaHombros.length;
+                        countLevel--;
+                        tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
+                        descripcion.setText(espaldaHombros[numEjercicio-1][1]);
+                    }
+
+                }
+
+                //pecho
+
+                if(valueCat == 8){
+
+                    if(countLevel == 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(pecho[numEjercicio-1][0]);
+                        descripcion.setText(pecho[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(pecho[numEjercicio-1][0]);
+                        descripcion.setText(pecho[numEjercicio-1][1]);
+                    }else if(countLevel == 2 && numEjercicio == 1){
+                        numEjercicio = pecho.length;
+                        countLevel--;
+                        tituloEjercicio.setText(pecho[numEjercicio-1][0]);
+                        descripcion.setText(pecho[numEjercicio-1][1]);
+                    }
+
+                }
+
+                if(valueCat == 9){
+
+                    if(countLevel == 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(pecho[numEjercicio-1][0]);
+                        descripcion.setText(pecho[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(pecho[numEjercicio-1][0]);
+                        descripcion.setText(pecho[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio == 1){
+                        numEjercicio = pecho.length;
+                        countLevel--;
+                        tituloEjercicio.setText(pecho[numEjercicio-1][0]);
+                        descripcion.setText(pecho[numEjercicio-1][1]);
+                    }
+
+                }
+
+                //Brazo
+
+                if(valueCat == 11){
+
+                    if(countLevel == 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(brazo[numEjercicio-1][0]);
+                        descripcion.setText(brazo[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(brazo[numEjercicio-1][0]);
+                        descripcion.setText(brazo[numEjercicio-1][1]);
+                    }else if(countLevel == 2 && numEjercicio == 1){
+                        numEjercicio = brazo.length;
+                        countLevel--;
+                        tituloEjercicio.setText(brazo[numEjercicio-1][0]);
+                        descripcion.setText(brazo[numEjercicio-1][1]);
+                    }
+
+                }
+
+                if(valueCat == 12){
+
+                    if(countLevel == 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(brazo[numEjercicio-1][0]);
+                        descripcion.setText(brazo[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(brazo[numEjercicio-1][0]);
+                        descripcion.setText(brazo[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio == 1){
+                        numEjercicio = brazo.length;
+                        countLevel--;
+                        tituloEjercicio.setText(brazo[numEjercicio-1][0]);
+                        descripcion.setText(brazo[numEjercicio-1][1]);
+                    }
+
+                }
+
+                //Pierna
+
+                if(valueCat == 14){
+
+                    if(countLevel == 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(pierna[numEjercicio-1][0]);
+                        descripcion.setText(pierna[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(pierna[numEjercicio-1][0]);
+                        descripcion.setText(pierna[numEjercicio-1][1]);
+                    }else if(countLevel == 2 && numEjercicio == 1){
+                        numEjercicio = pierna.length;
+                        countLevel--;
+                        tituloEjercicio.setText(pierna[numEjercicio-1][0]);
+                        descripcion.setText(pierna[numEjercicio-1][1]);
+                    }
+
+                }
+
+                if(valueCat == 15){
+
+                    if(countLevel == 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(pierna[numEjercicio-1][0]);
+                        descripcion.setText(pierna[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio > 1){
+                        numEjercicio--;
+                        tituloEjercicio.setText(pierna[numEjercicio-1][0]);
+                        descripcion.setText(pierna[numEjercicio-1][1]);
+                    }else if(countLevel > 1 && numEjercicio == 1){
+                        numEjercicio = pierna.length;
+                        countLevel--;
+                        tituloEjercicio.setText(pierna[numEjercicio-1][0]);
+                        descripcion.setText(pierna[numEjercicio-1][1]);
+                    }
+
+                }
 
             }
         });
