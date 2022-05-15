@@ -2,10 +2,17 @@ package com.example.entrenamientofisico;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.ContentValues;
+import android.content.DialogInterface;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.entrenamientofisico.db.dbinsert;
 
 public class activityExercicios extends AppCompatActivity {
 
@@ -14,8 +21,27 @@ public class activityExercicios extends AppCompatActivity {
     private TextView tituloEjercicio;
     private Button botonRecorrer;
     private Button botonRetroceder;
+    private Button salirMain;
     int numEjercicio = 1;
     int countLevel = 1;
+
+    String indexTitle[] = {
+            "Abdominales - pricipiante",
+            "Abdominales - intermedio",
+            "Abdominales - avanzado",
+            "Espalda y hombros - pricipiante",
+            "Espalda y hombros - intermedio",
+            "Espalda y hombros - avanzado",
+            "Pecho - pricipiante",
+            "Pecho - intermedio",
+            "Pecho - avanzado",
+            "Brazo - pricipiante",
+            "Brazo - intermedio",
+            "Brazo - avanzado",
+            "Pierna - pricipiante",
+            "Peirna - intermedio",
+            "Pierna - avanzado"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,24 +55,6 @@ public class activityExercicios extends AppCompatActivity {
         Bundle getValue = getIntent().getExtras();
         int valueCat = getValue.getInt("value");
         int numCategoria = valueCat;
-
-        String indexTitle[] = {
-                "Abdominales - pricipiante",
-                "Abdominales - intermedio",
-                "Abdominales - avanzado",
-                "Espalda y hombros - pricipiante",
-                "Espalda y hombros - intermedio",
-                "Espalda y hombros - avanzado",
-                "Pecho - pricipiante",
-                "Pecho - intermedio",
-                "Pecho - avanzado",
-                "Brazo - pricipiante",
-                "Brazo - intermedio",
-                "Brazo - avanzado",
-                "Pierna - pricipiante",
-                "Peirna - intermedio",
-                "Pierna - avanzado"
-        };
 
         String abdominales[][] = {
                 {"Saltos De Tijera","Comienzo a con los pies juntos y los brazos a los lados; a continuación, salta con los pies separados y las manos sobre la cabeza. Vuelve a la posición original y realiza la siguiente repetición. Este ejercicio sirve para entrenar todo el cuerpo y trabaja todos los grandes grupos musculares."},
@@ -123,6 +131,19 @@ public class activityExercicios extends AppCompatActivity {
                 titulo.setText(indexTitle[i-1]);
             }
         }
+
+        register();
+
+        //Salir del ejercicio
+
+        salirMain = (Button) findViewById(R.id.salirToMain);
+
+        salirMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                exitToMain();
+            }
+        });
 
         //Pasar al siguiente ejercicio
 
@@ -640,4 +661,38 @@ public class activityExercicios extends AppCompatActivity {
         });
 
     }
+
+    private void exitToMain() {
+        new AlertDialog.Builder(this)
+                .setTitle("Salir")
+                .setMessage("Desea salir del ejercicio?")
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                })
+                .show();
+    }
+
+    //Metodo para guardar el ejercicio en el historial
+
+    private void register(){
+        dbinsert inser = new dbinsert(activityExercicios.this);
+        long id = inser.insertRegiste(titulo.getText().toString());
+
+        if(id > 0){
+            Toast.makeText(this, "Registro exitoso", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(this, "Error", Toast.LENGTH_LONG).show();
+
+        }
+    }
+
 }
