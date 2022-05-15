@@ -8,14 +8,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.example.entrenamientofisico.db.dbinsert;
+
 public class popupChangeImc extends AppCompatDialogFragment {
-    private EditText editAltura;
-    private EditText editPeso;
+    private EditText editAltura, editPeso;
     private dialogChangeImc listener;
 
     @NonNull
@@ -59,4 +61,6 @@ public class popupChangeImc extends AppCompatDialogFragment {
     public interface dialogChangeImc{
         void applyTexts(String altura, String peso);
     }
+
+
 }

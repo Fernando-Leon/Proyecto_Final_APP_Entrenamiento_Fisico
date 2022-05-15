@@ -3,21 +3,23 @@ package com.example.entrenamientofisico;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.entrenamientofisico.db.dbHelper;
+import com.example.entrenamientofisico.db.dbinsert;
+import com.example.entrenamientofisico.entidades.historial;
+
+import java.util.ArrayList;
 
 public class activity_informes extends AppCompatActivity implements popupChangeImc.dialogChangeImc{
 
-    //Bibliografias
-
-    //https://www.youtube.com/watch?v=ARezg1D9Zd0
-    //https://www.develou.com/como-crear-dialogos-en-android/#Crear_un_dialogo_personalizado
-
-    private TextView pesoView;
-    private TextView alturaView;
-    private TextView imc;
+    private TextView pesoView, alturaView, imc;
     private Button button;
 
     @Override
@@ -42,6 +44,8 @@ public class activity_informes extends AppCompatActivity implements popupChangeI
             }
         });
     }
+
+    //Menu de navegacion
 
     public void statusAjustes(View view) {
         Intent intent = new Intent(this, activity_ajustes.class);
@@ -70,5 +74,19 @@ public class activity_informes extends AppCompatActivity implements popupChangeI
         float imcResult =  floatPeso / (floatAltura * floatAltura);
         String imcString = String.valueOf(imcResult);
         imc.setText(imcString);
+        registerImc();
     }
+
+    private void registerImc(){
+        dbinsert inser = new dbinsert(this);
+        long id = inser.insertImc(alturaView.getText().toString(), pesoView.getText().toString(), imc.getText().toString());
+
+        if(id > 0){
+            Toast.makeText(this, "Registro exitoso", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(this, "Error al actualizar el imc", Toast.LENGTH_LONG).show();
+        }
+
+    }
+
 }

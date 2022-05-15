@@ -3,12 +3,16 @@ package com.example.entrenamientofisico;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.entrenamientofisico.db.dbHelper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +25,18 @@ public class MainActivity extends AppCompatActivity {
         setTheme(R.style.Theme_EntrenamientoFisico);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Creacion de la base de datos
+
+        /*
+        dbHelper dbHelp = new dbHelper(MainActivity.this);
+        SQLiteDatabase db = dbHelp.getWritableDatabase();
+        if(db != null){
+            Toast.makeText(this, "Base de Datos Creada", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(this, "Error al craer Base de Datos", Toast.LENGTH_LONG).show();
+        }
+        */
 
 
         //Genera una frase aleatoria cada que se ejecute la aplicacion
@@ -46,14 +62,12 @@ public class MainActivity extends AppCompatActivity {
                 "No te vallas dejando algo sin terminar. -Arnold Schawarzeneger."
         };
 
-        for (int i = 0; i < 4; i++) {
-            int index = (int)(Math.random() * 4);
+        for (int i = 0; i < frasesRandom.length; i++) {
+            int index = (int)(Math.random() * frasesRandom.length);
             fraseRandom.setText(frasesRandom[index]);
         }
 
         grupo = (RadioGroup) findViewById(R.id.categorias);
-
-
         grupo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {

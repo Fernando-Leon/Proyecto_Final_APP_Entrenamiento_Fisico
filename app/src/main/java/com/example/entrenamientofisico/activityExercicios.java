@@ -16,14 +16,9 @@ import com.example.entrenamientofisico.db.dbinsert;
 
 public class activityExercicios extends AppCompatActivity {
 
-    private TextView titulo;
-    private TextView descripcion;
-    private TextView tituloEjercicio;
-    private Button botonRecorrer;
-    private Button botonRetroceder;
-    private Button salirMain;
-    int numEjercicio = 1;
-    int countLevel = 1;
+    private TextView titulo, descripcion, tituloEjercicio;
+    private Button botonRecorrer, botonRetroceder, salirMain;
+    int numEjercicio = 0, countLevel = 0;
 
     String indexTitle[] = {
             "Abdominales - pricipiante",
@@ -66,7 +61,8 @@ public class activityExercicios extends AppCompatActivity {
                 {"Flexión y Rotación","Comienza en la posición de flexión. A continuación, baja para realizar una flexión y al subir, rota el tren superior y extiende el brazo derecho hacia arriba. Repite el ejercicio con el otro brazo. Este ejercicio es genial para el pecho, los hombros. los brazos y el torso."},
                 {"Crunch de Bicicleta","Túmbate recto en el suelo, con las manos sujetando loa cabeza, levanta las rodillas y realice un movimiento de pedaleo, tocando los codos con la rodilla contraria mientras vas girando hacia delante y atrás."},
                 {"Butt Bridge","Túmbate en el suelo y encoge las rodillas con los pies sobre el suelo. Pon los brazos extendidos sobre el suelo. Después, sube el trasero todo lo que puedas, como si fueras un puente."},
-                {"Abdominal en V","Túmbate boca arriba con las piernas y los brazos extendidos, y las piernas juntas. Levanta el tronco y las piernas, utiliza los brazos para tocar los de dos de los pies y, a continuación, vuelve a la posición original y repite el ejercicio."}
+                {"Abdominal en V","Túmbate boca arriba con las piernas y los brazos extendidos, y las piernas juntas. Levanta el tronco y las piernas, utiliza los brazos para tocar los de dos de los pies y, a continuación, vuelve a la posición original y repite el ejercicio."},
+                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua."}
         };
 
         String espaldaHombros[][] = {
@@ -79,7 +75,9 @@ public class activityExercicios extends AppCompatActivity {
                 {"Estiramiento Derecho", "Estiramiento tumbado sobre el costado derecho Apóyate sobre el lado izquierdo con la pierna izquierda ligeramente flexionada frente a ti y la pierna derecha estirada detrás de la pierna izquierda. Estira el brazo derecho por encima de la cabeza y tira suavemente de tu muñeca derecha para estirar el lado derecho de tu cuerpo. Mantén esta posición durante unos segundos."},
                 {"Postura de Bebé", "Comienza con las rodillas y las manos en el suelo. Coloca las manos un poco adelantadas, abre las rodillas y junta las puntas de los pies. Inspira, espira y siéntate sobre las rodillas. Intenta que tu trasero toque los talones. Relaja los codos, toca el suelo con la frente e intenta bajar el pecho hasta el suelo. Mantén esta posición. "},
                 {"Elevaciones de Y ", "Túmbate boca abajo con los brazos totalmente extendidos y los pulgares hacia arriba. Tu cuerpo debería tener la forma de la letra «Y». Levanta los brazos del suelo tanto como puedas y mantén la posición durante 2 segundos. Vuelve lentamente a la posición original y repite el ejercicio. "},
-                {"Flexión supina ", "Túmbate boca arriba con los pies apoyados en el suelo y los brazos doblados a ambos lados. Levanta el pecho tanto como puedas y, a continuación, vuelve lentamente a la posición original. Repite el ejercicio. "}
+                {"Flexión supina ", "Túmbate boca arriba con los pies apoyados en el suelo y los brazos doblados a ambos lados. Levanta el pecho tanto como puedas y, a continuación, vuelve lentamente a la posición original. Repite el ejercicio. "},
+                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua."}
+
         };
 
         String pecho[][] = {
@@ -92,7 +90,8 @@ public class activityExercicios extends AppCompatActivity {
                 {"Flexiones con Inclinación", "(Apoyo de Piernas) Comienza a cuatro patas con las rodillas a la altura de las caderas y las manos debajo de los hombros. Luego coloca los pies en alto en una silla o bancoy empuja el cuerp0 arriba y abajo principalmente con la fuerza de los brazos. Recuerda mantener el torso en línea recta."},
                 {"Estiramiento de Hombros", "Coloca un brazo entrecruzado con tu cuerpo, paralelo al suelo, y a continuación utiliza el otro brazo para tirar del brazo en paralelo en dirección al pecho. Mantén un rato la posición, cambia de brazo y repite el ejercicio."},
                 {"Flexión y Rotación ", "Comienza en la posición de flexión. A continuación, baja para realizar una flexión y al subir, rota el tren superior y extiende el brazo derecho hacia arriba. Repite el ejercicio con el otro brazo. Este ejercicio es genial para el pecho, los hombros, los brazos y el torso. "},
-                {"Estiramiento de cobra ", "Túmbate boca abajo, dobla los codos y coloca las manos por debajo de los hombros. A continuación, levanta el pecho del suelo tanto como puedas. Mantén la posición durante unos segundos. "}
+                {"Estiramiento de cobra ", "Túmbate boca abajo, dobla los codos y coloca las manos por debajo de los hombros. A continuación, levanta el pecho del suelo tanto como puedas. Mantén la posición durante unos segundos. "},
+                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua."}
         };
 
         String brazo[][] = {
@@ -105,7 +104,8 @@ public class activityExercicios extends AppCompatActivity {
                 {"Giro de hombros", "Colócate en pie con las manos detrás de las orejas y los codos hacia afuera. Gira los codos hasta que ambos apunten al frente."},
                 {"Estiramiento de Hombros", "Coloca un brazo entrecruzado con tu cuerpo, paralelo al suelo, y a continuación utiliza el otro brazo para tirar del brazo en paralelo en dirección al pecho. Mantén un rato la posición, cambia de brazo y repite el ejercicio."},
                 {"Estiramiento de tríceps derecho ", "Coloca la mano derecha en la espalda, utiliza la mano izquierda para agarrar el codo derecho y tira de él suavemente. Mantén esta posición durante unos segundos. "},
-                {"Estiramiento de tríceps izquierdo ", "Coloca la mano izquierda en la espalda, utiliza la mano derecha para agarrar el codo izquierdo y tira de él suavemente. Mantén esta posición durante unos segundos. "}
+                {"Estiramiento de tríceps izquierdo ", "Coloca la mano izquierda en la espalda, utiliza la mano derecha para agarrar el codo izquierdo y tira de él suavemente. Mantén esta posición durante unos segundos. "},
+                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua."}
         };
 
         String pierna[][] = {
@@ -118,7 +118,9 @@ public class activityExercicios extends AppCompatActivity {
                 {"Levantamientos de pantorilla con sentadilla de sumo y pared","De pie, con las manos en la pared y los pies un poco separados de los hombros. Baja el cuerpo hasta que los muslos estén paralelos al suelo. Levanta los talones y bájalos."},
                 {"Zancada Cruzada","Póngase de pie y de un paso hacia atrás con la pierna izquierda hacia la derecha y agáchese al mismo tiemp0. Vuelve a la posición de antes y cambie de piernas."},
                 {"Sentadilla con Salto","Comienza haciendo una sentadilla normal, luego salta haciendo fuerza con el abdomen. Cuando caigas agacha el cuerpo en posición de sentadilla. Es un ejercicio genial para calentar todo el cuerpo y comenzar la sesión de entrenamiento para abdominales."},
-                {"Burpees","Comienza de pie. Baja y mantén la posición de sentadilla y pon las manos en el suelo. Estira las piernas y brazos a la vez. Vuelve de inmediato a la posición de sentadilla. Salta desde la posición de sentadilla. Los burpees son ejercicios que trabajan todo el cuerpo con ejercicio aeróbico y de fuerza."}
+                {"Burpees","Comienza de pie. Baja y mantén la posición de sentadilla y pon las manos en el suelo. Estira las piernas y brazos a la vez. Vuelve de inmediato a la posición de sentadilla. Salta desde la posición de sentadilla. Los burpees son ejercicios que trabajan todo el cuerpo con ejercicio aeróbico y de fuerza."},
+                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua."}
+
         };
 
         int principiante = 1;
@@ -131,8 +133,6 @@ public class activityExercicios extends AppCompatActivity {
                 titulo.setText(indexTitle[i-1]);
             }
         }
-
-        register();
 
         //Salir del ejercicio
 
@@ -156,99 +156,95 @@ public class activityExercicios extends AppCompatActivity {
                 //Abdominales
 
                 if(valueCat == 1){
-                    tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
-                    descripcion.setText(abdominales[numEjercicio-1][1]);
-
                     if(numEjercicio < abdominales.length){
                         numEjercicio++;
-                    }else if(numEjercicio == abdominales.length){
+                        tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
+                        descripcion.setText(abdominales[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == abdominales.length){
                         countLevel++;
-                        if(countLevel <= principiante){
-                            numEjercicio=1;
+                        if(countLevel == principiante){
+                            register();
                         }
                     }
                 }
 
                 if(valueCat == 2){
-                    tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
-                    descripcion.setText(abdominales[numEjercicio-1][1]);
-
                     if(numEjercicio < abdominales.length){
                         numEjercicio++;
-                    }else if(numEjercicio == abdominales.length){
+                        tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
+                        descripcion.setText(abdominales[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == abdominales.length){
                         countLevel++;
-                        if(countLevel <= intermedio){
-                            numEjercicio=1;
-                        }
-                        if(countLevel>2){
-                            countLevel = intermedio;
+                        if (countLevel == intermedio ){
+                            register();
+                        }else {
+                            numEjercicio = 0;
                         }
                     }
                 }
 
                 if(valueCat == 3){
-                    tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
-                    descripcion.setText(abdominales[numEjercicio-1][1]);
-
                     if(numEjercicio < abdominales.length){
                         numEjercicio++;
-                    }else if(numEjercicio == abdominales.length){
+                        tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
+                        descripcion.setText(abdominales[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == abdominales.length){
                         countLevel++;
-                        if(countLevel <= avanzado){
-                            numEjercicio=1;
-                        }
-                        if(countLevel>2){
-                            countLevel = avanzado;
+                        if (countLevel == avanzado ){
+                            register();
+                        }else {
+                            numEjercicio = 0;
                         }
                     }
                 }
 
-                //Espalda hombros
+                //Espalda y hombros
 
                 if(valueCat == 4){
-                    tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
-                    descripcion.setText(espaldaHombros[numEjercicio-1][1]);
-
                     if(numEjercicio < espaldaHombros.length){
                         numEjercicio++;
-                    }else if(numEjercicio == espaldaHombros.length){
+                        tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
+                        descripcion.setText(espaldaHombros[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == espaldaHombros.length){
                         countLevel++;
-                        if(countLevel <= principiante){
-                            numEjercicio=1;
+                        if(countLevel == principiante){
+                            register();
                         }
                     }
                 }
 
                 if(valueCat == 5){
-                    tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
-                    descripcion.setText(espaldaHombros[numEjercicio-1][1]);
-
                     if(numEjercicio < espaldaHombros.length){
                         numEjercicio++;
-                    }else if(numEjercicio == espaldaHombros.length){
+                        tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
+                        descripcion.setText(espaldaHombros[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == espaldaHombros.length){
                         countLevel++;
-                        if(countLevel <= intermedio){
-                            numEjercicio=1;
-                        }
-                        if(countLevel>2){
-                            countLevel = intermedio;
+                        if (countLevel == intermedio ){
+                            register();
+                        }else {
+                            numEjercicio = 0;
                         }
                     }
                 }
 
                 if(valueCat == 6){
-                    tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
-                    descripcion.setText(espaldaHombros[numEjercicio-1][1]);
-
                     if(numEjercicio < espaldaHombros.length){
                         numEjercicio++;
-                    }else if(numEjercicio == espaldaHombros.length){
+                        tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
+                        descripcion.setText(espaldaHombros[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == espaldaHombros.length){
                         countLevel++;
-                        if(countLevel <= avanzado){
-                            numEjercicio=1;
-                        }
-                        if(countLevel>2){
-                            countLevel = avanzado;
+                        if (countLevel == avanzado ){
+                            register();
+                        }else {
+                            numEjercicio = 0;
                         }
                     }
                 }
@@ -256,49 +252,47 @@ public class activityExercicios extends AppCompatActivity {
                 //Pecho
 
                 if(valueCat == 7){
-                    tituloEjercicio.setText(pecho[numEjercicio-1][0]);
-                    descripcion.setText(pecho[numEjercicio-1][1]);
-
                     if(numEjercicio < pecho.length){
                         numEjercicio++;
-                    }else if(numEjercicio == pecho.length){
+                        tituloEjercicio.setText(pecho[numEjercicio-1][0]);
+                        descripcion.setText(pecho[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == pecho.length){
                         countLevel++;
-                        if(countLevel <= principiante){
-                            numEjercicio=1;
+                        if(countLevel == principiante){
+                            register();
                         }
                     }
                 }
 
                 if(valueCat == 8){
-                    tituloEjercicio.setText(pecho[numEjercicio-1][0]);
-                    descripcion.setText(pecho[numEjercicio-1][1]);
-
                     if(numEjercicio < pecho.length){
                         numEjercicio++;
-                    }else if(numEjercicio == pecho.length){
+                        tituloEjercicio.setText(pecho[numEjercicio-1][0]);
+                        descripcion.setText(pecho[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == pecho.length){
                         countLevel++;
-                        if(countLevel <= intermedio){
-                            numEjercicio=1;
-                        }
-                        if(countLevel>2){
-                            countLevel = intermedio;
+                        if (countLevel == intermedio ){
+                            register();
+                        }else {
+                            numEjercicio = 0;
                         }
                     }
                 }
 
                 if(valueCat == 9){
-                    tituloEjercicio.setText(pecho[numEjercicio-1][0]);
-                    descripcion.setText(pecho[numEjercicio-1][1]);
-
                     if(numEjercicio < pecho.length){
                         numEjercicio++;
-                    }else if(numEjercicio == pecho.length){
+                        tituloEjercicio.setText(pecho[numEjercicio-1][0]);
+                        descripcion.setText(pecho[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == pecho.length){
                         countLevel++;
-                        if(countLevel <= avanzado){
-                            numEjercicio=1;
-                        }
-                        if(countLevel>2){
-                            countLevel = avanzado;
+                        if (countLevel == avanzado ){
+                            register();
+                        }else {
+                            numEjercicio = 0;
                         }
                     }
                 }
@@ -306,49 +300,47 @@ public class activityExercicios extends AppCompatActivity {
                 //Brazo
 
                 if(valueCat == 10){
-                    tituloEjercicio.setText(brazo[numEjercicio-1][0]);
-                    descripcion.setText(brazo[numEjercicio-1][1]);
-
                     if(numEjercicio < brazo.length){
                         numEjercicio++;
-                    }else if(numEjercicio == brazo.length){
+                        tituloEjercicio.setText(brazo[numEjercicio-1][0]);
+                        descripcion.setText(brazo[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == brazo.length){
                         countLevel++;
-                        if(countLevel <= principiante){
-                            numEjercicio=1;
+                        if(countLevel == principiante){
+                            register();
                         }
                     }
                 }
 
                 if(valueCat == 11){
-                    tituloEjercicio.setText(brazo[numEjercicio-1][0]);
-                    descripcion.setText(brazo[numEjercicio-1][1]);
-
                     if(numEjercicio < brazo.length){
                         numEjercicio++;
-                    }else if(numEjercicio == brazo.length){
+                        tituloEjercicio.setText(brazo[numEjercicio-1][0]);
+                        descripcion.setText(brazo[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == brazo.length){
                         countLevel++;
-                        if(countLevel <= intermedio){
-                            numEjercicio=1;
-                        }
-                        if(countLevel>2){
-                            countLevel = intermedio;
+                        if (countLevel == intermedio ){
+                            register();
+                        }else {
+                            numEjercicio = 0;
                         }
                     }
                 }
 
                 if(valueCat == 12){
-                    tituloEjercicio.setText(brazo[numEjercicio-1][0]);
-                    descripcion.setText(brazo[numEjercicio-1][1]);
-
                     if(numEjercicio < brazo.length){
                         numEjercicio++;
-                    }else if(numEjercicio == brazo.length){
+                        tituloEjercicio.setText(brazo[numEjercicio-1][0]);
+                        descripcion.setText(brazo[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == brazo.length){
                         countLevel++;
-                        if(countLevel <= avanzado){
-                            numEjercicio=1;
-                        }
-                        if(countLevel>2){
-                            countLevel = avanzado;
+                        if (countLevel == avanzado ){
+                            register();
+                        }else {
+                            numEjercicio = 0;
                         }
                     }
                 }
@@ -356,62 +348,61 @@ public class activityExercicios extends AppCompatActivity {
                 //Pierna
 
                 if(valueCat == 13){
-                    tituloEjercicio.setText(pierna[numEjercicio-1][0]);
-                    descripcion.setText(pierna[numEjercicio-1][1]);
-
                     if(numEjercicio < pierna.length){
                         numEjercicio++;
-                    }else if(numEjercicio == pierna.length){
+                        tituloEjercicio.setText(pierna[numEjercicio-1][0]);
+                        descripcion.setText(pierna[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == pierna.length){
                         countLevel++;
-                        if(countLevel <= principiante){
-                            numEjercicio=1;
+                        if(countLevel == principiante){
+                            register();
                         }
                     }
                 }
 
                 if(valueCat == 14){
-                    tituloEjercicio.setText(pierna[numEjercicio-1][0]);
-                    descripcion.setText(pierna[numEjercicio-1][1]);
-
                     if(numEjercicio < pierna.length){
                         numEjercicio++;
-                    }else if(numEjercicio == pierna.length){
+                        tituloEjercicio.setText(pierna[numEjercicio-1][0]);
+                        descripcion.setText(pierna[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == pierna.length){
                         countLevel++;
-                        if(countLevel <= intermedio){
-                            numEjercicio=1;
-                        }
-                        if(countLevel>2){
-                            countLevel = intermedio;
+                        if (countLevel == intermedio ){
+                            register();
+                        }else {
+                            numEjercicio = 0;
                         }
                     }
                 }
 
                 if(valueCat == 15){
-                    tituloEjercicio.setText(pierna[numEjercicio-1][0]);
-                    descripcion.setText(pierna[numEjercicio-1][1]);
-
                     if(numEjercicio < pierna.length){
                         numEjercicio++;
-                    }else if(numEjercicio == pierna.length){
+                        tituloEjercicio.setText(pierna[numEjercicio-1][0]);
+                        descripcion.setText(pierna[numEjercicio-1][1]);
+                    }
+                    if(numEjercicio == pierna.length){
                         countLevel++;
-                        if(countLevel <= avanzado){
-                            numEjercicio=1;
-                        }
-                        if(countLevel>2){
-                            countLevel = avanzado;
+                        if (countLevel == avanzado ){
+                            register();
+                        }else {
+                            numEjercicio = 0;
                         }
                     }
                 }
-
             }
         });
 
+        //Retroceder ejercicio
 
         botonRetroceder = (Button) findViewById(R.id.atras);
 
         botonRetroceder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if(numEjercicio > 1){
 
                     //Abdominales
@@ -453,208 +444,198 @@ public class activityExercicios extends AppCompatActivity {
                         tituloEjercicio.setText(pierna[numEjercicio-1][0]);
                         descripcion.setText(pierna[numEjercicio-1][1]);
                     }
-
                 }
 
                 //Abdominales
 
                 if(valueCat == 2){
 
-                    if(countLevel == 1 && numEjercicio > 1){
+                    if(countLevel != intermedio && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
                         descripcion.setText(abdominales[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio > 1){
+                    }else if(countLevel == intermedio && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
                         descripcion.setText(abdominales[numEjercicio-1][1]);
-                    }else if(countLevel == 2 && numEjercicio == 1){
+                    }else if(countLevel == intermedio && numEjercicio == 0){
                         numEjercicio = abdominales.length;
                         countLevel--;
                         tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
                         descripcion.setText(abdominales[numEjercicio-1][1]);
                     }
-
                 }
 
                 if(valueCat == 3){
 
-                    if(countLevel == 1 && numEjercicio > 1){
+                    if(countLevel != avanzado && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
                         descripcion.setText(abdominales[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio > 1){
+                    }else if(countLevel == avanzado && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
                         descripcion.setText(abdominales[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio == 1){
+                    }else if(countLevel == avanzado && numEjercicio == 0){
                         numEjercicio = abdominales.length;
                         countLevel--;
                         tituloEjercicio.setText(abdominales[numEjercicio-1][0]);
                         descripcion.setText(abdominales[numEjercicio-1][1]);
                     }
-
                 }
 
-                //Espalda hombros
+                //Hombros y espalda
 
                 if(valueCat == 5){
 
-                    if(countLevel == 1 && numEjercicio > 1){
+                    if(countLevel != intermedio && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
                         descripcion.setText(espaldaHombros[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio > 1){
+                    }else if(countLevel == intermedio && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
                         descripcion.setText(espaldaHombros[numEjercicio-1][1]);
-                    }else if(countLevel == 2 && numEjercicio == 1){
+                    }else if(countLevel == intermedio && numEjercicio == 0){
                         numEjercicio = espaldaHombros.length;
                         countLevel--;
                         tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
                         descripcion.setText(espaldaHombros[numEjercicio-1][1]);
                     }
-
                 }
 
                 if(valueCat == 6){
 
-                    if(countLevel == 1 && numEjercicio > 1){
+                    if(countLevel != avanzado && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
                         descripcion.setText(espaldaHombros[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio > 1){
+                    }else if(countLevel == avanzado && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
                         descripcion.setText(espaldaHombros[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio == 1){
+                    }else if(countLevel == avanzado && numEjercicio == 0){
                         numEjercicio = espaldaHombros.length;
                         countLevel--;
                         tituloEjercicio.setText(espaldaHombros[numEjercicio-1][0]);
                         descripcion.setText(espaldaHombros[numEjercicio-1][1]);
                     }
-
                 }
 
-                //pecho
+                //Pecho
 
                 if(valueCat == 8){
 
-                    if(countLevel == 1 && numEjercicio > 1){
+                    if(countLevel != intermedio && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(pecho[numEjercicio-1][0]);
                         descripcion.setText(pecho[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio > 1){
+                    }else if(countLevel == intermedio && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(pecho[numEjercicio-1][0]);
                         descripcion.setText(pecho[numEjercicio-1][1]);
-                    }else if(countLevel == 2 && numEjercicio == 1){
+                    }else if(countLevel == intermedio && numEjercicio == 0){
                         numEjercicio = pecho.length;
                         countLevel--;
                         tituloEjercicio.setText(pecho[numEjercicio-1][0]);
                         descripcion.setText(pecho[numEjercicio-1][1]);
                     }
-
                 }
 
                 if(valueCat == 9){
 
-                    if(countLevel == 1 && numEjercicio > 1){
+                    if(countLevel != avanzado && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(pecho[numEjercicio-1][0]);
                         descripcion.setText(pecho[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio > 1){
+                    }else if(countLevel == avanzado && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(pecho[numEjercicio-1][0]);
                         descripcion.setText(pecho[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio == 1){
+                    }else if(countLevel == avanzado && numEjercicio == 0){
                         numEjercicio = pecho.length;
                         countLevel--;
                         tituloEjercicio.setText(pecho[numEjercicio-1][0]);
                         descripcion.setText(pecho[numEjercicio-1][1]);
                     }
-
                 }
 
                 //Brazo
 
                 if(valueCat == 11){
 
-                    if(countLevel == 1 && numEjercicio > 1){
+                    if(countLevel != intermedio && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(brazo[numEjercicio-1][0]);
                         descripcion.setText(brazo[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio > 1){
+                    }else if(countLevel == intermedio && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(brazo[numEjercicio-1][0]);
                         descripcion.setText(brazo[numEjercicio-1][1]);
-                    }else if(countLevel == 2 && numEjercicio == 1){
+                    }else if(countLevel == intermedio && numEjercicio == 0){
                         numEjercicio = brazo.length;
                         countLevel--;
                         tituloEjercicio.setText(brazo[numEjercicio-1][0]);
                         descripcion.setText(brazo[numEjercicio-1][1]);
                     }
-
                 }
 
                 if(valueCat == 12){
 
-                    if(countLevel == 1 && numEjercicio > 1){
+                    if(countLevel != avanzado && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(brazo[numEjercicio-1][0]);
                         descripcion.setText(brazo[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio > 1){
+                    }else if(countLevel == avanzado && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(brazo[numEjercicio-1][0]);
                         descripcion.setText(brazo[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio == 1){
+                    }else if(countLevel == avanzado && numEjercicio == 0){
                         numEjercicio = brazo.length;
                         countLevel--;
                         tituloEjercicio.setText(brazo[numEjercicio-1][0]);
                         descripcion.setText(brazo[numEjercicio-1][1]);
                     }
-
                 }
 
-                //Pierna
+                //pierna
 
                 if(valueCat == 14){
 
-                    if(countLevel == 1 && numEjercicio > 1){
+                    if(countLevel != intermedio && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(pierna[numEjercicio-1][0]);
                         descripcion.setText(pierna[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio > 1){
+                    }else if(countLevel == intermedio && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(pierna[numEjercicio-1][0]);
                         descripcion.setText(pierna[numEjercicio-1][1]);
-                    }else if(countLevel == 2 && numEjercicio == 1){
+                    }else if(countLevel == intermedio && numEjercicio == 0){
                         numEjercicio = pierna.length;
                         countLevel--;
                         tituloEjercicio.setText(pierna[numEjercicio-1][0]);
                         descripcion.setText(pierna[numEjercicio-1][1]);
                     }
-
                 }
 
                 if(valueCat == 15){
 
-                    if(countLevel == 1 && numEjercicio > 1){
+                    if(countLevel != avanzado && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(pierna[numEjercicio-1][0]);
                         descripcion.setText(pierna[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio > 1){
+                    }else if(countLevel == avanzado && numEjercicio > 1){
                         numEjercicio--;
                         tituloEjercicio.setText(pierna[numEjercicio-1][0]);
                         descripcion.setText(pierna[numEjercicio-1][1]);
-                    }else if(countLevel > 1 && numEjercicio == 1){
+                    }else if(countLevel == avanzado && numEjercicio == 0){
                         numEjercicio = pierna.length;
                         countLevel--;
                         tituloEjercicio.setText(pierna[numEjercicio-1][0]);
                         descripcion.setText(pierna[numEjercicio-1][1]);
                     }
-
                 }
+
 
             }
 
@@ -693,6 +674,7 @@ public class activityExercicios extends AppCompatActivity {
             Toast.makeText(this, "Error", Toast.LENGTH_LONG).show();
 
         }
+        finish();
     }
 
 }

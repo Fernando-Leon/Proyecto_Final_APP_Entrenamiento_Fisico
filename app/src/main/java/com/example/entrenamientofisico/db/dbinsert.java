@@ -7,14 +7,15 @@ import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
 
+import com.example.entrenamientofisico.activity_informes;
 import com.example.entrenamientofisico.entidades.historial;
+import com.example.entrenamientofisico.popupChangeImc;
 
 import java.util.ArrayList;
 
 public class dbinsert extends dbHelper{
 
     Context context;
-
 
     public dbinsert(@Nullable Context context) {
         super(context);
@@ -26,7 +27,6 @@ public class dbinsert extends dbHelper{
         long id = 0;
 
         try {
-
             dbHelper dbHelp = new dbHelper(context);
             SQLiteDatabase db = dbHelp.getWritableDatabase();
 
@@ -39,6 +39,28 @@ public class dbinsert extends dbHelper{
         }
 
         return id;
+    }
+
+    public long insertImc(String peso, String altura, String imc){
+
+        long id = 0;
+
+        try {
+            dbHelper dbHelp = new dbHelper(context);
+            SQLiteDatabase db = dbHelp.getWritableDatabase();
+
+            ContentValues values = new ContentValues();
+            values.put("peso", peso);
+            values.put("altura", altura);
+            values.put("imc", imc);
+
+            id = db.insert("t_imc", null, values);
+        }catch (Exception ex){
+            ex.toString();
+        }
+
+        return id;
+
     }
 
     public ArrayList<historial> mostrarHistorial(){
@@ -65,4 +87,5 @@ public class dbinsert extends dbHelper{
         cursor.close();
         return lista;
     }
+
 }

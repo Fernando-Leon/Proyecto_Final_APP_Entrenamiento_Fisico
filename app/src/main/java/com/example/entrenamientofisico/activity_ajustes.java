@@ -6,14 +6,18 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.entrenamientofisico.db.dbHelper;
+import com.example.entrenamientofisico.db.dbinsert;
 
 public class activity_ajustes extends AppCompatActivity {
 
-    private Button exit;
-    private Button deleteHistory;
+    private Button exit, deleteHistory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +50,7 @@ public class activity_ajustes extends AppCompatActivity {
                 .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
+                        deleteTable();
                     }
                 })
                 .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -77,6 +81,8 @@ public class activity_ajustes extends AppCompatActivity {
                 .show();
     }
 
+    //Menu de navegacion
+
     public void statusInicio(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
@@ -90,5 +96,22 @@ public class activity_ajustes extends AppCompatActivity {
     public void statusInformes(View view) {
         Intent intent = new Intent(this, activity_informes.class);
         startActivity(intent);
+    }
+
+    //Metodo para eliminar los registros de la tabal historial
+
+    private void deleteTable(){
+        dbinsert deleted = new dbinsert(activity_ajustes.this);
+
+        SQLiteDatabase db = deleted.getWritableDatabase();
+
+        try{
+            db.execSQL("DELETE FROM t_historial");
+            db.execSQL("DELETE FROM t_imc");
+        } catch (Exception ex){
+            ex.toString();
+        } finally {
+            db.close();
+        }
     }
 }

@@ -44,40 +44,52 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:id="@+id/inicio"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="statusInicio"
+                android:background="#000"
+                android:src="@drawable/inicio"
+                android:layout_margin="10dp"
                 android:text="Home"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"></ImageButton>
 
-            <Button
+            <ImageButton
                 android:id="@+id/informesButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="statusInformes"
+                android:background="#000"
+                android:src="@drawable/infromes"
+                android:layout_margin="10dp"
                 android:text="Informe"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"></ImageButton>
 
-            <Button
+            <ImageButton
                 android:id="@+id/estadisticasButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="#000"
+                android:src="@drawable/estadisticas"
+                android:layout_margin="10dp"
                 android:text="Estadisticas"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"></ImageButton>
 
-            <Button
+            <ImageButton
                 android:id="@+id/ajustesButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="statusAjustes"
+                android:background="#000"
+                android:src="@drawable/ajustes"
+                android:layout_margin="10dp"
                 android:text="Ajustes"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"></ImageButton>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

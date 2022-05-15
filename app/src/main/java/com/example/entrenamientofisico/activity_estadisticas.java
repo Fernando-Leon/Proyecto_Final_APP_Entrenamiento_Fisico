@@ -42,17 +42,6 @@ public class activity_estadisticas extends AppCompatActivity {
         listahistorialadapter adapter = new listahistorialadapter(dbhistory.mostrarHistorial());
 
         lista.setAdapter(adapter);
-
-
-        /*
-        dbHelper dbHelp = new dbHelper(activity_estadisticas.this);
-        SQLiteDatabase db = dbHelp.getWritableDatabase();
-        if(db != null){
-            Toast.makeText(this, "Base de Datos Creada", Toast.LENGTH_LONG).show();
-        }else{
-            Toast.makeText(this, "Error al craer Base de Datos", Toast.LENGTH_LONG).show();
-        */
-
     }
 
     public void statusInicio(View view) {

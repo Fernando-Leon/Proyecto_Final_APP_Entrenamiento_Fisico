@@ -8,9 +8,10 @@ import androidx.annotation.Nullable;
 
 public class dbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
     private static final String DATABASE_NOMBRE = "historial.db";
     private static final String TABLE_HISTORIAL = "t_historial";
+    private static final String TABLE_IMC = "t_imc";
 
 
     public dbHelper(@Nullable Context context) {
@@ -24,13 +25,18 @@ public class dbHelper extends SQLiteOpenHelper {
                 "titulo TEXT NOT NULL)");
 
 
-
+        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_IMC + "(" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "peso REAL NOT NULL, " +
+                "altura REAL NOT NULL, " +
+                "imc REAL NOT NULL)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
         sqLiteDatabase.execSQL("DROP TABLE " + TABLE_HISTORIAL);
+        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_IMC);
         onCreate(sqLiteDatabase);
 
     }
