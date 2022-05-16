@@ -73,17 +73,21 @@
 
                     <RadioButton
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
+                        android:background="@drawable/abdomen1"
                         android:layout_margin="10dp"
                         android:id="@+id/c1r1"
-                        android:text="Principiante" />
+                        android:textColor="#FFF"
+                        android:text=" Abdominales principiante"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        />
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
+                        android:background="@drawable/abdomen2"
                         android:layout_margin="10dp"
                         android:id="@+id/c1r2"
                         android:text="Intermedio" />
@@ -91,7 +95,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
+                        android:background="@drawable/abdomen3"
                         android:layout_margin="10dp"
                         android:id="@+id/c1r3"
                         android:text="Avanzado" />

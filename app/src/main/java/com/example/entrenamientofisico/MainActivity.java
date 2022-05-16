@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Creacion de la base de datos
 
-        /*
+/*
         dbHelper dbHelp = new dbHelper(MainActivity.this);
         SQLiteDatabase db = dbHelp.getWritableDatabase();
         if(db != null){
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Error al craer Base de Datos", Toast.LENGTH_LONG).show();
         }
-        */
+*/
 
 
         //Genera una frase aleatoria cada que se ejecute la aplicacion
