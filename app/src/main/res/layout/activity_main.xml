@@ -90,7 +90,12 @@
                         android:background="@drawable/abdomen2"
                         android:layout_margin="10dp"
                         android:id="@+id/c1r2"
-                        android:text="Intermedio" />
+                        android:text="Abdominales intermedio"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="#FFF"
+                        />
+
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -98,7 +103,10 @@
                         android:background="@drawable/abdomen3"
                         android:layout_margin="10dp"
                         android:id="@+id/c1r3"
-                        android:text="Avanzado" />
+                        android:text="Abdominales avanzado"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="#FFF" />
 
                     <TextView
                         android:layout_width="match_parent"
