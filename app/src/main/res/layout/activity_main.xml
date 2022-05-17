@@ -75,11 +75,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/abdomen1"
                         android:layout_margin="10dp"
                         android:id="@+id/c1r1"
-                        android:textColor="#FFF"
                         android:text=" Abdominales principiante"
+                        android:background="@drawable/abdomen1"
+                        android:textColor="#FFF"
                         android:textSize="17dp"
                         android:textStyle="bold"
                         />
@@ -87,26 +87,28 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/abdomen2"
                         android:layout_margin="10dp"
                         android:id="@+id/c1r2"
                         android:text="Abdominales intermedio"
+                        android:background="@drawable/abdomen2"
+                        android:textColor="#FFF"
                         android:textSize="17dp"
                         android:textStyle="bold"
-                        android:textColor="#FFF"
+
                         />
 
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/abdomen3"
                         android:layout_margin="10dp"
                         android:id="@+id/c1r3"
                         android:text="Abdominales avanzado"
+                        android:background="@drawable/abdomen3"
+                        android:textColor="#FFF"
                         android:textSize="17dp"
                         android:textStyle="bold"
-                        android:textColor="#FFF" />
+                     />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -121,26 +123,42 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
                         android:layout_margin="10dp"
                         android:id="@+id/c2r1"
-                        android:text="Principiante" />
+                        android:text="Hombro y espalda Principiante"
+                        android:background="@drawable/espaldayhombro1"
+                        android:textColor="#FFF"
+                        android:textSize="17dp"
+                        android:autoSizeMaxTextSize="17dp"
+                        android:textStyle="bold"
+
+                        />
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
                         android:layout_margin="10dp"
                         android:id="@+id/c2r2"
-                        android:text="Intermedio" />
+                        android:text="Hombro y espalda intermedio"
+                        android:background="@drawable/espaldayhombro2"
+                        android:textColor="#FFF"
+                        android:textSize="17dp"
+                        android:autoSizeMaxTextSize="17dp"
+                        android:textStyle="bold"
+                        />
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
                         android:layout_margin="10dp"
                         android:id="@+id/c2r3"
-                        android:text="Avanzado" />
+                        android:text="Hombro y espalda avenzado"
+                        android:background="@drawable/espaldayhombro3"
+                        android:textColor="#FFF"
+                        android:textSize="17dp"
+                        android:autoSizeMaxTextSize="17dp"
+                        android:textStyle="bold"
+                        />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -155,26 +173,40 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
                         android:layout_margin="10dp"
                         android:id="@+id/c3r1"
-                        android:text="Principiante" />
+                        android:text="Pecho principiante"
+                        android:background="@drawable/pecho1"
+                        android:textColor="#FFF"
+                        android:textSize="17dp"
+                        android:autoSizeMaxTextSize="17dp"
+                        android:textStyle="bold"
+                        />
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
                         android:layout_margin="10dp"
                         android:id="@+id/c3r2"
-                        android:text="Intermedio" />
+                        android:text="Pecho intermedio"
+                        android:background="@drawable/pecho2"
+                        android:textColor="#FFF"
+                        android:textSize="17dp"
+                        android:autoSizeMaxTextSize="17dp"
+                        android:textStyle="bold" />
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
                         android:layout_margin="10dp"
                         android:id="@+id/c3r3"
-                        android:text="Avanzado" />
+                        android:text="Pecho avanzado"
+                        android:background="@drawable/pecho3"
+                        android:textColor="#FFF"
+                        android:textSize="17dp"
+                        android:autoSizeMaxTextSize="17dp"
+                        android:textStyle="bold"
+                        />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -189,26 +221,38 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
                         android:layout_margin="10dp"
                         android:id="@+id/c4r1"
-                        android:text="Principiante" />
+                        android:text="Brazo principiante"
+                        android:background="@drawable/brazo1"
+                        android:textColor="#FFF"
+                        android:textSize="17dp"
+                        android:autoSizeMaxTextSize="17dp"
+                        android:textStyle="bold" />
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
                         android:layout_margin="10dp"
                         android:id="@+id/c4r2"
-                        android:text="Intermedio" />
+                        android:text="Brazo intermedio"
+                        android:background="@drawable/brazo2"
+                        android:textColor="#FFF"
+                        android:textSize="17dp"
+                        android:autoSizeMaxTextSize="17dp"
+                        android:textStyle="bold"/>
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
                         android:layout_margin="10dp"
                         android:id="@+id/c4r3"
-                        android:text="Avanzado" />
+                        android:text="Brazo avanzado"
+                        android:background="@drawable/brazo3"
+                        android:textColor="#FFF"
+                        android:textSize="17dp"
+                        android:autoSizeMaxTextSize="17dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -223,26 +267,39 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
                         android:layout_margin="10dp"
                         android:id="@+id/c5r1"
-                        android:text="Principiante" />
+                        android:text="Pierna principiante"
+                        android:background="@drawable/pierna1"
+                        android:textColor="#FFF"
+                        android:textSize="17dp"
+                        android:autoSizeMaxTextSize="17dp"
+                        android:textStyle="bold" />
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
                         android:layout_margin="10dp"
                         android:id="@+id/c5r2"
-                        android:text="Intermedio" />
+                        android:text="Pierna intermedio"
+                        android:background="@drawable/pierna2"
+                        android:textColor="#FFF"
+                        android:textSize="17dp"
+                        android:autoSizeMaxTextSize="17dp"
+                        android:textStyle="bold" />
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:button="@android:color/transparent"
-                        android:background="@drawable/radio_buttom_customised"
                         android:layout_margin="10dp"
                         android:id="@+id/c5r3"
-                        android:text="Avanzado" />
+                        android:text="Pierna avanzado"
+                        android:background="@drawable/pierna3"
+                        android:textColor="#FFF"
+                        android:textSize="17dp"
+                        android:autoSizeMaxTextSize="17dp"
+                        android:textStyle="bold" />
+                    />
 
                 </RadioGroup>
 
