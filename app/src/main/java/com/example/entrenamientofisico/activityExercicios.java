@@ -52,7 +52,7 @@ public class activityExercicios extends AppCompatActivity {
         int numCategoria = valueCat;
 
         String abdominales[][] = {
-                {"Saltos De Tijera","Comienzo a con los pies juntos y los brazos a los lados; a continuación, salta con los pies separados y las manos sobre la cabeza. Vuelve a la posición original y realiza la siguiente repetición. Este ejercicio sirve para entrenar todo el cuerpo y trabaja todos los grandes grupos musculares."},
+                {"Saltos De Tijera","Comienzo con los pies juntos y los brazos a los lados; a continuación, salta con los pies separados y las manos sobre la cabeza. Vuelve a la posición original y realiza la siguiente repetición. Este ejercicio sirve para entrenar todo el cuerpo y trabaja todos los grandes grupos musculares."},
                 {"Crunch Abdominales","Túmbate boca arriba con las rodillas flexionadas y los brazos extendidos hacia delante. A continuación, levanta el tren superior del suelo. Aguanta unos segundos y vuelve a la posición original lentamente. Sobre todo, se trabajan el músculo del recto del abdomen y los oblicuos."},
                 {"Twist (ruso)","Siéntate en el suelo con las rodillas flexionadas, los pies ligeramente levantados y la espalda inclinada hacia atrás. A continuación, une las manos y gira de un lado a otro."},
                 {"Elevaciones de Piernas","Túmbate de espaldas y coloca las manos debajo de las caderas a modo de apoyo. Luego eleva las piernas rectas hasta formar un ángulo recto con el suelo. Baja las piernas despacio y vuelve a repetir."},

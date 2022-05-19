@@ -26,51 +26,83 @@
                 android:textColor="#fff"></TextView>
         </LinearLayout>
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Estas listo?"
+                    android:textColor="#fff"
+                    android:layout_margin="20dp"
+                    android:id="@+id/nombreEjercicio">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Da click en siguiente para empezar"
+                    android:textColor="#fff"
+                    android:layout_margin="20dp"
+                    android:id="@+id/descripcionEjercicio">
+                </TextView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Estas listo?"
-                android:textColor="#fff"
-                android:layout_margin="20dp"
-                android:id="@+id/nombreEjercicio">
-            </TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Da click en siguiente para empezar"
-                android:textColor="#fff"
-                android:layout_margin="20dp"
-                android:id="@+id/descripcionEjercicio">
-            </TextView>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="siguiente"
                 android:id="@+id/siguiente"
+                android:background="@drawable/layoutbutton"
+                android:layout_margin="10dp"
                 android:layout_gravity="center_horizontal"
+                android:textColor="#000"
+                android:foreground="?android:attr/selectableItemBackground"
                 ></Button>
 
-            <Button android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Atras"
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/layoutbutton"
+                android:text="Atras"
+                android:layout_margin="10dp"
+                android:textColor="#000"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:id="@+id/atras">
             </Button>
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Salir"
+                android:textColor="#000"
+                android:layout_margin="10dp"
                 android:id="@+id/salirToMain"
+                android:background="@drawable/layoutbutton"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_gravity="center_horizontal">
             </Button>
+
         </LinearLayout>
 
     </LinearLayout>

@@ -27,7 +27,6 @@ public class popupChangeImc extends AppCompatDialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.layout_change_imc, null);
         builder.setView(view)
-                .setTitle("Cambiar (Peso y Altura)")
                 .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {

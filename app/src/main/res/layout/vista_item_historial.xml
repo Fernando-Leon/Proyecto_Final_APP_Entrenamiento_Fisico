@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#000">
+    android:orientation="vertical"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:id="@+id/viewTitulo"
-            android:textColor="#fff">
-        </TextView>
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bacground_items_list"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:foregroundGravity="center"
+            android:padding="20dp"
+            android:text="Hola mundo"
+            android:textAlignment="textStart"
+            android:textColor="#fff"
+            android:textSize="15dp"></TextView>
     </LinearLayout>
-
 </LinearLayout>

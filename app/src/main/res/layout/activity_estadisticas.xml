@@ -19,12 +19,22 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="Estadisticas"
-                android:textAlignment="center"
+                android:padding="20dp"
+                android:text="ESTADISTICAS"
+                android:textAlignment="textStart"
                 android:textColor="#fff"
-                android:textSize="20sp"></TextView>
+                android:textStyle="bold"
+                android:background="@drawable/lineabordedow"
+                android:textSize="20dp"></TextView>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="Historial de ejericios"
+                android:textColor="#fff"
+                android:background="@drawable/lineabordedow"
+                android:textSize="18dp"></TextView>
         </LinearLayout>
 
         <ScrollView
@@ -34,38 +44,41 @@
 
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:id="@+id/listahistorial"/>
         </ScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="#000">
 
             <ImageButton
                 android:id="@+id/inicio"
+                android:onClick="statusInicio"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="statusInicio"
-                android:background="#000"
-                android:src="@drawable/inicio"
-                android:layout_margin="10dp"
-                android:text="Home"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_home_24"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/lineaborde"
                 tools:ignore="Suspicious0dp"></ImageButton>
 
             <ImageButton
                 android:id="@+id/informesButton"
+                android:onClick="statusInformes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="statusInformes"
-                android:background="#000"
-                android:src="@drawable/infromes"
-                android:layout_margin="10dp"
-                android:text="Informe"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_assessment_24"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/lineaborde"
                 tools:ignore="Suspicious0dp"></ImageButton>
 
             <ImageButton
@@ -73,22 +86,24 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#000"
-                android:src="@drawable/estadisticas"
-                android:layout_margin="10dp"
-                android:text="Estadisticas"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_assignment_24"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/lineaborde"
                 tools:ignore="Suspicious0dp"></ImageButton>
 
             <ImageButton
                 android:id="@+id/ajustesButton"
+                android:onClick="statusAjustes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="statusAjustes"
-                android:background="#000"
-                android:src="@drawable/ajustes"
-                android:layout_margin="10dp"
-                android:text="Ajustes"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_settings_24"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/lineaborde"
                 tools:ignore="Suspicious0dp"></ImageButton>
         </LinearLayout>
     </LinearLayout>

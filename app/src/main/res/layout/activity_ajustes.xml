@@ -52,42 +52,47 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="#000">
 
             <ImageButton
                 android:id="@+id/inicio"
+                android:onClick="statusInicio"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="statusInicio"
-                android:background="#000"
-                android:src="@drawable/inicio"
-                android:layout_margin="10dp"
-                android:text="Home"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_home_24"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/lineaborde"
                 tools:ignore="Suspicious0dp"></ImageButton>
 
             <ImageButton
                 android:id="@+id/informesButton"
+                android:onClick="statusInformes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="statusInformes"
-                android:background="#000"
-                android:src="@drawable/infromes"
-                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_assessment_24"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/lineaborde"
                 android:text="Informe"
                 tools:ignore="Suspicious0dp"></ImageButton>
 
             <ImageButton
                 android:id="@+id/estadisticasButton"
+                android:onClick="statusEstadisticas"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="statusEstadisticas"
-                android:background="#000"
-                android:src="@drawable/estadisticas"
-                android:layout_margin="10dp"
-                android:text="Estadisticas"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_assignment_24"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/lineaborde"
                 tools:ignore="Suspicious0dp"></ImageButton>
 
             <ImageButton
@@ -95,10 +100,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#000"
-                android:src="@drawable/ajustes"
-                android:layout_margin="10dp"
-                android:text="Ajustes"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_settings_24"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/lineaborde"
                 tools:ignore="Suspicious0dp"></ImageButton>
         </LinearLayout>
     </LinearLayout>

@@ -20,11 +20,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="Informes"
-            android:textAlignment="center"
+            android:padding="20dp"
+            android:text="INFORMES"
+            android:textAlignment="textStart"
             android:textColor="#fff"
-            android:textSize="20sp"></TextView>
+            android:textStyle="bold"
+            android:background="@drawable/lineabordedow"
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:layout_width="match_parent"
@@ -32,7 +34,8 @@
             android:padding="20dp"
             android:text="Indice de masa corporal (IMC)"
             android:textColor="#fff"
-            android:textSize="15sp"></TextView>
+            android:background="@drawable/lineabordedow"
+            android:textSize="18dp"></TextView>
 
     </LinearLayout>
 
@@ -51,6 +54,8 @@
                     android:layout_height="wrap_content"
                     android:text="Peso (Kg)"
                     android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
                     android:padding="20dp"
                     ></TextView>
 
@@ -60,14 +65,17 @@
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:text="50"
+                android:textSize="14dp"
                 android:textColor="#fff"></TextView>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Altura m"
+                android:text="Altura (m)"
                 android:textColor="#fff"
                 android:padding="20dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
                 ></TextView>
 
             <TextView
@@ -76,14 +84,18 @@
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:text="1.78"
+                android:textSize="14dp"
                 android:textColor="#fff"></TextView>
 
-            <Button
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cambiar"
-                android:id="@+id/abrirPopup">
-            </Button>
+                android:text="IMC (a/m*m)"
+                android:textColor="#fff"
+                android:padding="20dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                ></TextView>
 
             <TextView
                 android:id="@+id/resultadoImc"
@@ -91,63 +103,107 @@
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:padding="20dp"
+                android:textSize="14dp"
                 android:text="IMC" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cambiar IMC"
+                android:textColor="#000"
+                android:background="@drawable/layoutbutton"
+                android:padding="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_gravity="center"
+                android:id="@+id/abrirPopup">
+            </Button>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/graficaimc"
+                android:layout_margin="20dp"
+                ></ImageView>
+
+            <TextView
+                android:id="@+id/recomendaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recomenaciones"
+                android:gravity="center"
+                android:padding="20dp"
+                android:textSize="15dp"
+                android:textColor="#fff"></TextView>
+
+            <TextView
+                android:id="@+id/listrecomendacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recomenaciones"
+                android:padding="20dp"
+                android:textSize="14dp"
+                android:textColor="#fff"></TextView>
 
         </LinearLayout>
 
     </ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/inicio"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="statusInicio"
-            android:background="#000"
-            android:src="@drawable/inicio"
-            android:layout_margin="10dp"
-            android:text="Home"
-            tools:ignore="Suspicious0dp"></ImageButton>
+            android:orientation="horizontal"
+            android:background="#000">
 
-        <ImageButton
-            android:id="@+id/informesButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#000"
-            android:src="@drawable/infromes"
-            android:layout_margin="10dp"
-            android:text="Informe"
-            tools:ignore="Suspicious0dp"></ImageButton>
+            <ImageButton
+                android:id="@+id/inicio"
+                android:onClick="statusInicio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_home_24"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/lineaborde"
+                tools:ignore="Suspicious0dp"></ImageButton>
 
-        <ImageButton
-            android:id="@+id/estadisticasButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#000"
-            android:src="@drawable/estadisticas"
-            android:layout_margin="10dp"
-            android:onClick="statusEstadisticas"
-            android:text="Estadisticas"
-            tools:ignore="Suspicious0dp"></ImageButton>
+            <ImageButton
+                android:id="@+id/informesButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_assessment_24"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/lineaborde"
+                tools:ignore="Suspicious0dp"></ImageButton>
 
-        <ImageButton
-            android:id="@+id/ajustesButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#000"
-            android:src="@drawable/ajustes"
-            android:layout_margin="10dp"
-            android:onClick="statusAjustes"
-            android:text="Ajustes"
-            tools:ignore="Suspicious0dp"></ImageButton>
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/estadisticasButton"
+                android:onClick="statusEstadisticas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_assignment_24"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/lineaborde"
+                tools:ignore="Suspicious0dp"></ImageButton>
+
+            <ImageButton
+                android:id="@+id/ajustesButton"
+                android:onClick="statusAjustes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_settings_24"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/lineaborde"
+                tools:ignore="Suspicious0dp"></ImageButton>
+        </LinearLayout>
 </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
