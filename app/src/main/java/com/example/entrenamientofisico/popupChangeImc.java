@@ -32,7 +32,8 @@ public class popupChangeImc extends AppCompatDialogFragment {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         String altura = editAltura.getText().toString();
                         String peso = editPeso.getText().toString();
-                        listener.applyTexts(altura, peso);
+
+                        listener.applyTexts(peso, altura);
                     }
                 })
                 .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -41,8 +42,9 @@ public class popupChangeImc extends AppCompatDialogFragment {
 
                     }
                 });
-        editAltura = view.findViewById(R.id.editAlturaText);
+
         editPeso = view.findViewById(R.id.editPesoText);
+        editAltura = view.findViewById(R.id.editAlturaText);
         return builder.create();
     }
 
@@ -58,8 +60,6 @@ public class popupChangeImc extends AppCompatDialogFragment {
     }
 
     public interface dialogChangeImc{
-        void applyTexts(String altura, String peso);
+        void applyTexts(String peso, String altura);
     }
-
-
 }

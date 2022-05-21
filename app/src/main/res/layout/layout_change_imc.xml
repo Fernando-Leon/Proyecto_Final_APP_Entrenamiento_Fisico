@@ -9,28 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Altura"
-            android:textColor="#fff"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:layout_marginLeft="5dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            ></TextView>
-
-        <EditText
-            android:id="@+id/editAlturaText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Introduce la altura"
-            android:textColor="#fff"
-            android:inputType="numberDecimal"
-            android:layout_margin="10dp"
-            android:textColorHint="#fff"></EditText>
 
         <TextView
             android:layout_width="match_parent"
@@ -53,6 +31,29 @@
             android:inputType="numberDecimal"
             android:textColor="#fff"
             android:layout_margin="5dp"
+            android:textColorHint="#fff"></EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Altura"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/editAlturaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Introduce la altura"
+            android:textColor="#fff"
+            android:inputType="numberDecimal"
+            android:layout_margin="10dp"
             android:textColorHint="#fff"></EditText>
     </LinearLayout>
 

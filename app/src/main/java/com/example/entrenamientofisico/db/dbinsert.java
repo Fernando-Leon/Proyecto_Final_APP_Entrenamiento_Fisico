@@ -7,9 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
 
-import com.example.entrenamientofisico.activity_informes;
 import com.example.entrenamientofisico.entidades.historial;
-import com.example.entrenamientofisico.popupChangeImc;
 
 import java.util.ArrayList;
 
@@ -41,28 +39,6 @@ public class dbinsert extends dbHelper{
         return id;
     }
 
-    public long insertImc(String peso, String altura, String imc){
-
-        long id = 0;
-
-        try {
-            dbHelper dbHelp = new dbHelper(context);
-            SQLiteDatabase db = dbHelp.getWritableDatabase();
-
-            ContentValues values = new ContentValues();
-            values.put("peso", peso);
-            values.put("altura", altura);
-            values.put("imc", imc);
-
-            id = db.insert("t_imc", null, values);
-        }catch (Exception ex){
-            ex.toString();
-        }
-
-        return id;
-
-    }
-
     public ArrayList<historial> mostrarHistorial(){
         dbHelper help = new dbHelper(context);
         SQLiteDatabase db = help.getWritableDatabase();
@@ -87,5 +63,49 @@ public class dbinsert extends dbHelper{
         cursor.close();
         return lista;
     }
+
+    public long insertImc(String peso, String altura, String imc){
+
+        long id = 0;
+
+        try {
+            dbHelper dbHelp = new dbHelper(context);
+            SQLiteDatabase db = dbHelp.getWritableDatabase();
+
+            ContentValues values = new ContentValues();
+            values.put("peso", peso);
+            values.put("altura", altura);
+            values.put("imc", imc);
+
+            id = db.insert("t_imc", null, values);
+        }catch (Exception ex){
+            ex.toString();
+        }
+
+        return id;
+    }
+
+    public historial verImc(){
+        dbHelper help = new dbHelper(context);
+        SQLiteDatabase db = help.getWritableDatabase();
+
+
+        historial history = null;
+        Cursor cursor;
+
+        cursor = db.rawQuery("SELECT * FROM t_imc WHERE id = (SELECT MAX(id) FROM t_imc);", null);
+
+        if(cursor.moveToFirst()){
+            history = new historial();
+            history.setPeso(cursor.getString(1));
+            history.setAltura(cursor.getString(2));
+            history.setImc(cursor.getString(3));
+        }
+
+        cursor.close();
+
+        return history;
+    }
+
 
 }

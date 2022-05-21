@@ -4,7 +4,13 @@ public class historial {
 
     private int id;
     private String titulo;
+    private int id2;
+    private String peso;
+    private String altura;
+    private String imc;
 
+    public historial() {
+    }
 
     public int getId() {
         return id;
@@ -22,4 +28,36 @@ public class historial {
         this.titulo = titleEjercicio;
     }
 
+
+    public int getId2() {
+        return id2;
+    }
+
+    public void setId2(int id2) {
+        this.id2 = id2;
+    }
+
+    public String getPeso() {
+        return peso;
+    }
+
+    public void setPeso(String peso) {
+        this.peso = peso;
+    }
+
+    public String getAltura() {
+        return altura;
+    }
+
+    public void setAltura(String altura) {
+        this.altura = altura;
+    }
+
+    public String getImc() {
+        return imc;
+    }
+
+    public void setImc(String imc) {
+        this.imc = imc;
+    }
 }
