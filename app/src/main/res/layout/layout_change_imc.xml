@@ -55,6 +55,7 @@
             android:inputType="numberDecimal"
             android:layout_margin="10dp"
             android:textColorHint="#fff"></EditText>
+
     </LinearLayout>
 
 </RelativeLayout>

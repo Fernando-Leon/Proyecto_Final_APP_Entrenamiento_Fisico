@@ -34,10 +34,6 @@ public class popupChangeImc extends AppCompatDialogFragment {
                         String altura = editAltura.getText().toString();
                         String peso = editPeso.getText().toString();
 
-                        if(altura == "" || peso == ""){
-                            altura = "1";
-                            peso = "1";
-                        }
 
                         listener.applyTexts(peso, altura);
                     }

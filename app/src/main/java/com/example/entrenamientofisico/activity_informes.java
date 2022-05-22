@@ -1,5 +1,6 @@
 package com.example.entrenamientofisico;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,6 +10,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,7 +25,7 @@ import java.util.ArrayList;
 
 public class activity_informes extends AppCompatActivity implements popupChangeImc.dialogChangeImc{
 
-    private TextView pesoView, alturaView, imc, rec, list;
+    private TextView imc, rec, list, pesoView, alturaView;
     private Button button;
 
     historial hist;
@@ -39,7 +41,7 @@ public class activity_informes extends AppCompatActivity implements popupChangeI
         imc = (TextView) findViewById(R.id.resultadoImc);
         rec = (TextView) findViewById(R.id.recomendaciones);
         list = (TextView) findViewById(R.id.listrecomendacion);
-        button = (Button) findViewById(R.id.abrirPopup);
+        button = (Button) findViewById(R.id.changeImc);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,26 +93,30 @@ public class activity_informes extends AppCompatActivity implements popupChangeI
         startActivity(intent);
     }
 
+
     @Override
     public void applyTexts(String peso, String altura) {
 
-        if(peso == "1" || altura == "1"){
-            Toast.makeText(this, "Asegurate de llenar los campos correctamente", Toast.LENGTH_LONG).show();
-        }else {
-            alturaView.setText(altura);
-            pesoView.setText(peso);
+            if(altura.isEmpty() || peso.isEmpty()){
+                Toast.makeText(activity_informes.this, "Error, favor de llenar todos los campos", Toast.LENGTH_LONG).show();
+            }
+            else{
+                float floatAltura = Float.parseFloat(altura);
+                float floatPeso = Float.parseFloat(peso);
 
-            String getAltura = alturaView.getText().toString();
-            String getPeso = pesoView.getText().toString();
-            float floatAltura = Float.parseFloat(getAltura);
-            float floatPeso = Float.parseFloat(getPeso);
-            float imcResult =  floatPeso / (floatAltura * floatAltura);
-            String imcString = String.valueOf(imcResult);
-            imc.setText(imcString);
+                if((floatAltura >= 0.50 && floatAltura <= 2.52) && (floatPeso >= 2 && floatPeso <= 650)){
+                        float imcResult =  floatPeso / (floatAltura * floatAltura);
+                        String imcResultString = String.valueOf(imcResult);
+                        funcRec(imcResult);
 
-            funcRec(imcResult);
-            registerImc();
-        }
+                        pesoView.setText(peso);
+                        alturaView.setText(altura);
+                        imc.setText(imcResultString);
+                        registerImc();
+                    }else{
+                        Toast.makeText(activity_informes.this, "Valores fuera de rango\nPeso min: 2Kg \tPeso max: 650kg\nAltura min: 0.5m \tAlrura max: 2.52m", Toast.LENGTH_LONG).show();
+                }
+            }
     }
 
     private void funcRec(float imcValue){
