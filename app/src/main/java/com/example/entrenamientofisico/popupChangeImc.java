@@ -30,8 +30,14 @@ public class popupChangeImc extends AppCompatDialogFragment {
                 .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
                         String altura = editAltura.getText().toString();
                         String peso = editPeso.getText().toString();
+
+                        if(altura == "" || peso == ""){
+                            altura = "1";
+                            peso = "1";
+                        }
 
                         listener.applyTexts(peso, altura);
                     }

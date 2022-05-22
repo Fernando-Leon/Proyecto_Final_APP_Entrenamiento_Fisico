@@ -31,6 +31,7 @@ public class listahistorialadapter extends RecyclerView.Adapter<listahistorialad
     @Override
     public void onBindViewHolder(@NonNull ContactViewHolder holder, int position) {
         holder.viewTitulo.setText(listaView.get(position).getTitleEjercicio());
+        holder.showdatetime.setText(listaView.get(position).getDate());
     }
 
     @Override
@@ -41,11 +42,12 @@ public class listahistorialadapter extends RecyclerView.Adapter<listahistorialad
     public class ContactViewHolder extends RecyclerView.ViewHolder {
 
         TextView viewTitulo;
+        TextView showdatetime;
 
         public ContactViewHolder(@NonNull View itemView) {
             super(itemView);
-
             viewTitulo = itemView.findViewById(R.id.viewTitulo);
+            showdatetime = itemView.findViewById(R.id.datetimeshow);
         }
     }
 }

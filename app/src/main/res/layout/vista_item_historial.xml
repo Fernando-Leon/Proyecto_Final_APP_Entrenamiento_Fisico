@@ -28,5 +28,13 @@
             android:textAlignment="textStart"
             android:textColor="#fff"
             android:textSize="15dp"></TextView>
+
+        <TextView
+            android:id="@+id/datetimeshow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="No sirvio">
+        </TextView>
     </LinearLayout>
 </LinearLayout>

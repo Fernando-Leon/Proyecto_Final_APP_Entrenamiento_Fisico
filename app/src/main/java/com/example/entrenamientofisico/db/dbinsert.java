@@ -54,6 +54,7 @@ public class dbinsert extends dbHelper{
                 history = new historial();
                 history.setId(cursor.getInt(0));
                 history.setTitleEjercicio(cursor.getString(1));
+                history.setDate(cursor.getString(2));
 
                 lista.add(history);
 

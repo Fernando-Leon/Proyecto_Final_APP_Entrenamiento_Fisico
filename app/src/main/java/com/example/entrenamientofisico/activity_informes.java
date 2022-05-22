@@ -93,20 +93,24 @@ public class activity_informes extends AppCompatActivity implements popupChangeI
 
     @Override
     public void applyTexts(String peso, String altura) {
-        alturaView.setText(altura);
-        pesoView.setText(peso);
 
-        String getAltura = alturaView.getText().toString();
-        String getPeso = pesoView.getText().toString();
-        float floatAltura = Float.parseFloat(getAltura);
-        float floatPeso = Float.parseFloat(getPeso);
-        float imcResult =  floatPeso / (floatAltura * floatAltura);
-        String imcString = String.valueOf(imcResult);
-        imc.setText(imcString);
+        if(peso == "1" || altura == "1"){
+            Toast.makeText(this, "Asegurate de llenar los campos correctamente", Toast.LENGTH_LONG).show();
+        }else {
+            alturaView.setText(altura);
+            pesoView.setText(peso);
 
-        funcRec(imcResult);
+            String getAltura = alturaView.getText().toString();
+            String getPeso = pesoView.getText().toString();
+            float floatAltura = Float.parseFloat(getAltura);
+            float floatPeso = Float.parseFloat(getPeso);
+            float imcResult =  floatPeso / (floatAltura * floatAltura);
+            String imcString = String.valueOf(imcResult);
+            imc.setText(imcString);
 
-        registerImc();
+            funcRec(imcResult);
+            registerImc();
+        }
     }
 
     private void funcRec(float imcValue){

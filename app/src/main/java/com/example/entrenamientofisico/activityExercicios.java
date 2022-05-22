@@ -6,12 +6,15 @@ import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.entrenamientofisico.db.dbinsert;
 
 public class activityExercicios extends AppCompatActivity {
@@ -19,6 +22,7 @@ public class activityExercicios extends AppCompatActivity {
     private TextView titulo, descripcion, tituloEjercicio;
     private Button botonRecorrer, botonRetroceder, salirMain;
     int numEjercicio = 0, countLevel = 0;
+    private ImageView imag;
 
     String indexTitle[] = {
             "Abdominales - pricipiante",
@@ -46,6 +50,7 @@ public class activityExercicios extends AppCompatActivity {
         titulo = (TextView) findViewById(R.id.tituloEjercicio);
         tituloEjercicio = (TextView) findViewById(R.id.nombreEjercicio);
         descripcion = (TextView) findViewById(R.id.descripcionEjercicio);
+        imag = (ImageView) findViewById(R.id.image_ex);
 
         Bundle getValue = getIntent().getExtras();
         int valueCat = getValue.getInt("value");
@@ -123,6 +128,21 @@ public class activityExercicios extends AppCompatActivity {
 
         };
 
+        //Imagen segun el ejercicio
+
+        String url[] = {"https://fernando-leon.github.io/urlsAnimation/gif1.gif",
+                "https://fernando-leon.github.io/Portafolio/whatsapp.png"};
+
+        Uri urlparse = null;
+
+
+        urlparse = Uri.parse(url[0]);
+
+
+        Glide.with(getApplicationContext()).load(urlparse).into(imag);
+
+        //Imagen segun el ejercicio
+
         int principiante = 1;
         int intermedio = 2;
         int avanzado = 3;
@@ -149,9 +169,37 @@ public class activityExercicios extends AppCompatActivity {
 
         botonRecorrer = (Button) findViewById(R.id.siguiente);
 
+        //Cambio de estado boton
+
+        if(numEjercicio == 0 && countLevel == 0){
+            botonRecorrer.setText("Iniciar");
+        }
+
         botonRecorrer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                botonRecorrer.setText("Siguiente");
+
+                if(numEjercicio > 0){
+                    botonRetroceder.setVisibility(View.VISIBLE);
+                }
+
+                if(numEjercicio == 10 || numEjercicio == 0){
+                    botonRetroceder.setVisibility(View.INVISIBLE);
+                }
+
+                if(numEjercicio == 10){
+                    botonRecorrer.setText("Continuar");
+                }
+
+                if((numEjercicio == 9 && (valueCat == 1 || valueCat == 4 || valueCat == 7 || valueCat == 10 || valueCat == 13)) || numEjercicio == 9 && countLevel == 1 || numEjercicio == 9 && countLevel == 2){
+                    botonRecorrer.setText("Finalizar");
+                }
+
+                //if(numEjercicio == 9 && countLevel == 1 || numEjercicio == 9 && countLevel == 2){
+                  //  botonRecorrer.setText("Finalizar");
+                //}
 
                 //Abdominales
 
@@ -399,9 +447,18 @@ public class activityExercicios extends AppCompatActivity {
 
         botonRetroceder = (Button) findViewById(R.id.atras);
 
+        if(numEjercicio == 0 && countLevel == 0){
+            botonRetroceder.setVisibility(View.INVISIBLE);
+        }
+
         botonRetroceder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+                if(numEjercicio == 1){
+                    botonRecorrer.setVisibility(View.INVISIBLE);
+                }
 
                 if(numEjercicio > 1){
 
@@ -637,6 +694,11 @@ public class activityExercicios extends AppCompatActivity {
                 }
 
 
+                if(numEjercicio == 1){
+                    botonRetroceder.setVisibility(View.INVISIBLE);
+                }
+
+                botonRecorrer.setText("Siguiente");
             }
 
         });

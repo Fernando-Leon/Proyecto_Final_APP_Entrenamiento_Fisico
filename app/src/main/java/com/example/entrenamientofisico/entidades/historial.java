@@ -8,7 +8,7 @@ public class historial {
     private String peso;
     private String altura;
     private String imc;
-
+    private String date;
     public historial() {
     }
 
@@ -59,5 +59,13 @@ public class historial {
 
     public void setImc(String imc) {
         this.imc = imc;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }
