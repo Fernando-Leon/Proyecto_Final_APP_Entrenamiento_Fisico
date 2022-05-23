@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/background"
     tools:context=".activity_estadisticas">
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,9 +22,8 @@
                 android:padding="20dp"
                 android:text="ESTADISTICAS"
                 android:textAlignment="textStart"
-                android:textColor="#fff"
                 android:textStyle="bold"
-                android:background="@drawable/lineabordedow"
+                android:background="@color/main"
                 android:textSize="20dp"></TextView>
 
             <TextView
@@ -32,9 +31,32 @@
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:text="Historial de ejericios"
-                android:textColor="#fff"
                 android:background="@drawable/lineabordedow"
                 android:textSize="18dp"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="20dp"
+                android:text="Tipo ejercicio"
+                android:textSize="15dp"></TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="20dp"
+                android:text="Fecha"
+                android:textSize="15dp">
+            </TextView>
+
         </LinearLayout>
 
         <ScrollView
@@ -52,8 +74,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#000">
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/inicio"

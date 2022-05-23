@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
     tools:context=".activity_ajustes">
 
     <LinearLayout
@@ -20,11 +19,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="Ajustes"
-                android:textAlignment="center"
-                android:textColor="#fff"
-                android:textSize="20sp"></TextView>
+                android:padding="20dp"
+                android:text="AJUSTES"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:background="@color/main"
+                android:textSize="20dp"></TextView>
 
         </LinearLayout>
 
@@ -38,12 +38,18 @@
                 android:id="@+id/deleteHistorial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_margin="0dp"
+                android:padding="20dp"
                 android:text="Eliminar historial"></Button>
 
             <Button
                 android:id="@+id/exitAplication"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_margin="0dp"
+                android:padding="20dp"
                 android:text="Salir"></Button>
 
         </LinearLayout>
@@ -52,8 +58,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#000">
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/inicio"

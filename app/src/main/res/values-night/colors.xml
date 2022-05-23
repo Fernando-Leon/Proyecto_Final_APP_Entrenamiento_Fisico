@@ -3,9 +3,8 @@
 <!-- Colores modo dia-->
 <resources>
     <color name="splashcolor">#000000</color>
-    <color name="main">#8aaebb</color>
-    <color name="background">#FFFFFF</color>
-    <color name="textcolor">#000000</color>
+    <color name="main">#000000</color>
+    <color name="background">#000000</color>
+    <color name="textcolor">#FFFFFF</color>
     <color name="textcolorcontrasteimage">#FFFFFF</color>
-    <color name="deimitacion">#c6c6c6</color>
 </resources>

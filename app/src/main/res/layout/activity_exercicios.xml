@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000"
+    android:background="@color/background"
     tools:context=".activityExercicios">
 
     <LinearLayout
@@ -20,13 +20,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="20dp"
                 android:text="Error"
                 android:textAlignment="textStart"
                 android:id="@+id/tituloEjercicio"
-                android:layout_margin="20dp"
-                android:textSize="20dp"
-                android:textColor="#fff"></TextView>
+                android:padding="20dp"
+                android:background="@color/main"
+                android:textSize="20dp"></TextView>
         </LinearLayout>
 
             <LinearLayout
@@ -40,7 +39,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Estas listo?"
-                    android:textColor="#fff"
                     android:layout_margin="20dp"
                     android:textSize="18dp"
                     android:id="@+id/nombreEjercicio">
@@ -50,7 +48,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Da click en siguiente para empezar"
-                    android:textColor="#fff"
                     android:textSize="15dp"
                     android:layout_margin="20dp"
                     android:id="@+id/descripcionEjercicio">
@@ -81,7 +78,6 @@
                 android:background="@drawable/layoutbutton"
                 android:layout_margin="10dp"
                 android:layout_gravity="center_horizontal"
-                android:textColor="#000"
                 android:foreground="?android:attr/selectableItemBackground"
                 ></Button>
 
@@ -93,7 +89,6 @@
                 android:background="@drawable/layoutbutton"
                 android:text="Atras"
                 android:layout_margin="10dp"
-                android:textColor="#000"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:id="@+id/atras">
             </Button>
@@ -103,7 +98,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Salir"
-                android:textColor="#000"
                 android:layout_margin="10dp"
                 android:id="@+id/salirToMain"
                 android:background="@drawable/layoutbutton"
