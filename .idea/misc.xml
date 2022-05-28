@@ -4,20 +4,26 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/bacground_items_list.xml" value="0.1455" />
+        <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/bakgroundday.xml" value="0.2315" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/borderedondo.xml" value="0.2785" />
-        <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/bordes_redondo_item.xml" value="0.1" />
+        <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/bordes_redondo_item.xml" value="0.2" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/delimitaciones.xml" value="0.267" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/ic_baseline_assessment_24.xml" value="0.1" />
+        <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/ic_baseline_assessment_focus_24.xml" value="0.2075" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/ic_baseline_assignment_24.xml" value="0.1" />
+        <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/ic_baseline_assignment_focus_24.xml" value="0.1965" />
+        <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/ic_baseline_assignment_focused_24.xml" value="0.1" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1" />
+        <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/ic_baseline_home_focus_24.xml" value="0.2075" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1" />
+        <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/ic_baseline_settings_focus_24.xml" value="0.2075" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/layoutbutton.xml" value="0.1455" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/lineaborde.xml" value="0.2" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/lineabordedow.xml" value="0.2685" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/radio_buttom_customised.xml" value="0.3185" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/drawable/splash_screen.xml" value="0.25" />
-        <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/layout/activity_ajustes.xml" value="0.19831223628691982" />
-        <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/layout/activity_estadisticas.xml" value="0.17407407407407408" />
+        <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/layout/activity_ajustes.xml" value="0.33" />
+        <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/layout/activity_estadisticas.xml" value="0.33" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/layout/activity_exercicios.xml" value="0.2570194384449244" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/layout/activity_informes.xml" value="0.33" />
         <entry key="..\:/Users/Fer/Documents/Desarrolla aplicaciones moviles para Android/Parcial 3/Proyecto Final APP (Entrenamiento Fisico)/app/src/main/res/layout/activity_main.xml" value="0.2563734290843806" />

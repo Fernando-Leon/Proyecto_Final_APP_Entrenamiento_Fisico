@@ -31,7 +31,6 @@
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:text="Historial de ejericios"
-                android:background="@drawable/lineabordedow"
                 android:textSize="18dp"></TextView>
         </LinearLayout>
 
@@ -76,7 +75,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageButton
+            <Button
                 android:id="@+id/inicio"
                 android:onClick="statusInicio"
                 android:layout_width="0dp"
@@ -84,12 +83,15 @@
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_home_24"
+                android:text="Inicio"
+                android:drawableTop="@drawable/ic_baseline_home_24"
                 android:foreground="?android:attr/selectableItemBackground"
+                android:textColor="@color/textcolor"
+                android:textSize="10dp"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></ImageButton>
+                tools:ignore="Suspicious0dp"></Button>
 
-            <ImageButton
+            <Button
                 android:id="@+id/informesButton"
                 android:onClick="statusInformes"
                 android:layout_width="0dp"
@@ -97,24 +99,29 @@
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_assessment_24"
+                android:text="Informes"
+                android:drawableTop="@drawable/ic_baseline_assessment_24"
                 android:foreground="?android:attr/selectableItemBackground"
+                android:textColor="@color/textcolor"
+                android:textSize="10dp"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></ImageButton>
+                tools:ignore="Suspicious0dp"></Button>
 
-            <ImageButton
+            <Button
                 android:id="@+id/estadisticasButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_assignment_24"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:text="Estadisticas"
+                android:drawableTop="@drawable/ic_baseline_assignment_focus_24"
+                android:textColor="@color/main"
+                android:textSize="10dp"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></ImageButton>
+                tools:ignore="Suspicious0dp"></Button>
 
-            <ImageButton
+            <Button
                 android:id="@+id/ajustesButton"
                 android:onClick="statusAjustes"
                 android:layout_width="0dp"
@@ -122,10 +129,13 @@
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_settings_24"
+                android:text="Ajustes"
+                android:drawableTop="@drawable/ic_baseline_settings_24"
                 android:foreground="?android:attr/selectableItemBackground"
+                android:textColor="@color/textcolor"
+                android:textSize="10dp"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></ImageButton>
+                tools:ignore="Suspicious0dp"></Button>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

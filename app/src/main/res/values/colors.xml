@@ -3,9 +3,11 @@
 <!-- Colores modo dia-->
 <resources>
     <color name="splashcolor">#000000</color>
-    <color name="main">#8aaebb</color>
+    <!--<color name="fondoday">@color/bakgroundday</color> -->
+    <color name="main">#0C7489</color>
     <color name="background">#FFFFFF</color>
     <color name="textcolor">#000000</color>
     <color name="textcolorcontrasteimage">#FFFFFF</color>
     <color name="deimitacion">#c6c6c6</color>
+    <color name="focusedcolor">#8aaebb</color>
 </resources>

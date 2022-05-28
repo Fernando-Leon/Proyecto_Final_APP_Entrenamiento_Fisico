@@ -7,4 +7,5 @@
     <color name="background">#000000</color>
     <color name="textcolor">#FFFFFF</color>
     <color name="textcolorcontrasteimage">#FFFFFF</color>
+    <color name="focusedcolor">#8aaebb</color>
 </resources>

@@ -46,7 +46,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="100dp"
                     android:text="Da click en siguiente para empezar"
                     android:textSize="15dp"
                     android:layout_margin="20dp"
@@ -61,6 +61,16 @@
                     android:layout_height="250dp">
 
                 </ImageView>
+
+                <TextView
+                    android:id="@+id/repsTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/textcolor"
+                    android:textSize="20dp"
+                    android:text="Value">
+                </TextView>
 
             </LinearLayout>
 

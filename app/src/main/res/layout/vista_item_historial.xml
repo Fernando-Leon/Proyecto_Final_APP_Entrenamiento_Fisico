@@ -26,7 +26,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/bacground_items_list"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:foregroundGravity="center"
                 android:padding="20dp"
