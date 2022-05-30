@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/main"
     tools:context=".activityExercicios">
 
     <LinearLayout
@@ -23,6 +23,7 @@
                 android:text="Error"
                 android:textAlignment="textStart"
                 android:id="@+id/tituloEjercicio"
+                android:textColor="@color/textcolorcontrasteimage"
                 android:padding="20dp"
                 android:background="@color/main"
                 android:textSize="20dp"></TextView>
@@ -30,9 +31,9 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_margin="10dp"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:background="@drawable/bordes_redondo_item"
                 android:orientation="vertical">
 
                 <TextView
@@ -40,6 +41,7 @@
                     android:layout_height="wrap_content"
                     android:text="Estas listo?"
                     android:layout_margin="20dp"
+                    android:textAlignment="center"
                     android:textSize="18dp"
                     android:id="@+id/nombreEjercicio">
                 </TextView>
@@ -56,27 +58,41 @@
                 <ImageView
                     android:layout_gravity="center"
                     android:id="@+id/image_ex"
+                    android:src="@drawable/img_descanso_inicio"
                     android:layout_margin="25dp"
                     android:layout_width="250dp"
                     android:layout_height="250dp">
 
                 </ImageView>
 
-                <TextView
-                    android:id="@+id/repsTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:textColor="@color/textcolor"
-                    android:textSize="20dp"
-                    android:text="Value">
-                </TextView>
+                <LinearLayout
+                    android:id="@+id/linearcontentvalues"
+                    android:visibility="invisible"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/marco_redondo"
+                    android:layout_gravity="center"
+                    >
+                    <TextView
+                        android:id="@+id/repsTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/textcolor"
+                        android:textSize="20dp"
+                        android:text="Value">
+                    </TextView>
+                </LinearLayout>
 
             </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/background"
             android:orientation="horizontal">
 
             <Button
@@ -87,6 +103,7 @@
                 android:id="@+id/siguiente"
                 android:background="@drawable/layoutbutton"
                 android:layout_margin="10dp"
+                android:textColor="@color/background"
                 android:layout_gravity="center_horizontal"
                 android:foreground="?android:attr/selectableItemBackground"
                 ></Button>
@@ -97,6 +114,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/layoutbutton"
+                android:textColor="@color/background"
                 android:text="Atras"
                 android:layout_margin="10dp"
                 android:foreground="?android:attr/selectableItemBackground"
@@ -109,6 +127,7 @@
                 android:layout_weight="1"
                 android:text="Salir"
                 android:layout_margin="10dp"
+                android:textColor="@color/background"
                 android:id="@+id/salirToMain"
                 android:background="@drawable/layoutbutton"
                 android:foreground="?android:attr/selectableItemBackground"

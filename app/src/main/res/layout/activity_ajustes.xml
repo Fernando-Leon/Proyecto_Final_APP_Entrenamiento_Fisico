@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/main"
     tools:context=".activity_ajustes">
 
     <LinearLayout
@@ -21,6 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
+                android:textColor="@color/textcolorcontrasteimage"
                 android:text="AJUSTES"
                 android:textAlignment="textStart"
                 android:textStyle="bold"
@@ -33,7 +34,15 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/bordes_redondo_item">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opciones" android:padding="20dp"
+                android:textAlignment="center"
+                android:textSize="18dp"></TextView>
 
             <Button
                 android:id="@+id/deleteHistorial"
@@ -63,7 +72,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@color/background">
 
             <Button
                 android:id="@+id/inicio"

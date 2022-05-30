@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ import com.example.entrenamientofisico.db.dbinsert;
 
 public class activityExercicios extends AppCompatActivity {
 
+    private LinearLayout linear1;
     private TextView titulo, descripcion, tituloEjercicio, countExercices;
     private Button botonRecorrer, botonRetroceder, salirMain;
     int numEjercicio = 0, countLevel = 0;
@@ -52,6 +54,7 @@ public class activityExercicios extends AppCompatActivity {
         descripcion = (TextView) findViewById(R.id.descripcionEjercicio);
         countExercices = (TextView) findViewById(R.id.repsTime);
         imag = (ImageView) findViewById(R.id.image_ex);
+        linear1 = (LinearLayout) findViewById(R.id.linearcontentvalues);
 
         Bundle getValue = getIntent().getExtras();
         int valueCat = getValue.getInt("value");
@@ -59,7 +62,7 @@ public class activityExercicios extends AppCompatActivity {
 
         String abdominales[][] = {
                 {"Saltos De Tijera","Comienzo con los pies juntos y los brazos a los lados; a continuación, salta con los pies separados y las manos sobre la cabeza. Vuelve a la posición original y realiza la siguiente repetición. Este ejercicio sirve para entrenar todo el cuerpo y trabaja todos los grandes grupos musculares.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "10"},
-                {"Crunch Abdominales","Túmbate boca arriba con las rodillas flexionadas y los brazos extendidos hacia delante. A continuación, levanta el tren superior del suelo. Aguanta unos segundos y vuelve a la posición original lentamente. Sobre todo, se trabajan el músculo del recto del abdomen y los oblicuos.", "https://i.pinimg.com/originals/71/98/b6/7198b6c1f65616ca7d88e97009a48d09.gif", "10"},
+                {"Crunch Abdominales","Túmbate boca arriba con las rodillas flexionadas y los brazos extendidos hacia delante. A continuación, levanta el tren superior del suelo. Aguanta unos segundos y vuelve a la posición original lentamente. Sobre todo, se trabajan el músculo del recto del abdomen y los oblicuos.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "10"},
                 {"Twist (ruso)","Siéntate en el suelo con las rodillas flexionadas, los pies ligeramente levantados y la espalda inclinada hacia atrás. A continuación, une las manos y gira de un lado a otro.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "10"},
                 {"Elevaciones de Piernas","Túmbate de espaldas y coloca las manos debajo de las caderas a modo de apoyo. Luego eleva las piernas rectas hasta formar un ángulo recto con el suelo. Baja las piernas despacio y vuelve a repetir.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "10"},
                 {"Tablón","Túmbate apoyando los dedos de los pies y los antebrazos en el suelo. Mantén el cuerpo recto y quédate en esta posición el tiempo que puedas. Los tablones fortalecen los abdominales, la espalda y los hombros.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "10"},
@@ -166,11 +169,13 @@ public class activityExercicios extends AppCompatActivity {
             public void onClick(View view) {
 
                 Uri urlparse = null;
+                linear1.setVisibility(View.VISIBLE);
 
                 botonRecorrer.setText("Siguiente");
 
                 if(numEjercicio > 0){
                     botonRetroceder.setVisibility(View.VISIBLE);
+                    linear1.setVisibility(View.VISIBLE);
                 }
 
                 if(numEjercicio == 10 || numEjercicio == 0){
@@ -179,6 +184,7 @@ public class activityExercicios extends AppCompatActivity {
 
                 if(numEjercicio == 10){
                     botonRecorrer.setText("Continuar");
+                    linear1.setVisibility(View.INVISIBLE);
                 }
 
                 if((numEjercicio == 9 && (valueCat == 1 || valueCat == 4 || valueCat == 7 || valueCat == 10 || valueCat == 13)) || numEjercicio == 9 && countLevel == 1 || numEjercicio == 9 && countLevel == 2){

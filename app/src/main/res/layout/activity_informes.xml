@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/main"
     tools:context=".activity_informes">
 
     <LinearLayout
@@ -22,29 +22,31 @@
             android:layout_height="wrap_content"
             android:padding="20dp"
             android:text="INFORMES"
+            android:textColor="@color/textcolorcontrasteimage"
             android:textAlignment="textStart"
             android:textStyle="bold"
             android:background="@color/main"
             android:textSize="20dp"></TextView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="Indice de masa corporal (IMC)"
-            android:textSize="18dp"></TextView>
-
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@drawable/bordes_redondo_item"
         android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="Indice de masa corporal (IMC)"
+                android:textAlignment="center"
+                android:textSize="18dp"></TextView>
 
             <TextView
                 android:layout_width="match_parent"
@@ -62,8 +64,7 @@
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:text="Peso"
-                android:textSize="14dp"
-                android:textColor="#fff"></TextView>
+                android:textSize="14dp"></TextView>
 
             <TextView
                 android:layout_width="match_parent"
@@ -80,8 +81,7 @@
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:text="Altura"
-                android:textSize="14dp"
-                android:textColor="#fff"></TextView>
+                android:textSize="14dp"></TextView>
 
             <TextView
                 android:layout_width="match_parent"
@@ -104,6 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cambiar IMC"
+                android:textColor="@color/background"
                 android:background="@drawable/layoutbutton"
                 android:padding="10dp"
                 android:foreground="?android:attr/selectableItemBackground"
@@ -142,6 +143,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/background"
             android:orientation="horizontal">
 
             <Button
