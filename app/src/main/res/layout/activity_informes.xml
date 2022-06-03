@@ -25,7 +25,6 @@
             android:textColor="@color/textcolorcontrasteimage"
             android:textAlignment="textStart"
             android:textStyle="bold"
-            android:background="@color/main"
             android:textSize="20dp"></TextView>
     </LinearLayout>
 
@@ -105,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:text="Cambiar IMC"
                 android:textColor="@color/background"
-                android:background="@drawable/layoutbutton"
+                android:background="@drawable/degradado_fade"
                 android:padding="10dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:layout_gravity="center"

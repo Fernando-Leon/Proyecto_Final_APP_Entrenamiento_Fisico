@@ -3,9 +3,17 @@
 <!-- Colores modo dia-->
 <resources>
     <color name="splashcolor">#000000</color>
-    <color name="main">#000000</color>
-    <color name="background">#000000</color>
+    <color name="main">#A9DDD8</color>
     <color name="textcolor">#FFFFFF</color>
     <color name="textcolorcontrasteimage">#FFFFFF</color>
     <color name="focusedcolor">#8aaebb</color>
+
+    <!-- Letra Textos -->
+
+    <color name="textWhiteBlack">#FFFFFF</color>
+    <color name="textBlackWhite">#FFFFFF</color>
+
+    <!-- Fondo -->
+
+    <color name="background">#000000</color>
 </resources>

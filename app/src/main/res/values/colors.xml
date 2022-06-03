@@ -4,13 +4,28 @@
 <resources>
     <color name="splashcolor">#000000</color>
     <!--<color name="fondoday">@color/bakgroundday</color> -->
-    <color name="main">#3D8B7D</color>
+    <color name="main">#A9DDD8</color>
     <color name="secondColor">#8AC4C1</color>
-    <color name="background">#FFFFFF</color>
     <color name="textcolor">#000000</color>
     <color name="textcolorcontrasteimage">#FFFFFF</color>
     <color name="deimitacion">#c6c6c6</color>
     <color name="focusedcolor">#8aaebb</color>
+
+    <!-- Letra Textos -->
+
+    <color name="textWhiteBlack">#000000</color>
+    <color name="textBlackWhite">#000000</color>
+
+    <!-- Fondo -->
+
+    <color name="background">#FFFFFF</color>
+    <color name="blanco">#FFFFFF</color>
+
+    <!-- Gradientes colors -->
+
+    <color name="primaryGradientColor">#F4FBFA</color>
+    <color name="secondGradientColor">#ACACAC</color>
+
 </resources>
 
 <!-- Pack Icons: https://www.flaticon.es/packs/gym-129 -->

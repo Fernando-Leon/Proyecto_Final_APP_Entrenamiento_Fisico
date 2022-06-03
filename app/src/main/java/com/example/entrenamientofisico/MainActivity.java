@@ -2,10 +2,15 @@ package com.example.entrenamientofisico;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
@@ -37,9 +42,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Error al craer Base de Datos", Toast.LENGTH_LONG).show();
         }
 */
-
-
-
 
         //Genera una frase aleatoria cada que se ejecute la aplicacion
 
