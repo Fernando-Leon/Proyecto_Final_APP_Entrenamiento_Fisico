@@ -2,6 +2,7 @@
 
 <!-- Colores modo dia-->
 <resources>
+
     <color name="splashcolor">#000000</color>
     <!--<color name="fondoday">@color/bakgroundday</color> -->
     <color name="main">#A9DDD8</color>
@@ -25,6 +26,7 @@
 
     <color name="primaryGradientColor">#F4FBFA</color>
     <color name="secondGradientColor">#ACACAC</color>
+
 
 </resources>
 
