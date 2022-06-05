@@ -25,7 +25,7 @@
                 android:text="AJUSTES"
                 android:textAlignment="textStart"
                 android:textStyle="bold"
-                android:textSize="20dp"></TextView>
+                android:textSize="@dimen/TitlesDimen"/>
 
         </LinearLayout>
 
@@ -39,9 +39,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Opciones" android:padding="20dp"
+                android:text="Opciones"
+                android:padding="20dp"
                 android:textAlignment="center"
-                android:textSize="18dp"></TextView>
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bordedown"
+                android:textSize="@dimen/Subtitle"/>
 
             <Button
                 android:id="@+id/deleteHistorial"
@@ -50,10 +54,12 @@
                 android:textAlignment="textStart"
                 android:layout_margin="10dp"
                 android:padding="20dp"
+                android:elevation="@dimen/elevacion_dimen"
+                android:textSize="@dimen/TextOneDime"
                 android:background="@drawable/degradado_fade"
-                android:textColor="@color/textWhiteBlack"
+                android:textColor="@color/textBlackWhite"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:text="Eliminar historial"></Button>
+                android:text="Eliminar historial"/>
 
             <Button
                 android:id="@+id/exitAplication"
@@ -62,10 +68,12 @@
                 android:textAlignment="textStart"
                 android:layout_margin="10dp"
                 android:padding="20dp"
-                android:textColor="@color/textWhiteBlack"
+                android:elevation="@dimen/elevacion_dimen"
+                android:textSize="@dimen/TextOneDime"
+                android:textColor="@color/textBlackWhite"
                 android:background="@drawable/degradado_fade"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:text="Salir"></Button>
+                android:text="Salir"/>
 
         </LinearLayout>
 
@@ -88,9 +96,9 @@
                 android:drawableTop="@drawable/ic_baseline_home_24"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:textColor="@color/textcolor"
-                android:textSize="10dp"
+                android:textSize="@dimen/TextTwoDimen"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"/>
 
             <Button
                 android:id="@+id/informesButton"
@@ -104,9 +112,9 @@
                 android:drawableTop="@drawable/ic_baseline_assessment_24"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:textColor="@color/textcolor"
-                android:textSize="10dp"
+                android:textSize="@dimen/TextTwoDimen"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"/>
 
             <Button
                 android:id="@+id/estadisticasButton"
@@ -120,9 +128,9 @@
                 android:drawableTop="@drawable/ic_baseline_assignment_24"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:textColor="@color/textcolor"
-                android:textSize="10dp"
+                android:textSize="@dimen/TextTwoDimen"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"/>
 
             <Button
                 android:id="@+id/ajustesButton"
@@ -135,9 +143,9 @@
                 android:drawableTop="@drawable/ic_baseline_settings_focus_24"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:textColor="@color/main"
-                android:textSize="10dp"
+                android:textSize="@dimen/TextTwoDimen"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

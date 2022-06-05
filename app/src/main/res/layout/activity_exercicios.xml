@@ -25,68 +25,85 @@
                 android:id="@+id/tituloEjercicio"
                 android:textColor="@color/textcolorcontrasteimage"
                 android:padding="20dp"
-                android:textSize="20dp"></TextView>
+                android:textSize="@dimen/TitlesDimen"/>
         </LinearLayout>
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bordes_redondo_item"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estas listo?"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bordedown"
+                android:textSize="@dimen/Subtitle"
+                android:id="@+id/nombreEjercicio">
+            </TextView>
+
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@drawable/bordes_redondo_item"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Estas listo?"
-                    android:layout_margin="20dp"
-                    android:textAlignment="center"
-                    android:textSize="18dp"
-                    android:id="@+id/nombreEjercicio">
-                </TextView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:text="Da click en siguiente para empezar"
-                    android:textSize="15dp"
-                    android:layout_margin="20dp"
-                    android:id="@+id/descripcionEjercicio">
-                </TextView>
-
-                <ImageView
-                    android:layout_gravity="center"
-                    android:id="@+id/image_ex"
-                    android:src="@drawable/img_descanso_inicio"
-                    android:layout_margin="25dp"
-                    android:layout_width="250dp"
-                    android:layout_height="250dp">
-
-                </ImageView>
+                tools:ignore="NestedWeights">
 
                 <LinearLayout
-                    android:id="@+id/linearcontentvalues"
-                    android:visibility="invisible"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:orientation="vertical"
-                    android:background="@drawable/marco_redondo"
-                    android:layout_gravity="center"
-                    >
-                    <TextView
-                        android:id="@+id/repsTime"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textAlignment="center"
-                        android:gravity="center"
-                        android:layout_gravity="center_horizontal"
-                        android:textColor="@color/textcolor"
-                        android:textSize="20dp"
-                        android:text="Value">
-                    </TextView>
-                </LinearLayout>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:text="Da click en siguiente para empezar"
+                        android:textSize="@dimen/TextOneDime"
+                        android:layout_margin="20dp"
+                        android:id="@+id/descripcionEjercicio">
+                    </TextView>
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/image_ex"
+                        android:src="@drawable/img_descanso_inicio"
+                        android:layout_margin="25dp"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp">
+
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/linearcontentvalues"
+                        android:visibility="invisible"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/marco_redondo"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/repsTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/textcolor"
+                            android:textSize="@dimen/TitlesDimen"
+                            android:text="Value">
+                        </TextView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -99,39 +116,39 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="siguiente"
+                android:textSize="@dimen/TextOneDime"
                 android:id="@+id/siguiente"
                 android:background="@drawable/degradado_fade"
                 android:layout_margin="10dp"
-                android:textColor="@color/background"
+                android:textColor="@color/textBlackWhite"
                 android:layout_gravity="center_horizontal"
-                android:foreground="?android:attr/selectableItemBackground"
-                ></Button>
+                android:foreground="?android:attr/selectableItemBackground"/>
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textSize="@dimen/TextOneDime"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/degradado_fade"
-                android:textColor="@color/background"
+                android:textColor="@color/textBlackWhite"
                 android:text="Atras"
                 android:layout_margin="10dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:id="@+id/atras">
-            </Button>
+                android:id="@+id/atras"/>
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Menú"
+                android:textSize="@dimen/TextOneDime"
                 android:layout_margin="10dp"
-                android:textColor="@color/background"
+                android:textColor="@color/textBlackWhite"
                 android:id="@+id/salirToMain"
                 android:background="@drawable/degradado_fade"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:layout_gravity="center_horizontal">
-            </Button>
+                android:layout_gravity="center_horizontal"/>
 
         </LinearLayout>
 

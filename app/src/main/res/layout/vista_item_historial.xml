@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:orientation="vertical"
-    android:background="@color/background"
+    android:background="@drawable/degradado_fade"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="fill_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +19,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@color/background">
 
@@ -33,7 +33,7 @@
                 android:padding="20dp"
                 android:text="Hola mundo"
                 android:textAlignment="textStart"
-                android:textSize="15dp"></TextView>
+                android:textSize="@dimen/TextOneDime"></TextView>
 
             <TextView
                 android:id="@+id/datetimeshow"
@@ -41,6 +41,7 @@
                 android:padding="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textSize="@dimen/TextOneDime"
                 android:text="Error">
             </TextView>
 

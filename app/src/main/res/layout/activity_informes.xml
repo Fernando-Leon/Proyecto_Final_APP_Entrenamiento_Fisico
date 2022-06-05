@@ -12,31 +12,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="INFORMES"
-            android:textColor="@color/textcolorcontrasteimage"
-            android:textAlignment="textStart"
-            android:textStyle="bold"
-            android:textSize="20dp"></TextView>
-    </LinearLayout>
+            android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@drawable/bordes_redondo_item"
-        android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="INFORMES"
+                android:textColor="@color/textcolorcontrasteimage"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textSize="@dimen/TitlesDimen"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bordes_redondo_item"
             android:orientation="vertical">
 
             <TextView
@@ -45,99 +41,111 @@
                 android:padding="20dp"
                 android:text="Indice de masa corporal (IMC)"
                 android:textAlignment="center"
-                android:textSize="18dp"></TextView>
+                android:background="@drawable/bordedown"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="@dimen/Subtitle"/>
 
-            <TextView
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Peso (Kg)"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                android:padding="20dp"
-                ></TextView>
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Peso (Kg)"
+                        android:textSize="@dimen/TextOneDime"
+                        android:textStyle="bold"
+                        android:padding="20dp"/>
 
 
-            <TextView
-                android:id="@+id/valuePeso"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Peso"
-                android:textSize="14dp"></TextView>
+                    <TextView
+                        android:id="@+id/valuePeso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="Peso"
+                        android:textSize="@dimen/TextOneDime"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Altura (m)"
-                android:padding="20dp"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                ></TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Altura (m)"
+                        android:padding="20dp"
+                        android:textSize="@dimen/TextOneDime"
+                        android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/valueAltura"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Altura"
-                android:textSize="14dp"></TextView>
+                    <TextView
+                        android:id="@+id/valueAltura"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="Altura"
+                        android:textSize="@dimen/TextOneDime"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="IMC (a/m*m)"
-                android:padding="20dp"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                ></TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="IMC (a/m*m)"
+                        android:padding="20dp"
+                        android:textSize="@dimen/TextOneDime"
+                        android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/resultadoImc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:textSize="14dp"
-                android:text="IMC" />
+                    <TextView
+                        android:id="@+id/resultadoImc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:textSize="@dimen/TextOneDime"
+                        android:text="IMC" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cambiar IMC"
-                android:textColor="@color/background"
-                android:background="@drawable/degradado_fade"
-                android:padding="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:layout_gravity="center"
-                android:id="@+id/changeImc">
-            </Button>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cambiar IMC"
+                        android:textColor="@color/textBlackWhite"
+                        android:background="@drawable/degradado_fade"
+                        android:elevation="@dimen/elevacion_dimen"
+                        android:padding="10dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:layout_gravity="center"
+                        android:id="@+id/changeImc">
+                    </Button>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:background="@drawable/graficaimc"
-                android:layout_margin="20dp"
-                ></ImageView>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/graficaimc"
+                        android:layout_margin="20dp"/>
 
-            <TextView
-                android:id="@+id/recomendaciones"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Recomenaciones"
-                android:gravity="center"
-                android:padding="20dp"
-                android:textSize="15dp"></TextView>
+                    <TextView
+                        android:id="@+id/recomendaciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Recomenaciones"
+                        android:gravity="center"
+                        android:padding="20dp"
+                        android:textSize="@dimen/TextOneDime"/>
 
-            <TextView
-                android:id="@+id/listrecomendacion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Recomenaciones"
-                android:padding="20dp"
-                android:textSize="14dp"></TextView>
+                    <TextView
+                        android:id="@+id/listrecomendacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Recomenaciones"
+                        android:padding="20dp"
+                        android:textSize="@dimen/TextOneDime"/>
+
+                </LinearLayout>
+
+            </ScrollView>
 
         </LinearLayout>
-
-    </ScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -157,9 +165,9 @@
                 android:drawableTop="@drawable/ic_baseline_home_24"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:textColor="@color/textcolor"
-                android:textSize="10dp"
+                android:textSize="@dimen/TextTwoDimen"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"/>
 
             <Button
                 android:id="@+id/informesButton"
@@ -171,9 +179,9 @@
                 android:text="Informes"
                 android:drawableTop="@drawable/ic_baseline_assessment_focus_24"
                 android:textColor="@color/main"
-                android:textSize="10dp"
+                android:textSize="@dimen/TextTwoDimen"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"/>
 
             <Button
                 android:id="@+id/estadisticasButton"
@@ -187,9 +195,9 @@
                 android:drawableTop="@drawable/ic_baseline_assignment_24"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:textColor="@color/textcolor"
-                android:textSize="10dp"
+                android:textSize="@dimen/TextTwoDimen"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"/>
 
             <Button
                 android:id="@+id/ajustesButton"
@@ -203,9 +211,10 @@
                 android:drawableTop="@drawable/ic_baseline_settings_24"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:textColor="@color/textcolor"
-                android:textSize="10dp"
+                android:textSize="@dimen/TextTwoDimen"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"
+                style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>
-</LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

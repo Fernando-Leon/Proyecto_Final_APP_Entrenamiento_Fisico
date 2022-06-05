@@ -14,7 +14,7 @@
 
     <!-- Letra Textos -->
 
-    <color name="textWhiteBlack">#000000</color>
+    <color name="textWhiteBlack">#FFFFFF</color>
     <color name="textBlackWhite">#000000</color>
 
     <!-- Fondo -->
@@ -24,8 +24,8 @@
 
     <!-- Gradientes colors -->
 
-    <color name="primaryGradientColor">#F4FBFA</color>
-    <color name="secondGradientColor">#ACACAC</color>
+    <color name="primaryGradientColor">#FFFFFF</color>
+    <color name="secondGradientColor">#FFFFFF</color>
 
 
 </resources>

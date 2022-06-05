@@ -9,9 +9,7 @@
                 android:startColor="@color/primaryGradientColor"
                 android:endColor="@color/secondGradientColor">
             </gradient>
-            <stroke android:width="@dimen/_1sdp" android:color="@color/secondGradientColor"></stroke>
-
-            <corners android:radius="18dp"/>
+            <corners android:radius="@dimen/border_radius"/>
         </shape>
     </item>
 

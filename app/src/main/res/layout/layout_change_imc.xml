@@ -13,41 +13,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Peso"
-            android:textSize="18dp"
+            android:textSize="@dimen/TextOneDime"
             android:textStyle="bold"
             android:layout_marginLeft="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            ></TextView>
+            android:layout_marginTop="20dp"/>
 
         <EditText
             android:id="@+id/editPesoText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Introduce el peso"
+            android:textSize="@dimen/TextOneDime"
             android:inputType="numberDecimal"
-            android:layout_margin="5dp"></EditText>
+            android:layout_margin="5dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Altura"
-            android:textSize="18dp"
+            android:textSize="@dimen/TextOneDime"
             android:textStyle="bold"
             android:layout_marginLeft="5dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            ></TextView>
+            android:layout_marginTop="20dp"/>
 
         <EditText
             android:id="@+id/editAlturaText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Introduce la altura"
+            android:textSize="@dimen/TextOneDime"
             android:inputType="numberDecimal"
-            android:layout_margin="10dp"></EditText>
+            android:layout_margin="10dp"/>
 
     </LinearLayout>
 

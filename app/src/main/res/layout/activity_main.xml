@@ -7,10 +7,10 @@
     android:background="@color/main"
     tools:context=".MainActivity">
 
-       <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,7 +25,8 @@
                 android:textColor="@color/textWhiteBlack"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:textSize="40dp"></TextView>
+                android:textSize="@dimen/TitlesDimen"/>
+
 
             <TextView
                 android:id="@+id/fraseRandom"
@@ -33,10 +34,10 @@
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:text="Error"
-                android:elevation="2dp"
                 android:textAlignment="center"
                 android:textColor="@color/textWhiteBlack"
-                android:textStyle="bold|italic"></TextView>
+                android:textSize="@dimen/TextOneDime"
+                android:textStyle="bold|italic"/>
 
         </LinearLayout>
 
@@ -45,325 +46,346 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical"
+            android:elevation="10dp"
             android:background="@drawable/bordes_redondo_item">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CATEGORIAS"
-                android:textSize="17dp"
+                android:textSize="@dimen/Subtitle"
                 android:textAlignment="center"
-                android:textColor="@color/textcolor"
-                android:padding="10dp"
-                android:layout_margin="10dp"></TextView>
+                android:padding="20dp"
+                android:background="@drawable/bordedown"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/categorias">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="PRINCIPIANTE"
+                            android:textSize="@dimen/Subtitle"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/textcolor">
+                        </TextView>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c1r1"
+                            android:text="ABDOMINALES PRINCIPIANTE"
+                            android:drawableStart="@drawable/ic_vector_abdominales"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:textSize="@dimen/CategSize"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c2r1"
+                            android:text="ESPALDA Y HOMBROS PRINCIPIANTE"
+                            android:drawableStart="@drawable/ic_vector_espalda"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/CategSize"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c3r1"
+                            android:text="PECHO PRINCIPIANTE"
+                            android:drawableStart="@drawable/ic_vector_pecho"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/CategSize"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c4r1"
+                            android:textAlignment="center"
+                            android:text="BRAZO PRINCIPIANTE"
+                            android:drawableStart="@drawable/ic_vector_brazo"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:textSize="@dimen/CategSize"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c5r1"
+                            android:textAlignment="center"
+                            android:text="PIERNA PRINCIPIANTE"
+                            android:drawableStart="@drawable/ic_vector_pierna"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:scaleType="centerInside"
+                            android:textSize="@dimen/CategSize"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="INTERMEDIO"
+                            android:textSize="@dimen/Subtitle"
+                            android:textColor="@color/textcolor"
+                            android:layout_margin="10dp">
+                        </TextView>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c1r2"
+                            android:text="ABDOMINALES INTERMEDIO"
+                            android:drawableStart="@drawable/ic_vector_abdominales"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:textSize="@dimen/CategSize"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c2r2"
+                            android:textAlignment="center"
+                            android:text="ESPALDA Y HOMBROS INTERMEDIO"
+                            android:drawableStart="@drawable/ic_vector_espalda"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:textSize="@dimen/CategSize"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c3r2"
+                            android:text="PECHO INTERMEDIO"
+                            android:textAlignment="center"
+                            android:drawableStart="@drawable/ic_vector_pecho"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:textSize="@dimen/CategSize"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c4r2"
+                            android:textAlignment="center"
+                            android:text="BRAZO INTERMEDIO"
+                            android:drawableStart="@drawable/ic_vector_brazo"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:textSize="@dimen/CategSize"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c5r2"
+                            android:textAlignment="center"
+                            android:text="PIERNA INTERMEDIO"
+                            android:drawableStart="@drawable/ic_vector_pierna"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:textSize="@dimen/CategSize"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="AVANZADO"
+                            android:textSize="@dimen/Subtitle"
+                            android:textColor="@color/textcolor"
+                            android:layout_margin="10dp">
+                        </TextView>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c1r3"
+                            android:text="ABDOMINALES AVANZADO"
+                            android:drawableStart="@drawable/ic_vector_abdominales"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:textSize="@dimen/CategSize"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c2r3"
+                            android:textAlignment="center"
+                            android:text="ESPALDA Y HOMBROS AVANZADO"
+                            android:drawableStart="@drawable/ic_vector_espalda"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:textSize="@dimen/CategSize"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c3r3"
+                            android:text="PECHO AVANZADO"
+                            android:drawableStart="@drawable/ic_vector_pecho"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:textSize="@dimen/CategSize"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c4r3"
+                            android:textAlignment="center"
+                            android:text="BRAZO AVANZADO"
+                            android:drawableStart="@drawable/ic_vector_brazo"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:textSize="@dimen/CategSize"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/textBlackWhite"
+                            android:layout_margin="10dp"
+                            android:id="@+id/c5r3"
+                            android:textAlignment="center"
+                            android:drawableStart="@drawable/ic_vector_pierna"
+                            android:background="@drawable/degradado_fade"
+                            android:padding="15dp"
+                            android:text="PIERNA AVANZADO"
+                            android:textSize="@dimen/CategSize"
+                            android:textStyle="bold"
+                            android:elevation="@dimen/elevacion_dimen"
+                            android:foreground="?android:attr/selectableItemBackground"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/Subtitle"
+                            android:textColor="@color/textcolor"
+                            android:layout_margin="10dp"
+                            android:textStyle="bold">
+                        </TextView>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </ScrollView>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/categorias">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="PRINCIPIANTE"
-                        android:textSize="17dp"
-                        android:layout_margin="10dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/textcolor">
-                    </TextView>
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c1r1"
-                        android:text="ABDOMINALES PRINCIPIANTE"
-                        android:drawableLeft="@drawable/ic_vector_abdominales"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:textSize="17dp"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        />
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c2r1"
-                        android:text="ESPALDA Y HOMBROS PRINCIPIANTE"
-                        android:drawableLeft="@drawable/ic_vector_espalda"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:autoSizeMaxTextSize="17dp"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        />
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c3r1"
-                        android:text="PECHO PRINCIPIANTE"
-                        android:drawableLeft="@drawable/ic_vector_pecho"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        />
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c4r1"
-                        android:textAlignment="center"
-                        android:text="BRAZO PRINCIPIANTE"
-                        android:drawableLeft="@drawable/ic_vector_brazo"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"/>
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c5r1"
-                        android:textAlignment="center"
-                        android:text="PIERNA PRINCIPIANTE"
-                        android:drawableLeft="@drawable/ic_vector_pierna"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:scaleType="centerInside"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="INTERMEDIO"
-                        android:textSize="17dp"
-                        android:textColor="@color/textcolor"
-                        android:layout_margin="10dp"
-                        android:textStyle="bold">
-                    </TextView>
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c1r2"
-                        android:text="ABDOMINALES INTERMEDIO"
-                        android:drawableLeft="@drawable/ic_vector_abdominales"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:textSize="17dp"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        />
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c2r2"
-                        android:textAlignment="center"
-                        android:text="ESPALDA Y HOMBROS INTERMEDIO"
-                        android:drawableLeft="@drawable/ic_vector_espalda"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:textSize="17dp"
-                        android:autoSizeMaxTextSize="17dp"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        />
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c3r2"
-                        android:text="PECHO INTERMEDIO"
-                        android:textAlignment="center"
-                        android:drawableLeft="@drawable/ic_vector_pecho"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"/>
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c4r2"
-                        android:textAlignment="center"
-                        android:text="BRAZO INTERMEDIO"
-                        android:drawableLeft="@drawable/ic_vector_brazo"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"/>
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c5r2"
-                        android:textAlignment="center"
-                        android:text="PIERNA INTERMEDIO"
-                        android:drawableLeft="@drawable/ic_vector_pierna"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="AVANZADO"
-                        android:textSize="17dp"
-                        android:textColor="@color/textcolor"
-                        android:layout_margin="10dp"
-                        android:textStyle="bold">
-                    </TextView>
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c1r3"
-                        android:text="ABDOMINALES AVANZADO"
-                        android:drawableLeft="@drawable/ic_vector_abdominales"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:textSize="17dp"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        />
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c2r3"
-                        android:textAlignment="center"
-                        android:text="ESPALDA Y HOMBROS AVANZADO"
-                        android:drawableLeft="@drawable/ic_vector_espalda"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        />
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c3r3"
-                        android:text="PECHO AVANZADO"
-                        android:drawableLeft="@drawable/ic_vector_pecho"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"/>
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c4r3"
-                        android:textAlignment="center"
-                        android:text="BRAZO AVANZADO"
-                        android:drawableLeft="@drawable/ic_vector_brazo"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"/>
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/textWhiteBlack"
-                        android:layout_margin="10dp"
-                        android:id="@+id/c5r3"
-                        android:textAlignment="center"
-                        android:drawableLeft="@drawable/ic_vector_pierna"
-                        android:background="@drawable/degradado_fade"
-                        android:padding="15dp"
-                        android:text="PIERNA AVANZADO"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:foreground="?android:attr/selectableItemBackground"/>
-                    />
-                </RadioGroup>
-
-            </LinearLayout>
-
-        </ScrollView>
-
-            </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/background"
-            android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/inicio"
@@ -375,59 +397,61 @@
                     android:text="Inicio"
                     android:drawableTop="@drawable/ic_baseline_home_focus_24"
                     android:textColor="@color/main"
-                    android:textSize="9dp"
+                    android:textSize="@dimen/TextTwoDimen"
                     android:background="@drawable/lineaborde"
-                    tools:ignore="Suspicious0dp"></Button>
+                    tools:ignore="Suspicious0dp"/>
 
-            <Button
-                android:id="@+id/informesButton"
-                android:onClick="statusInformes"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:layout_gravity="center"
-                android:text="Informes"
-                android:drawableTop="@drawable/ic_baseline_assessment_24"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:textColor="@color/textcolor"
-                android:background="@drawable/lineaborde"
-                android:textSize="9dp"
-                tools:ignore="Suspicious0dp"></Button>
+                <Button
+                    android:id="@+id/informesButton"
+                    android:onClick="statusInformes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="Informes"
+                    android:drawableTop="@drawable/ic_baseline_assessment_24"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="@color/textcolor"
+                    android:background="@drawable/lineaborde"
+                    android:textSize="@dimen/TextTwoDimen"
+                    tools:ignore="Suspicious0dp"/>
 
-            <Button
-                android:id="@+id/estadisticasButton"
-                android:onClick="statusEstadisticas"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:layout_gravity="center"
-                android:text="Estadisticas"
-                android:drawableTop="@drawable/ic_baseline_assignment_24"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:textColor="@color/textcolor"
-                android:textSize="10dp"
-                android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                <Button
+                    android:id="@+id/estadisticasButton"
+                    android:onClick="statusEstadisticas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="Estadisticas"
+                    android:drawableTop="@drawable/ic_baseline_assignment_24"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/TextTwoDimen"
+                    android:background="@drawable/lineaborde"
+                    tools:ignore="Suspicious0dp"/>
 
-            <Button
-                android:id="@+id/ajustesButton"
-                android:onClick="statusAjustes"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:layout_gravity="center"
-                android:text="Ajustes"
-                android:drawableTop="@drawable/ic_baseline_settings_24"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:textColor="@color/textcolor"
-                android:textSize="10dp"
-                android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                <Button
+                    android:id="@+id/ajustesButton"
+                    android:onClick="statusAjustes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="Ajustes"
+                    android:drawableTop="@drawable/ic_baseline_settings_24"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/TextTwoDimen"
+                    android:background="@drawable/lineaborde"
+                    tools:ignore="Suspicious0dp"/>
+            </LinearLayout>
+
         </LinearLayout>
 
-</LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

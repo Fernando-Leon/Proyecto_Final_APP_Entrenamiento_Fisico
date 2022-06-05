@@ -24,7 +24,7 @@
                 android:textColor="@color/textcolorcontrasteimage"
                 android:textAlignment="textStart"
                 android:textStyle="bold"
-                android:textSize="20dp"></TextView>
+                android:textSize="@dimen/TitlesDimen"/>
         </LinearLayout>
 
         <LinearLayout
@@ -41,12 +41,15 @@
                 android:padding="20dp"
                 android:textAlignment="center"
                 android:text="Historial de ejericios"
-                android:textSize="18dp"></TextView>
+                android:background="@drawable/bordedown"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="@dimen/Subtitle"/>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:background="@drawable/borde_items_plant"
+                android:layout_marginBottom="2dp"
                 android:layout_height="wrap_content">
 
                 <TextView
@@ -56,7 +59,7 @@
                     android:padding="20dp"
                     android:text="Tipo ejercicio"
                     android:textAlignment="center"
-                    android:textSize="15dp"></TextView>
+                    android:textSize="@dimen/TextOneDime"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -65,7 +68,7 @@
                     android:padding="20dp"
                     android:textAlignment="center"
                     android:text="Fecha"
-                    android:textSize="15dp">
+                    android:textSize="@dimen/TextOneDime">
                 </TextView>
 
             </LinearLayout>
@@ -73,12 +76,12 @@
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
-
+                android:layout_weight="1"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_height="wrap_content"
                     android:id="@+id/listahistorial"/>
             </ScrollView>
 
@@ -102,9 +105,9 @@
                 android:drawableTop="@drawable/ic_baseline_home_24"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:textColor="@color/textcolor"
-                android:textSize="10dp"
+                android:textSize="@dimen/TextTwoDimen"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"/>
 
             <Button
                 android:id="@+id/informesButton"
@@ -118,9 +121,9 @@
                 android:drawableTop="@drawable/ic_baseline_assessment_24"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:textColor="@color/textcolor"
-                android:textSize="10dp"
+                android:textSize="@dimen/TextTwoDimen"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"/>
 
             <Button
                 android:id="@+id/estadisticasButton"
@@ -132,9 +135,9 @@
                 android:text="Estadisticas"
                 android:drawableTop="@drawable/ic_baseline_assignment_focus_24"
                 android:textColor="@color/main"
-                android:textSize="10dp"
+                android:textSize="@dimen/TextTwoDimen"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"/>
 
             <Button
                 android:id="@+id/ajustesButton"
@@ -148,9 +151,9 @@
                 android:drawableTop="@drawable/ic_baseline_settings_24"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:textColor="@color/textcolor"
-                android:textSize="10dp"
+                android:textSize="@dimen/TextTwoDimen"
                 android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"></Button>
+                tools:ignore="Suspicious0dp"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
