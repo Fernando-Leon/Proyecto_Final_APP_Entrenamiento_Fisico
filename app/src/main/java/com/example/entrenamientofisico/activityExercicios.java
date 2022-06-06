@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ public class activityExercicios extends AppCompatActivity {
     private Button botonRecorrer, botonRetroceder, salirMain;
     int numEjercicio = 0, countLevel = 0;
     private ImageView imag;
+    String nombredelacategoria="";
 
     String indexTitle[] = {
             "Abdominales - pricipiante",
@@ -59,6 +61,7 @@ public class activityExercicios extends AppCompatActivity {
         Bundle getValue = getIntent().getExtras();
         int valueCat = getValue.getInt("value");
         int numCategoria = valueCat;
+
 
         String abdominales[][] = {
                 {"Saltos De Tijera","Comienzo con los pies juntos y los brazos a los lados; a continuación, salta con los pies separados y las manos sobre la cabeza. Vuelve a la posición original y realiza la siguiente repetición. Este ejercicio sirve para entrenar todo el cuerpo y trabaja todos los grandes grupos musculares.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "20s"},
@@ -140,6 +143,7 @@ public class activityExercicios extends AppCompatActivity {
         for(int i=1; i<=15; i+=1) {
             if(valueCat == i){
                 titulo.setText(indexTitle[i-1]);
+                nombredelacategoria = titulo.getText().toString();
             }
         }
 
@@ -836,7 +840,15 @@ public class activityExercicios extends AppCompatActivity {
 
         numEjercicio = 0;
         countLevel = 0;
-        finish();
+
+
+
+
+        Bundle sendValue = new Bundle();
+        Intent intent = new Intent(activityExercicios.this, resultados.class);
+        intent.putExtra("categorias", nombredelacategoria);
+        startActivity(intent);
+
     }
 
 }

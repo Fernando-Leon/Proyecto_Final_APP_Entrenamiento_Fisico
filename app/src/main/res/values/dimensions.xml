@@ -3,7 +3,7 @@
     <dimen name="TitlesDimen">24sp</dimen>
     <dimen name="Subtitle">18sp</dimen>
     <dimen name="CategSize">15sp</dimen>
-    <dimen name="TextOneDime">13sp</dimen>
+    <dimen name="TextOneDime">16sp</dimen>
     <dimen name="TextTwoDimen">7sp</dimen>
 
     <dimen name="border_radius">18dp</dimen>
