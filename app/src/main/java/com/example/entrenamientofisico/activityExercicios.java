@@ -27,6 +27,7 @@ public class activityExercicios extends AppCompatActivity {
     int numEjercicio = 0, countLevel = 0;
     private ImageView imag;
     String nombredelacategoria="";
+    int numCategoria = 0;
 
     String indexTitle[] = {
             "Abdominales - pricipiante",
@@ -60,7 +61,7 @@ public class activityExercicios extends AppCompatActivity {
 
         Bundle getValue = getIntent().getExtras();
         int valueCat = getValue.getInt("value");
-        int numCategoria = valueCat;
+        numCategoria = valueCat;
 
 
         String abdominales[][] = {
@@ -128,8 +129,8 @@ public class activityExercicios extends AppCompatActivity {
                 {"Inclinaciones hacia adelante", "Sujétate de algún objeto con una  mano, inclínate hacia adelante flexionando las rodillas pero sin llegar a tocar el suelo. Repite el ejercicio.", "https://media3.giphy.com/media/O2WI1FvPAjGtgiiORv/giphy.gif", "x8"},
                 {"Zancadas laterales", "Colócate de pie, con los pies paralelo, desplazar una pierna hacia el lateral y apoyar completamente el pie en el piso mientras flexionamos la rodilla y descendemos el cuerpo. Repite hacia el otro lado.", "https://media4.giphy.com/media/ORp0Y4ZrJo4PAdrGv2/giphy.gif", "x4"},
                 {"Caminata de pato", "Ponte en posición de sentadilla profunda, separa los pies poco más allá del ancho de la cadera y descendemos glúteos siempre con espalda recta hasta que nuestras rodillas formen un ángulo inferior a los 90°. Inicia el desplazamiento despegando y adelantando un pie hasta que los muslos queden paralelos al suelo.", "https://media4.giphy.com/media/ikAi8zVbeTa1NHlTOk/giphy.gif", "10m"},
-                {"Wall sit con un pie", "Apóyate contra la pared con los pies firmemente plantados en el suelo, separados al ancho de los hombros. Simula estar sentado recargando tu espalda pon la pared formando un ángulo de recto. Levanta un pie a la altura de la otra rodilla mantenla por un tiempo. Repite en ambas piernas.",  "https://media1.giphy.com/media/ekku6uBiagwDh1iY8g/200.webp", "5s"},
-                {"Sentadillas profundas explosivas", "Comienzan con los pies por fuera de las caderas y las rodillas en la misma dirección que las puntas de los pies. Luego echamos la cadera hacia atrás y flexionamos las caderas en 90 grados, saltamos en vertical con toda nuestra energía. Repite el ejercicio.", "https://media2.giphy.com/media/sqhvc1lfawKXEEXcIn/200.webp", "x10"},
+                {"Wall sit con un pie", "Apóyate contra la pared con los pies firmemente plantados en el suelo, separados al ancho de los hombros. Simula estar sentado recargando tu espalda pon la pared formando un ángulo de recto. Levanta un pie a la altura de la otra rodilla mantenla por un tiempo. Repite en ambas piernas.",  "https://media4.giphy.com/media/ekku6uBiagwDh1iY8g/giphy.gif", "5s"},
+                {"Sentadillas profundas explosivas", "Comienzan con los pies por fuera de las caderas y las rodillas en la misma dirección que las puntas de los pies. Luego echamos la cadera hacia atrás y flexionamos las caderas en 90 grados, saltamos en vertical con toda nuestra energía. Repite el ejercicio.", "https://media.giphy.com/media/XKHiFqVMvCCpnvkaMf/giphy.gif", "x10"},
                 {"Saltos explosivos de pie", "Ponte de pie, salta lo más alto que puedas intentando tocar tus rodillas con tus pectorales. Repite el ejercicio", "https://media0.giphy.com/media/xjXqSc7yoSj9h76DAe/giphy.gif", "x10"},
                 {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "10"}
         };
@@ -841,14 +842,11 @@ public class activityExercicios extends AppCompatActivity {
         numEjercicio = 0;
         countLevel = 0;
 
-
-
-
         Bundle sendValue = new Bundle();
         Intent intent = new Intent(activityExercicios.this, resultados.class);
         intent.putExtra("categorias", nombredelacategoria);
+        intent.putExtra("valueData", numCategoria);
         startActivity(intent);
-
     }
 
 }

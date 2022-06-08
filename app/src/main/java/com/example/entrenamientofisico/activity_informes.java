@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 public class activity_informes extends AppCompatActivity implements popupChangeImc.dialogChangeImc{
 
-    private TextView imc, rec, list, pesoView, alturaView;
+    private TextView imc, rec, pesoView, alturaView;
     private Button button;
 
     historial hist;
@@ -40,7 +40,6 @@ public class activity_informes extends AppCompatActivity implements popupChangeI
         alturaView = (TextView) findViewById(R.id.valueAltura);
         imc = (TextView) findViewById(R.id.resultadoImc);
         rec = (TextView) findViewById(R.id.recomendaciones);
-        list = (TextView) findViewById(R.id.listrecomendacion);
         button = (Button) findViewById(R.id.changeImc);
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -122,11 +121,11 @@ public class activity_informes extends AppCompatActivity implements popupChangeI
     private void funcRec(float imcValue){
 
         String nivelRec[][] = {
-                {"Muy delgado", "Come con más frecuencia\nToma batidos\nEscoje comidas ricas en nutrientes\nToma agua"},
-                {"Saludable", "Sigue asi crack!!\nToma agua"},
-                {"Sobrepeso","Evita el consumo de frituras\nCome mas frutas y verduras\nToma agua"},
-                {"Obesidad", "Evita el consumo de frituras\nCome mas frutas y verduras\nToma agua"},
-                {"Obesidad extrema", "Evita el consumo de frituras\nCome mas frutas y verduras\nToma agua"}
+                {"Muy delgado"},
+                {"Saludable"},
+                {"Sobrepeso"},
+                {"Obesidad",},
+                {"Obesidad extrema",}
         };
 
         String valueRec = "";
@@ -134,31 +133,30 @@ public class activity_informes extends AppCompatActivity implements popupChangeI
 
         if(imcValue <18.5){
             valueRec = nivelRec[0][0];
-            recList = nivelRec[0][1];
-            rec.setTextColor(Color.parseColor("#BAEBDD"));
+            rec.setTextColor(Color.parseColor("#FFFFFF"));
+            rec.setBackgroundColor(Color.parseColor("#BAEBDD"));
         }
         else if(imcValue >= 18.5 && imcValue < 25){
             valueRec = nivelRec[1][0];
-            recList = nivelRec[1][1];
-            rec.setTextColor(Color.parseColor("#17A480"));
+            rec.setTextColor(Color.parseColor("#FFFFFF"));
+            rec.setBackgroundColor(Color.parseColor("#17A480"));
         }
         else if(imcValue >= 25 && imcValue < 30){
             valueRec = nivelRec[2][0];
-            recList = nivelRec[2][1];
-            rec.setTextColor(Color.parseColor("#FF9E82"));
+            rec.setTextColor(Color.parseColor("#FFFFFF"));
+            rec.setBackgroundColor(Color.parseColor("#FF9E82"));
         }
         else if(imcValue >= 30 && imcValue < 35){
             valueRec = nivelRec[3][0];
-            recList = nivelRec[3][1];
-            rec.setTextColor(Color.parseColor("#F1606D"));
+            rec.setTextColor(Color.parseColor("#FFFFFF"));
+            rec.setBackgroundColor(Color.parseColor("#F1606D"));
         }
         else if(imcValue >= 35){
             valueRec = nivelRec[4][0];
-            recList = nivelRec[4][1];
-            rec.setTextColor(Color.parseColor("#E24E4E"));
+            rec.setTextColor(Color.parseColor("#FFFFFF"));
+            rec.setBackgroundColor(Color.parseColor("#E24E4E"));
         }
         rec.setText(valueRec);
-        list.setText(recList);
     }
 
     private void registerImc(){

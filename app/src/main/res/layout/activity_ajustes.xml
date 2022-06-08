@@ -34,6 +34,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical"
+            android:elevation="@dimen/elevacion_dimen"
             android:background="@drawable/bordes_redondo_item">
 
             <TextView
@@ -47,105 +48,110 @@
                 android:background="@drawable/bordedown"
                 android:textSize="@dimen/Subtitle"/>
 
-            <Button
-                android:id="@+id/deleteHistorial"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/deleteHistorial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:layout_margin="10dp"
+                    android:padding="20dp"
+                    android:elevation="@dimen/elevacion_dimen"
+                    android:textSize="@dimen/TextOneDime"
+                    android:background="@drawable/degradado_fade"
+                    android:textColor="@color/textBlackWhite"
+                    android:text="Eliminar historial"/>
+
+                <Button
+                    android:id="@+id/exitAplication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:layout_margin="10dp"
+                    android:padding="20dp"
+                    android:elevation="@dimen/elevacion_dimen"
+                    android:textSize="@dimen/TextOneDime"
+                    android:textColor="@color/textBlackWhite"
+                    android:background="@drawable/degradado_fade"
+                    android:text="Salir"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_margin="10dp"
-                android:padding="20dp"
-                android:elevation="@dimen/elevacion_dimen"
-                android:textSize="@dimen/TextOneDime"
-                android:background="@drawable/degradado_fade"
-                android:textColor="@color/textBlackWhite"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="Eliminar historial"/>
+                android:orientation="horizontal"
+                android:background="@color/background">
 
-            <Button
-                android:id="@+id/exitAplication"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_margin="10dp"
-                android:padding="20dp"
-                android:elevation="@dimen/elevacion_dimen"
-                android:textSize="@dimen/TextOneDime"
-                android:textColor="@color/textBlackWhite"
-                android:background="@drawable/degradado_fade"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="Salir"/>
+                <Button
+                    android:id="@+id/inicio"
+                    android:onClick="statusInicio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="Inicio"
+                    android:drawableTop="@drawable/ic_baseline_home_24"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/TextTwoDimen"
+                    android:background="@drawable/lineaborde"
+                    tools:ignore="Suspicious0dp"/>
 
+                <Button
+                    android:id="@+id/informesButton"
+                    android:onClick="statusInformes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="Informes"
+                    android:drawableTop="@drawable/ic_baseline_assessment_24"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/TextTwoDimen"
+                    android:background="@drawable/lineaborde"
+                    tools:ignore="Suspicious0dp"/>
+
+                <Button
+                    android:id="@+id/estadisticasButton"
+                    android:onClick="statusEstadisticas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="Estadisticas"
+                    android:drawableTop="@drawable/ic_baseline_assignment_24"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/TextTwoDimen"
+                    android:background="@drawable/lineaborde"
+                    tools:ignore="Suspicious0dp"/>
+
+                <Button
+                    android:id="@+id/ajustesButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="Ajustes"
+                    android:drawableTop="@drawable/ic_baseline_settings_focus_24"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="@color/main"
+                    android:textSize="@dimen/TextTwoDimen"
+                    android:background="@drawable/lineaborde"
+                    tools:ignore="Suspicious0dp"/>
+            </LinearLayout>
         </LinearLayout>
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/background">
-
-            <Button
-                android:id="@+id/inicio"
-                android:onClick="statusInicio"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:layout_gravity="center"
-                android:text="Inicio"
-                android:drawableTop="@drawable/ic_baseline_home_24"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:textColor="@color/textcolor"
-                android:textSize="@dimen/TextTwoDimen"
-                android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"/>
-
-            <Button
-                android:id="@+id/informesButton"
-                android:onClick="statusInformes"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:layout_gravity="center"
-                android:text="Informes"
-                android:drawableTop="@drawable/ic_baseline_assessment_24"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:textColor="@color/textcolor"
-                android:textSize="@dimen/TextTwoDimen"
-                android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"/>
-
-            <Button
-                android:id="@+id/estadisticasButton"
-                android:onClick="statusEstadisticas"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:layout_gravity="center"
-                android:text="Estadisticas"
-                android:drawableTop="@drawable/ic_baseline_assignment_24"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:textColor="@color/textcolor"
-                android:textSize="@dimen/TextTwoDimen"
-                android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"/>
-
-            <Button
-                android:id="@+id/ajustesButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:layout_gravity="center"
-                android:text="Ajustes"
-                android:drawableTop="@drawable/ic_baseline_settings_focus_24"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:textColor="@color/main"
-                android:textSize="@dimen/TextTwoDimen"
-                android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"/>
-        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

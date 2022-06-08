@@ -31,7 +31,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical"
-            android:padding="10dp"
+
+            android:elevation="@dimen/elevacion_dimen"
             android:background="@drawable/bordes_redondo_item"
             android:layout_weight="1">
 
@@ -85,75 +86,75 @@
                     android:id="@+id/listahistorial"/>
             </ScrollView>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/background"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/inicio"
-                android:onClick="statusInicio"
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:layout_gravity="center"
-                android:text="Inicio"
-                android:drawableTop="@drawable/ic_baseline_home_24"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:textColor="@color/textcolor"
-                android:textSize="@dimen/TextTwoDimen"
-                android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"/>
+                android:background="@color/background"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/informesButton"
-                android:onClick="statusInformes"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:layout_gravity="center"
-                android:text="Informes"
-                android:drawableTop="@drawable/ic_baseline_assessment_24"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:textColor="@color/textcolor"
-                android:textSize="@dimen/TextTwoDimen"
-                android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"/>
+                <Button
+                    android:id="@+id/inicio"
+                    android:onClick="statusInicio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="Inicio"
+                    android:drawableTop="@drawable/ic_baseline_home_24"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/TextTwoDimen"
+                    android:background="@drawable/lineaborde"
+                    tools:ignore="Suspicious0dp"/>
 
-            <Button
-                android:id="@+id/estadisticasButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:layout_gravity="center"
-                android:text="Estadisticas"
-                android:drawableTop="@drawable/ic_baseline_assignment_focus_24"
-                android:textColor="@color/main"
-                android:textSize="@dimen/TextTwoDimen"
-                android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"/>
+                <Button
+                    android:id="@+id/informesButton"
+                    android:onClick="statusInformes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="Informes"
+                    android:drawableTop="@drawable/ic_baseline_assessment_24"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/TextTwoDimen"
+                    android:background="@drawable/lineaborde"
+                    tools:ignore="Suspicious0dp"/>
 
-            <Button
-                android:id="@+id/ajustesButton"
-                android:onClick="statusAjustes"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:layout_gravity="center"
-                android:text="Ajustes"
-                android:drawableTop="@drawable/ic_baseline_settings_24"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:textColor="@color/textcolor"
-                android:textSize="@dimen/TextTwoDimen"
-                android:background="@drawable/lineaborde"
-                tools:ignore="Suspicious0dp"/>
+                <Button
+                    android:id="@+id/estadisticasButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="Estadisticas"
+                    android:drawableTop="@drawable/ic_baseline_assignment_focus_24"
+                    android:textColor="@color/main"
+                    android:textSize="@dimen/TextTwoDimen"
+                    android:background="@drawable/lineaborde"
+                    tools:ignore="Suspicious0dp"/>
+
+                <Button
+                    android:id="@+id/ajustesButton"
+                    android:onClick="statusAjustes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="Ajustes"
+                    android:drawableTop="@drawable/ic_baseline_settings_24"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/TextTwoDimen"
+                    android:background="@drawable/lineaborde"
+                    tools:ignore="Suspicious0dp"/>
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
