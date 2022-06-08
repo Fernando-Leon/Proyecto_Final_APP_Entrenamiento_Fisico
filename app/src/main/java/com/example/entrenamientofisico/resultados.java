@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.entrenamientofisico.db.dbinsert;
 
 public class resultados extends AppCompatActivity {
 
@@ -36,6 +39,7 @@ public class resultados extends AppCompatActivity {
 
         categorianombre.setText(categoria);
         cantEjer(valueCat);
+        registerData();
 
         regresar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,6 +111,18 @@ public class resultados extends AppCompatActivity {
             kcal.setText(resultToString);
         }
 
+    }
+
+    private void registerData(){
+        dbinsert inser = new dbinsert(resultados.this);
+        long id = inser.insertRegiste(categorianombre.getText().toString(), cantEjercicios.getText().toString(), kcal.getText().toString());
+
+        if(id > 0){
+            Toast.makeText(this, "Registro exitoso", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(this, "Error", Toast.LENGTH_LONG).show();
+
+        }
     }
 
 }

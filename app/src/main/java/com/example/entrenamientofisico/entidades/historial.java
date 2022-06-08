@@ -8,7 +8,8 @@ public class historial {
     private String peso;
     private String altura;
     private String imc;
-    private String date;
+    private String kcal;
+    private String ejercicios;
     public historial() {
     }
 
@@ -61,11 +62,19 @@ public class historial {
         this.imc = imc;
     }
 
-    public String getDate() {
-        return date;
+    public String getKcal() {
+        return kcal;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setKcal(String kcal) {
+        this.kcal = kcal;
+    }
+
+    public String getEjercicios() {
+        return ejercicios;
+    }
+
+    public void setEjercicios(String ejercicios) {
+        this.ejercicios = ejercicios;
     }
 }

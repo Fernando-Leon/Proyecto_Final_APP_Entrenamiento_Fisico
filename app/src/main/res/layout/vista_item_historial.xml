@@ -31,18 +31,27 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 android:foregroundGravity="center"
                 android:padding="20dp"
-                android:text="Hola mundo"
+                android:text="Piernas - Principiante"
                 android:textAlignment="textStart"
                 android:textSize="@dimen/TextOneDime"></TextView>
 
             <TextView
-                android:id="@+id/datetimeshow"
+                android:id="@+id/numEjerciciosShow"
                 android:layout_width="0dp"
                 android:padding="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textSize="@dimen/TextOneDime"
-                android:text="Error">
+                android:text="10"/>
+
+            <TextView
+                android:id="@+id/kcalShow"
+                android:layout_width="0dp"
+                android:padding="20dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/TextOneDime"
+                android:text="100 kcal">
             </TextView>
 
         </LinearLayout>

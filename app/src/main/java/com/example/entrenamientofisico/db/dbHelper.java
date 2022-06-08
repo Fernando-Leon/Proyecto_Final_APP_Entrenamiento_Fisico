@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 public class dbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 5;
+    private static final int DATABASE_VERSION = 6;
     private static final String DATABASE_NOMBRE = "historial.db";
     private static final String TABLE_HISTORIAL = "t_historial";
     private static final String TABLE_IMC = "t_imc";
@@ -23,7 +23,8 @@ public class dbHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_HISTORIAL + "(" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "titulo TEXT NOT NULL," +
-                "DATE DEFAULT CURRENT_TIMESTAMP)");
+                "numEjercices TEXT NOT NULL," +
+                "numKcal TEXT NOT NULL)");
 
 
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_IMC + "(" +

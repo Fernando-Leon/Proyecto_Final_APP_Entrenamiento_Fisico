@@ -829,15 +829,6 @@ public class activityExercicios extends AppCompatActivity {
     //Metodo para guardar el ejercicio en el historial
 
     private void register(){
-        dbinsert inser = new dbinsert(activityExercicios.this);
-        long id = inser.insertRegiste(titulo.getText().toString());
-
-        if(id > 0){
-            Toast.makeText(this, "Registro exitoso", Toast.LENGTH_LONG).show();
-        }else{
-            Toast.makeText(this, "Error", Toast.LENGTH_LONG).show();
-
-        }
 
         numEjercicio = 0;
         countLevel = 0;

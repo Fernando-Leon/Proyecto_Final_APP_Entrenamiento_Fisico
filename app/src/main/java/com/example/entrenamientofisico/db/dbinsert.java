@@ -20,7 +20,7 @@ public class dbinsert extends dbHelper{
         this.context = context;
     }
 
-    public long insertRegiste(String titleEjercice){
+    public long insertRegiste(String titleEjercice, String numEjercicios, String numCalorias){
 
         long id = 0;
 
@@ -30,6 +30,9 @@ public class dbinsert extends dbHelper{
 
             ContentValues values = new ContentValues();
             values.put("titulo", titleEjercice);
+            values.put("numEjercices", numEjercicios);
+            values.put("numKcal", numCalorias);
+
 
             id = db.insert("t_historial", null, values);
         }catch (Exception ex){
@@ -54,7 +57,8 @@ public class dbinsert extends dbHelper{
                 history = new historial();
                 history.setId(cursor.getInt(0));
                 history.setTitleEjercicio(cursor.getString(1));
-                history.setDate(cursor.getString(2));
+                history.setEjercicios(cursor.getString(2));
+                history.setKcal(cursor.getString(3));
 
                 lista.add(history);
 
