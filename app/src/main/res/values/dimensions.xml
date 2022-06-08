@@ -5,6 +5,7 @@
     <dimen name="CategSize">15sp</dimen>
     <dimen name="TextOneDime">16sp</dimen>
     <dimen name="TextTwoDimen">7sp</dimen>
+    <dimen name="TextThreeDimen">12sp</dimen>
 
     <dimen name="border_radius">18dp</dimen>
     <dimen name="elevacion_dimen">10dp</dimen>

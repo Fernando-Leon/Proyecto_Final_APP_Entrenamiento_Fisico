@@ -1,29 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:orientation="vertical"
-    android:background="@drawable/degradado_fade"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/border_radius"
+    app:cardElevation="@dimen/elevacion_dimen"
+    app:cardUseCompatPadding="true">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:padding="10dp">
 
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/background">
+            <LinearLayout
+                android:id="@+id/primerBloque"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_margin="10dp"
+                android:layout_toStartOf="@+id/segundoBloque"
+                android:orientation="vertical">
 
-            <TextView
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="Categoria"
+                    android:textColor="@color/textBlackWhite"
+                    android:textSize="@dimen/TextOneDime"
+                    tools:ignore="Suspicious0dp" />
+
+                <TextView
+                    android:id="@+id/viewTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Piernas - Principiante"
+                    android:textColor="@color/textBlackWhite"
+                    android:textSize="@dimen/TextThreeDimen"
+                    tools:ignore="Suspicious0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/segundoBloque"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_toStartOf="@+id/tercerBloque"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="Ejercicios"
+                    android:textColor="@color/textBlackWhite"
+                    android:textSize="@dimen/TextOneDime"
+                    tools:ignore="Suspicious0dp" />
+
+                <TextView
+                    android:id="@+id/numEjerciciosShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:gravity="center"
+                    android:text="10"
+                    android:textColor="@color/textBlackWhite"
+                    android:textSize="@dimen/TextThreeDimen" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tercerBloque"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="Calorias"
+                    android:textColor="@color/textBlackWhite"
+                    android:textSize="@dimen/TextOneDime"
+                    tools:ignore="Suspicious0dp" />
+
+                <TextView
+                    android:id="@+id/kcalShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textColor="@color/textBlackWhite"
+                    android:textSize="@dimen/TextThreeDimen" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+
+
+<!--
+
+<TextView
                 android:id="@+id/viewTitulo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -33,7 +126,7 @@
                 android:padding="20dp"
                 android:text="Piernas - Principiante"
                 android:textAlignment="textStart"
-                android:textSize="@dimen/TextOneDime"></TextView>
+                android:textSize="@dimen/TextOneDime"/>
 
             <TextView
                 android:id="@+id/numEjerciciosShow"
@@ -54,7 +147,4 @@
                 android:text="100 kcal">
             </TextView>
 
-        </LinearLayout>
-
-    </LinearLayout>
-</LinearLayout>
+-->

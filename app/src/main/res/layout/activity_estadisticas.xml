@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
-                android:text="ESTADISTICAS"
+                android:text="HISTORIAL"
                 android:textColor="@color/textcolorcontrasteimage"
                 android:textAlignment="textStart"
                 android:textStyle="bold"
@@ -47,42 +47,6 @@
                 android:layout_marginEnd="10dp"
                 android:textSize="@dimen/Subtitle"/>
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_marginBottom="2dp"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="20dp"
-                    android:text="Categoria"
-                    android:textAlignment="center"
-                    android:textSize="@dimen/TextOneDime"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="20dp"
-                    android:textAlignment="center"
-                    android:text="Ejercicios"
-                    android:textSize="@dimen/TextOneDime">
-                </TextView>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="20dp"
-                    android:textAlignment="center"
-                    android:text="Kcal"
-                    android:textSize="@dimen/TextOneDime">
-                </TextView>
-            </LinearLayout>
-
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -90,8 +54,9 @@
                 tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
                     android:id="@+id/listahistorial"/>
             </ScrollView>
 
