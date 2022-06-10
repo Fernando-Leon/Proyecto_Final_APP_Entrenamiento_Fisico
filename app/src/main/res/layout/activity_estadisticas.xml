@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main"
+    android:background="@color/navColor"
     tools:context=".activity_estadisticas">
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,6 +43,7 @@
                 android:textAlignment="center"
                 android:text="Historial de ejericios"
                 android:background="@drawable/bordedown"
+                android:textColor="@color/textBlackWhite"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:textSize="@dimen/Subtitle"/>

@@ -54,6 +54,13 @@ public class activity_informes extends AppCompatActivity implements popupChangeI
             }
         });
 
+
+        if(rec.getText().toString() == "IMC"){
+            rec.setVisibility(View.INVISIBLE);
+        }else{
+            rec.setVisibility(View.VISIBLE);
+        }
+
         //mostrar el imc actual
 
         dbinsert showimc = new dbinsert(activity_informes.this);
@@ -72,7 +79,6 @@ public class activity_informes extends AppCompatActivity implements popupChangeI
         else{
             Toast.makeText(this, "Ingresa tu peso y altura para empezar", Toast.LENGTH_LONG).show();
         }
-
     }
 
     //Menu de navegacion
@@ -163,9 +169,7 @@ public class activity_informes extends AppCompatActivity implements popupChangeI
         dbinsert inser = new dbinsert(this);
         long id = inser.insertImc(pesoView.getText().toString(), alturaView.getText().toString(), imc.getText().toString());
 
-        if(id > 0){
-            Toast.makeText(this, "Registro exitoso", Toast.LENGTH_LONG).show();
-        }else{
+        if(id < 0){
             Toast.makeText(this, "Error al actualizar el imc", Toast.LENGTH_LONG).show();
         }
     }

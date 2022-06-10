@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main"
+    android:background="@color/navColor"
     tools:context=".activity_informes">
 
     <LinearLayout
@@ -43,6 +43,7 @@
                 android:text="Indice de masa corporal (IMC)"
                 android:textAlignment="center"
                 android:background="@drawable/bordedown"
+                android:textColor="@color/textBlackWhite"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:textSize="@dimen/Subtitle"/>
@@ -60,6 +61,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textBlackWhite"
                         android:text="Peso (Kg)"
                         android:textSize="@dimen/TextOneDime"
                         android:textStyle="bold"
@@ -70,6 +72,7 @@
                         android:id="@+id/valuePeso"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textBlackWhite"
                         android:padding="20dp"
                         android:text="Peso"
                         android:textSize="@dimen/TextOneDime"/>
@@ -78,6 +81,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Altura (m)"
+                        android:textColor="@color/textBlackWhite"
                         android:padding="20dp"
                         android:textSize="@dimen/TextOneDime"
                         android:textStyle="bold"/>
@@ -86,6 +90,7 @@
                         android:id="@+id/valueAltura"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textBlackWhite"
                         android:padding="20dp"
                         android:text="Altura"
                         android:textSize="@dimen/TextOneDime"/>
@@ -93,6 +98,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textBlackWhite"
                         android:text="IMC (a/m*m)"
                         android:padding="20dp"
                         android:textSize="@dimen/TextOneDime"
@@ -102,6 +108,7 @@
                         android:id="@+id/resultadoImc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textBlackWhite"
                         android:padding="20dp"
                         android:textSize="@dimen/TextOneDime"
                         android:text="IMC" />
@@ -110,7 +117,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cambiar IMC"
-                        android:textColor="@color/textBlackWhite"
+                        android:textColor="@color/main"
                         android:background="@drawable/degradado_fade"
                         android:elevation="@dimen/elevacion_dimen"
                         android:padding="10dp"

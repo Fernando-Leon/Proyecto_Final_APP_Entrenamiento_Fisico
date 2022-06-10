@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main"
+    android:background="@color/navColor"
     tools:context=".activityExercicios">
 
     <LinearLayout
@@ -39,7 +39,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Estas listo?"
+                android:text="Indicaciones"
                 android:padding="20dp"
                 android:textAlignment="center"
                 android:layout_marginStart="10dp"
@@ -63,7 +63,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="130dp"
-                        android:text="Da click en siguiente para empezar"
+                        android:text='Antes de empezar recuerda calentar.\n\n\nCuando estes listo da lick en "INICIAR"'
                         android:textSize="@dimen/TextOneDime"
                         android:layout_margin="20dp"
                         android:id="@+id/descripcionEjercicio">
@@ -79,9 +79,8 @@
                         <ImageView
                             android:layout_gravity="center"
                             android:id="@+id/image_ex"
-                            android:src="@drawable/img_descanso_inicio"
                             android:layout_width="wrap_content"
-                            android:layout_height="300dp">
+                            android:layout_height="250dp">
                         </ImageView>
 
 
@@ -127,7 +126,7 @@
                     android:id="@+id/siguiente"
                     android:background="@drawable/degradado_fade"
                     android:layout_margin="10dp"
-                    android:textColor="@color/textBlackWhite"
+                    android:textColor="@color/main"
                     android:layout_gravity="center_horizontal"/>
 
                 <Button
@@ -137,7 +136,7 @@
                     android:textSize="@dimen/TextOneDime"
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/degradado_fade"
-                    android:textColor="@color/textBlackWhite"
+                    android:textColor="@color/main"
                     android:text="Atras"
                     android:layout_margin="10dp"
                     android:id="@+id/atras"/>
@@ -149,7 +148,7 @@
                     android:text="Menú"
                     android:textSize="@dimen/TextOneDime"
                     android:layout_margin="10dp"
-                    android:textColor="@color/textBlackWhite"
+                    android:textColor="@color/main"
                     android:id="@+id/salirToMain"
                     android:background="@drawable/degradado_fade"
                     android:layout_gravity="center_horizontal"/>

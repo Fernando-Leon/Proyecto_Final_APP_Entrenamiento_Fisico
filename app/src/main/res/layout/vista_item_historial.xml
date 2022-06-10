@@ -35,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
                     android:text="Categoria"
-                    android:textColor="@color/textBlackWhite"
+                    android:textColor="@color/main"
                     android:textSize="@dimen/TextOneDime"
                     tools:ignore="Suspicious0dp" />
 
@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
                     android:text="Ejercicios"
-                    android:textColor="@color/textBlackWhite"
+                    android:textColor="@color/main"
                     android:textSize="@dimen/TextOneDime"
                     tools:ignore="Suspicious0dp" />
 
@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
                     android:text="Calorias"
-                    android:textColor="@color/textBlackWhite"
+                    android:textColor="@color/main"
                     android:textSize="@dimen/TextOneDime"
                     tools:ignore="Suspicious0dp" />
 

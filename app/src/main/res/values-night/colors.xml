@@ -2,10 +2,39 @@
 
 <!-- Colores modo dia-->
 <resources>
+    <!-- Splash Color -->
     <color name="splashcolor">#000000</color>
-    <color name="main">#000000</color>
-    <color name="background">#000000</color>
+
+    <!-- Colores Principales -->
+
+    <color name="main">#FEC693</color>
+    <color name="secondColor">#FEC693</color>
+    <color name="navColor">#2D2D2D</color>
+
+    <!--Colores de Textos -->
+
     <color name="textcolor">#FFFFFF</color>
     <color name="textcolorcontrasteimage">#FFFFFF</color>
+    <color name="textWhiteBlack">#FFFFFF</color>
+    <color name="textBlackWhite">#FFFFFF</color>
+
+    <!-- Extras -->
+
+    <color name="deimitacion">#c6c6c6</color>
     <color name="focusedcolor">#8aaebb</color>
+
+    <!-- Fondo -->
+
+    <color name="background">#414141</color>
+    <color name="blanco">#FFFFFF</color>
+
+    <!-- Gradientes colores -->
+
+    <color name="primaryGradientColor">#414141</color> <!-- Primer color -->
+    <color name="secondGradientColor">#414141</color> <!-- Segundo color -->
+
+    <!-- Color Transicion -->
+
+    <color name="transition">@color/main</color>
+
 </resources>

@@ -63,6 +63,10 @@ public class activityExercicios extends AppCompatActivity {
         int valueCat = getValue.getInt("value");
         numCategoria = valueCat;
 
+        Uri urls = null;
+        urls = Uri.parse("https://media.giphy.com/media/KAN81GTvMstR8rCaEv/giphy.gif");
+        Glide.with(getApplicationContext()).load(urls).into(imag);
+
 
         String abdominales[][] = {
                 {"Saltos De Tijera","Comienzo con los pies juntos y los brazos a los lados; a continuación, salta con los pies separados y las manos sobre la cabeza. Vuelve a la posición original y realiza la siguiente repetición. Este ejercicio sirve para entrenar todo el cuerpo y trabaja todos los grandes grupos musculares.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "20s"},
@@ -75,7 +79,7 @@ public class activityExercicios extends AppCompatActivity {
                 {"Crunch de Bicicleta","Túmbate recto en el suelo, con las manos sujetando loa cabeza, levanta las rodillas y realice un movimiento de pedaleo, tocando los codos con la rodilla contraria mientras vas girando hacia delante y atrás.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "x12"},
                 {"Butt Bridge","Túmbate en el suelo y encoge las rodillas con los pies sobre el suelo. Pon los brazos extendidos sobre el suelo. Después, sube el trasero todo lo que puedas, como si fueras un puente.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "x30"},
                 {"Abdominal en V","Túmbate boca arriba con las piernas y los brazos extendidos, y las piernas juntas. Levanta el tronco y las piernas, utiliza los brazos para tocar los de dos de los pies y, a continuación, vuelve a la posición original y repite el ejercicio.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "x15"},
-                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "10"}
+                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua.", "https://i.pinimg.com/originals/50/9a/d7/509ad76aecf8f54718cdf6d5925933fd.gif", "10"}
         };
 
         String espaldaHombros[][] = {
@@ -89,7 +93,7 @@ public class activityExercicios extends AppCompatActivity {
                 {"Postura de Bebé", "Comienza con las rodillas y las manos en el suelo. Coloca las manos un poco adelantadas, abre las rodillas y junta las puntas de los pies. Inspira, espira y siéntate sobre las rodillas. Intenta que tu trasero toque los talones. Relaja los codos, toca el suelo con la frente e intenta bajar el pecho hasta el suelo. Mantén esta posición.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "30s"},
                 {"Elevaciones de Y ", "Túmbate boca abajo con los brazos totalmente extendidos y los pulgares hacia arriba. Tu cuerpo debería tener la forma de la letra «Y». Levanta los brazos del suelo tanto como puedas y mantén la posición durante 2 segundos. Vuelve lentamente a la posición original y repite el ejercicio.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "x14"},
                 {"Flexión supina ", "Túmbate boca arriba con los pies apoyados en el suelo y los brazos doblados a ambos lados. Levanta el pecho tanto como puedas y, a continuación, vuelve lentamente a la posición original. Repite el ejercicio. ", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "x12"},
-                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "10"}
+                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua.", "https://i.pinimg.com/originals/50/9a/d7/509ad76aecf8f54718cdf6d5925933fd.gif", "10"}
 
         };
 
@@ -104,7 +108,7 @@ public class activityExercicios extends AppCompatActivity {
                 {"Estiramiento de Hombros", "Coloca un brazo entrecruzado con tu cuerpo, paralelo al suelo, y a continuación utiliza el otro brazo para tirar del brazo en paralelo en dirección al pecho. Mantén un rato la posición, cambia de brazo y repite el ejercicio.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "30s"},
                 {"Flexión y Rotación ", "Comienza en la posición de flexión. A continuación, baja para realizar una flexión y al subir, rota el tren superior y extiende el brazo derecho hacia arriba. Repite el ejercicio con el otro brazo. Este ejercicio es genial para el pecho, los hombros, los brazos y el torso.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "x12"},
                 {"Estiramiento de cobra ", "Túmbate boca abajo, dobla los codos y coloca las manos por debajo de los hombros. A continuación, levanta el pecho del suelo tanto como puedas. Mantén la posición durante unos segundos.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "30s"},
-                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "10"}
+                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua.", "https://i.pinimg.com/originals/50/9a/d7/509ad76aecf8f54718cdf6d5925933fd.gif", "10"}
         };
 
         String brazo[][] = {
@@ -118,7 +122,7 @@ public class activityExercicios extends AppCompatActivity {
                 {"Circulo con los brazos", "Colocate de pie con los brazos extendidos hacia los lados a la altura de los hombros. Mueve los brazos con rapidez en circulos y en la direccion de las agujas del reloj.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "30s"},
                 {"Estiramiento de tríceps derecho ", "Coloca la mano derecha en la espalda, utiliza la mano izquierda para agarrar el codo derecho y tira de él suavemente. Mantén esta posición durante unos segundos.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "30s"},
                 {"Estiramiento de tríceps izquierdo ", "Coloca la mano izquierda en la espalda, utiliza la mano derecha para agarrar el codo izquierdo y tira de él suavemente. Mantén esta posición durante unos segundos.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "30s"},
-                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "10"}
+                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua.", "https://i.pinimg.com/originals/50/9a/d7/509ad76aecf8f54718cdf6d5925933fd.gif", "10"}
         };
 
         String pierna[][] = {
@@ -132,7 +136,7 @@ public class activityExercicios extends AppCompatActivity {
                 {"Wall sit con un pie", "Apóyate contra la pared con los pies firmemente plantados en el suelo, separados al ancho de los hombros. Simula estar sentado recargando tu espalda pon la pared formando un ángulo de recto. Levanta un pie a la altura de la otra rodilla mantenla por un tiempo. Repite en ambas piernas.",  "https://media4.giphy.com/media/ekku6uBiagwDh1iY8g/giphy.gif", "5s"},
                 {"Sentadillas profundas explosivas", "Comienzan con los pies por fuera de las caderas y las rodillas en la misma dirección que las puntas de los pies. Luego echamos la cadera hacia atrás y flexionamos las caderas en 90 grados, saltamos en vertical con toda nuestra energía. Repite el ejercicio.", "https://media.giphy.com/media/XKHiFqVMvCCpnvkaMf/giphy.gif", "x10"},
                 {"Saltos explosivos de pie", "Ponte de pie, salta lo más alto que puedas intentando tocar tus rodillas con tus pectorales. Repite el ejercicio", "https://media0.giphy.com/media/xjXqSc7yoSj9h76DAe/giphy.gif", "x10"},
-                {"Descanso", "Terminaeste la ronda de ejercios.\nTomate unos minutos para descansar, recuerda tomar suficiente agua.", "https://fernando-leon.github.io/urlsAnimation/gif1.gif", "10"}
+                {"Descanso", "Terminaeste la ronda de ejercios.\n\nTomate unos minutos para descansar.\n\nRecuerda tomar suficiente agua.", "https://media.giphy.com/media/E5jrFRY38yFo30C4nV/giphy.gif", "10"}
         };
 
 

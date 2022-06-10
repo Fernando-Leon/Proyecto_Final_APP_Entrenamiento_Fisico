@@ -3,25 +3,23 @@ package com.example.entrenamientofisico;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.entrenamientofisico.db.dbinsert;
 
 public class resultados extends AppCompatActivity {
 
     private Button regresar, reintentarEjercicio;
     private TextView categorianombre, cantEjercicios, kcal;
-
-
-    String arrayValues[] = {
-
-
-    };
-
+    private ImageView gifShow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +33,13 @@ public class resultados extends AppCompatActivity {
 
         categorianombre=(TextView) findViewById(R.id.nameEjercicio);
         cantEjercicios = (TextView) findViewById(R.id.cantidadEjercicios);
+        gifShow = (ImageView) findViewById(R.id.gifTrofeo);
         kcal = (TextView) findViewById(R.id.calorias);
+
+
+        Uri urlparse = null;
+        urlparse = Uri.parse("https://media.giphy.com/media/Ya09HZXAIo3oWBnwmd/giphy.gif");
+        Glide.with(getApplicationContext()).load(urlparse).into(gifShow);
 
         categorianombre.setText(categoria);
         cantEjer(valueCat);
@@ -117,11 +121,8 @@ public class resultados extends AppCompatActivity {
         dbinsert inser = new dbinsert(resultados.this);
         long id = inser.insertRegiste(categorianombre.getText().toString(), cantEjercicios.getText().toString(), kcal.getText().toString());
 
-        if(id > 0){
-            Toast.makeText(this, "Registro exitoso", Toast.LENGTH_LONG).show();
-        }else{
+        if(id < 0){
             Toast.makeText(this, "Error", Toast.LENGTH_LONG).show();
-
         }
     }
 
