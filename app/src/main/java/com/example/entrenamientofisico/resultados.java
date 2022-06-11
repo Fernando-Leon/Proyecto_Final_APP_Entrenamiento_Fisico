@@ -50,7 +50,6 @@ public class resultados extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(resultados.this, MainActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
