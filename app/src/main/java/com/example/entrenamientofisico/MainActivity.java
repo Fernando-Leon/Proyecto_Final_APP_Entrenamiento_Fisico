@@ -19,6 +19,9 @@ import android.widget.Toast;
 
 import com.example.entrenamientofisico.db.dbHelper;
 
+
+//Proyecto
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView fraseRandom;
