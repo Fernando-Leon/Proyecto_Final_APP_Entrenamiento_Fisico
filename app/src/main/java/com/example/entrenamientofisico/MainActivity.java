@@ -22,7 +22,6 @@ import com.example.entrenamientofisico.db.dbHelper;
 public class MainActivity extends AppCompatActivity {
 
     private TextView fraseRandom;
-
     private RadioGroup grupo;
 
     @Override
@@ -31,18 +30,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Creacion de la base de datos
-
-/*
-        dbHelper dbHelp = new dbHelper(MainActivity.this);
-        SQLiteDatabase db = dbHelp.getWritableDatabase();
-        if(db != null){
-            Toast.makeText(this, "Base de Datos Creada", Toast.LENGTH_LONG).show();
-        }else{
-            Toast.makeText(this, "Error al craer Base de Datos", Toast.LENGTH_LONG).show();
-        }
-*/
-
         //Genera una frase aleatoria cada que se ejecute la aplicacion
 
         fraseRandom = (TextView) findViewById(R.id.fraseRandom);
@@ -50,20 +37,35 @@ public class MainActivity extends AppCompatActivity {
         String frasesRandom[] = {
                 "La fuerza no viene de una capacidad física. Viene de una voluntad indomable.-Mahatma Gandhi.",
                 "Cuando se tiene algo que demostrar, no hay nada mejor que un reto.- Terry Bradshaw.",
+                "La vida es demasiado corta para rencores a largo plazo. -Elon Musk.",
                 "Si quieres verme conseguir algo, dime que no puedo hacerlo.-Maya Angelou.",
                 "No eres un perdedor hasta que no dejas de intentarlo.-Mike Ditka.",
                 "Incluso si caes de cara, sigues moviéndote hacia adelante.- Viktor Kiam",
+                "La disiplina te llevara a lugares que la motivacion no puede. -Daniel Habif.",
+                "Para ser el mejor entrena como si fueses el mejor. -Anonimo.",
                 "Para tener éxito, en primer lugar debemos creer que podemos.- Nikos Kazantzakis.",
                 "Tienes que esperar cosas de ti mismo antes de poder hacerlas.-Michael Jordan.",
                 "No puedes poner un límite a nada. Cuanto más sueñas, más lejos llegas.-Michael Phelps.",
                 "Las grandes recompensas esperan a los que son capaces de sufrir, arriesgarse, hacer cosas distintas. Por eso están destinadas a solo unos pocos. -Anónimo.",
                 "La motivación es lo que te pone en marcha, y el hábito es lo que hace que sigas.-.Jim Ryun.",
+                "El hombre que mueve montañas comienza levantando piedras. -Anonimo.",
+                "Lo que encaramos parece insuperable, pero somos mas fuertes de lo que creemos. -Arnold Schwarzenegger.",
                 "Da siempre lo mejor de ti. Lo que siembres hoy dará su fruto mañana.-Og Mandino",
                 "Un campeón es alguien que se levanta cuando no puede más.-William Harrison “Jack” Dempsey.",
-                "Establece tu metas altas, y no pares hasta que no llegues allí.- Bo Jackson.",
+                "Establece tu metas altas, y no pares hasta que no llegues allí.-Bo Jackson.",
+                "Creo que es posible para la gente normal elegir ser extraordinaria. -Elon Musk",
+                "Seeña sin miedos, entrena sin limites. -Anonimo.",
+                "Cuando sietas que vas a rendirte, pienza en por que empezaste. -Anonimo.",
+                "No puedes crecer y estar en tu zona de confort. -Anonimo.",
+                "Si no puedes volar. corre.\nSi no puedes correr. camina.\nSi no puedes caminar. gatea.\nPero agas lo que agas sigue adelante. -Anonimo.",
                 "No se puede ganar a la persona que nunca se rinde.-Babe Ruth.",
+                "La persistencia es muy importante. No debes rendirte a menos que estes obligado a rendirte. -Elon Musk",
+                "Tarde o temprano la disiplpina vencera a la inteligencia. -Yokoi Kenji.",
                 "La falta de actividad destruye la buena condicion de cualquier ser humano, mientras que el movimiento y el ejercicio físico metodico la guardan y la preservan. -Platón.",
-                "No te vallas dejando algo sin terminar. -Arnold Schawarzeneger."
+                "No te vallas dejando algo sin terminar. -Arnold Schawarzeneger.",
+                "La libertad está en ser dueños de la propia vida. -PLATÓN.",
+                "El cuerpo está destinado a ser visto, no a estar todo cubierto. -Marilyn Monroe.",
+                "Te estas distrayendo, recuerda tu proposito o seras uno mas en el rebaño. -Anonimo.",
         };
 
         for (int i = 0; i < frasesRandom.length; i++) {

@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
-                android:text="INFORMES"
+                android:text="@string/informes_uppercase"
                 android:textColor="@color/textcolorcontrasteimage"
                 android:textAlignment="textStart"
                 android:textStyle="bold"
@@ -40,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
-                android:text="Indice de masa corporal (IMC)"
+                android:text="@string/indice_de_masa_corporal_imc"
                 android:textAlignment="center"
                 android:background="@drawable/bordedown"
                 android:textColor="@color/textBlackWhite"
@@ -51,18 +51,19 @@
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                tools:ignore="NestedWeights">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textBlackWhite"
-                        android:text="Peso (Kg)"
+                        android:text="@string/peso_kg"
                         android:textSize="@dimen/TextOneDime"
                         android:textStyle="bold"
                         android:padding="20dp"/>
@@ -74,13 +75,13 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/textBlackWhite"
                         android:padding="20dp"
-                        android:text="Peso"
+                        android:text="@string/peso"
                         android:textSize="@dimen/TextOneDime"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Altura (m)"
+                        android:text="@string/altura_m"
                         android:textColor="@color/textBlackWhite"
                         android:padding="20dp"
                         android:textSize="@dimen/TextOneDime"
@@ -92,14 +93,14 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/textBlackWhite"
                         android:padding="20dp"
-                        android:text="Altura"
+                        android:text="@string/altura"
                         android:textSize="@dimen/TextOneDime"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textBlackWhite"
-                        android:text="IMC (a/m*m)"
+                        android:text="@string/imc_a_m_m"
                         android:padding="20dp"
                         android:textSize="@dimen/TextOneDime"
                         android:textStyle="bold"/>
@@ -111,12 +112,12 @@
                         android:textColor="@color/textBlackWhite"
                         android:padding="20dp"
                         android:textSize="@dimen/TextOneDime"
-                        android:text="IMC" />
+                        android:text="@string/imc" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cambiar IMC"
+                        android:text="@string/cambiar_imc"
                         android:textColor="@color/main"
                         android:background="@drawable/degradado_fade"
                         android:elevation="@dimen/elevacion_dimen"
@@ -143,7 +144,7 @@
                             android:id="@+id/recomendaciones"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="IMC"
+                            android:text="@string/imc"
                             android:gravity="center"
                             android:layout_gravity="center_horizontal"
                             android:padding="20dp"
@@ -170,13 +171,14 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:layout_gravity="center"
-                    android:text="Inicio"
+                    android:text="@string/inicio"
                     android:drawableTop="@drawable/ic_baseline_home_24"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:textColor="@color/textcolor"
                     android:textSize="@dimen/TextTwoDimen"
                     android:background="@drawable/lineaborde"
-                    tools:ignore="Suspicious0dp"/>
+                    tools:ignore="Suspicious0dp,UsingOnClickInXml"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/informesButton"
@@ -185,12 +187,12 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:layout_gravity="center"
-                    android:text="Informes"
+                    android:text="@string/informes"
                     android:drawableTop="@drawable/ic_baseline_assessment_focus_24"
                     android:textColor="@color/main"
                     android:textSize="@dimen/TextTwoDimen"
                     android:background="@drawable/lineaborde"
-                    tools:ignore="Suspicious0dp"/>
+                    tools:ignore="ButtonStyle,Suspicious0dp"/>
 
                 <Button
                     android:id="@+id/estadisticasButton"
@@ -200,13 +202,13 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:layout_gravity="center"
-                    android:text="Estadisticas"
+                    android:text="@string/estadisticas"
                     android:drawableTop="@drawable/ic_baseline_assignment_24"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:textColor="@color/textcolor"
                     android:textSize="@dimen/TextTwoDimen"
                     android:background="@drawable/lineaborde"
-                    tools:ignore="Suspicious0dp"/>
+                    tools:ignore="ButtonStyle,Suspicious0dp,UsingOnClickInXml"/>
 
                 <Button
                     android:id="@+id/ajustesButton"
@@ -216,13 +218,13 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:layout_gravity="center"
-                    android:text="Ajustes"
+                    android:text="@string/ajustes"
                     android:drawableTop="@drawable/ic_baseline_settings_24"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:textColor="@color/textcolor"
                     android:textSize="@dimen/TextTwoDimen"
                     android:background="@drawable/lineaborde"
-                    tools:ignore="Suspicious0dp"
+                    tools:ignore="Suspicious0dp,UsingOnClickInXml"
                     style="?android:attr/buttonBarButtonStyle" />
             </LinearLayout>
 

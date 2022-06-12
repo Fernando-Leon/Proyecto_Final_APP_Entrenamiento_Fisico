@@ -16,7 +16,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -34,7 +34,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
-                    android:text="Categoria"
+                    android:text="@string/categoria"
                     android:textColor="@color/main"
                     android:textSize="@dimen/TextOneDime"
                     tools:ignore="Suspicious0dp" />
@@ -44,9 +44,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Piernas - Principiante"
+                    android:text="@string/piernas_principiante"
                     android:textColor="@color/textBlackWhite"
-                    android:textSize="@dimen/TextThreeDimen"
+                    android:textSize="@dimen/dimentexextra"
                     tools:ignore="Suspicious0dp" />
             </LinearLayout>
 
@@ -62,7 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
-                    android:text="Ejercicios"
+                    android:text="@string/ejercicios"
                     android:textColor="@color/main"
                     android:textSize="@dimen/TextOneDime"
                     tools:ignore="Suspicious0dp" />
@@ -73,9 +73,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="0dp"
                     android:gravity="center"
-                    android:text="10"
+                    android:text="@string/_10"
                     android:textColor="@color/textBlackWhite"
-                    android:textSize="@dimen/TextThreeDimen" />
+                    android:textSize="@dimen/dimentexextra" />
 
             </LinearLayout>
 
@@ -91,7 +91,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
-                    android:text="Calorias"
+                    android:text="@string/calorias"
                     android:textColor="@color/main"
                     android:textSize="@dimen/TextOneDime"
                     tools:ignore="Suspicious0dp" />
@@ -101,9 +101,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="100"
+                    android:text="@string/_100"
                     android:textColor="@color/textBlackWhite"
-                    android:textSize="@dimen/TextThreeDimen" />
+                    android:textSize="@dimen/dimentexextra" />
             </LinearLayout>
 
         </RelativeLayout>

@@ -9,4 +9,6 @@
 
     <dimen name="border_radius">18dp</dimen>
     <dimen name="elevacion_dimen">10dp</dimen>
+
+    <dimen name="dimentexextra">10sp</dimen>
 </resources>

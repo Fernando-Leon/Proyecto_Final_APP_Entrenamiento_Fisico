@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:padding="20dp"
     android:layout_height="wrap_content">
@@ -7,16 +8,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Peso"
+            android:text="@string/peso_kg"
             android:textSize="@dimen/TextOneDime"
             android:textColor="@color/main"
             android:textStyle="bold"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"/>
@@ -25,20 +27,21 @@
             android:id="@+id/editPesoText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Introduce el peso"
+            android:hint="@string/introduce_el_peso"
             android:textSize="@dimen/TextOneDime"
             android:inputType="numberDecimal"
             android:textColor="@color/textBlackWhite"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:autofillHints="" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Altura"
+            android:text="@string/altura_m"
             android:textSize="@dimen/TextOneDime"
             android:textStyle="bold"
             android:textColor="@color/main"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"/>
@@ -48,10 +51,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/textBlackWhite"
-            android:hint="Introduce la altura"
+            android:hint="@string/introduce_la_altura"
             android:textSize="@dimen/TextOneDime"
             android:inputType="numberDecimal"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:autofillHints="" />
 
     </LinearLayout>
 

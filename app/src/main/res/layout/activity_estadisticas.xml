@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
-                android:text="HISTORIAL"
+                android:text="@string/historial"
                 android:textColor="@color/textcolorcontrasteimage"
                 android:textAlignment="textStart"
                 android:textStyle="bold"
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:textAlignment="center"
-                android:text="Historial de ejericios"
+                android:text="@string/historial_de_ejercicios"
                 android:background="@drawable/bordedown"
                 android:textColor="@color/textBlackWhite"
                 android:layout_marginStart="10dp"
@@ -56,7 +56,7 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:id="@+id/listahistorial"/>
             </ScrollView>
@@ -75,13 +75,13 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:layout_gravity="center"
-                    android:text="Inicio"
+                    android:text="@string/inicio"
                     android:drawableTop="@drawable/ic_baseline_home_24"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:textColor="@color/textcolor"
                     android:textSize="@dimen/TextTwoDimen"
                     android:background="@drawable/lineaborde"
-                    tools:ignore="Suspicious0dp"/>
+                    tools:ignore="ButtonStyle,Suspicious0dp,UsingOnClickInXml"/>
 
                 <Button
                     android:id="@+id/informesButton"
@@ -91,13 +91,13 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:layout_gravity="center"
-                    android:text="Informes"
+                    android:text="@string/estadisticas"
                     android:drawableTop="@drawable/ic_baseline_assessment_24"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:textColor="@color/textcolor"
                     android:textSize="@dimen/TextTwoDimen"
                     android:background="@drawable/lineaborde"
-                    tools:ignore="Suspicious0dp"/>
+                    tools:ignore="ButtonStyle,Suspicious0dp,UsingOnClickInXml"/>
 
                 <Button
                     android:id="@+id/estadisticasButton"
@@ -106,12 +106,12 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:layout_gravity="center"
-                    android:text="Estadisticas"
+                    android:text="@string/estadisticas"
                     android:drawableTop="@drawable/ic_baseline_assignment_focus_24"
                     android:textColor="@color/main"
                     android:textSize="@dimen/TextTwoDimen"
                     android:background="@drawable/lineaborde"
-                    tools:ignore="Suspicious0dp"/>
+                    tools:ignore="ButtonStyle,Suspicious0dp"/>
 
                 <Button
                     android:id="@+id/ajustesButton"
@@ -121,13 +121,14 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:layout_gravity="center"
-                    android:text="Ajustes"
+                    android:text="@string/ajustes"
                     android:drawableTop="@drawable/ic_baseline_settings_24"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:textColor="@color/textcolor"
                     android:textSize="@dimen/TextTwoDimen"
                     android:background="@drawable/lineaborde"
-                    tools:ignore="Suspicious0dp"/>
+                    tools:ignore="Suspicious0dp,UsingOnClickInXml"
+                    style="?android:attr/buttonBarButtonStyle" />
             </LinearLayout>
 
         </LinearLayout>
