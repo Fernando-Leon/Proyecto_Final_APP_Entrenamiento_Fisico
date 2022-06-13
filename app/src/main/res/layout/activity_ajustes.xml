@@ -69,6 +69,19 @@
                     android:text="@string/eliminar_historial"/>
 
                 <Button
+                    android:id="@+id/viewPolices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:layout_margin="10dp"
+                    android:padding="20dp"
+                    android:elevation="@dimen/elevacion_dimen"
+                    android:textSize="@dimen/TextOneDime"
+                    android:background="@drawable/degradado_fade"
+                    android:textColor="@color/main"
+                    android:text="@string/avisos"/>
+
+                <Button
                     android:id="@+id/exitAplication"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

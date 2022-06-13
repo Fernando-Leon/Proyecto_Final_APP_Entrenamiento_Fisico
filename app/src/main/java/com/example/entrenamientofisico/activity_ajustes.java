@@ -17,7 +17,7 @@ import com.example.entrenamientofisico.db.dbinsert;
 
 public class activity_ajustes extends AppCompatActivity {
 
-    private Button exit, deleteHistory;
+    private Button exit, deleteHistory, viewAvisos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,15 @@ public class activity_ajustes extends AppCompatActivity {
 
         deleteHistory = (Button) findViewById(R.id.deleteHistorial);
         exit = (Button) findViewById(R.id.exitAplication);
+        viewAvisos = (Button) findViewById(R.id.viewPolices);
+
+
+        viewAvisos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showAvisos();
+            }
+        });
 
         deleteHistory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,5 +122,10 @@ public class activity_ajustes extends AppCompatActivity {
         } finally {
             db.close();
         }
+    }
+
+    private void showAvisos(){
+        Intent intent = new Intent(this, avisos.class);
+        startActivity(intent);
     }
 }

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.EntrenamientoFisico"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".avisos"
+            android:exported="false" />
+        <activity
             android:name=".resultados"
             android:exported="false" />
         <activity

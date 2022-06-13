@@ -60,4 +60,6 @@
     <string name="reintentar">Reintentar</string>
     <string name="introduce_el_peso">Introduce el peso</string>
     <string name="introduce_la_altura">Introduce la altura</string>
+    <string name="avisos">Avisos</string>
+    <string name="avisosUpper">AVISOS</string>
 </resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navColor"
+    tools:context=".avisos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textColor="@color/textcolorcontrasteimage"
+                android:text="@string/avisosUpper"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textSize="@dimen/TitlesDimen"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:elevation="@dimen/elevacion_dimen"
+            android:background="@drawable/bordes_redondo_item">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INFORMACION IMPORTANTE"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/textBlackWhite"
+                android:background="@drawable/bordedown"
+                android:textSize="@dimen/Subtitle"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="ENFOQUE DE LA APLICACION"
+                    android:textSize="@dimen/Subtitle"
+                    android:textColor="@color/textBlackWhite">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="La aplicacion esta enfocada en personas que desean tener una mejor salud fisica o quieren un cambio en su fisico.\n\nLos ejercicios utilizados en la aplicacion estan cientificamente comprobados por especialistas en el ambito del ejercicio fisico. \n\n"
+                    android:textSize="@dimen/TextThreeDimen"
+                    android:textColor="@color/textBlackWhite">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="ADVERTENCIA"
+                    android:textSize="@dimen/Subtitle"
+                    android:textColor="@color/textBlackWhite">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="El mal uso de esta aplicacion no es responsabilidad de los desarrolladores. Cualquier accidente fisico es y sera responsabilidad unica del usuario."
+                    android:textSize="@dimen/TextThreeDimen"
+                    android:textColor="@color/textBlackWhite">
+                </TextView>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/returnAjustes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_margin="20dp"
+                android:background="@drawable/degradado_fade"
+                android:elevation="@dimen/elevacion_dimen"
+                android:text="Regresar"
+                android:padding="10dp"
+                android:textColor="@color/main">
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

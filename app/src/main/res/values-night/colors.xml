@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Colores modo dia-->
+<!-- Colores modo noche-->
 <resources>
     <!-- Splash Color -->
     <color name="splashcolor">#000000</color>
